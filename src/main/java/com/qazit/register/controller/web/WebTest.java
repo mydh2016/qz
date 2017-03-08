@@ -5,5 +5,6 @@ public class WebTest {
 		System.out.println("hello");
 		String s = "s2";
 		String s1 = "s1";
+		String s3 = "s3";
 	}
 }
