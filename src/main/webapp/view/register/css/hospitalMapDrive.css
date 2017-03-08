@@ -1,0 +1,58 @@
+
+.hs_mapWalk{
+    max-width: 720px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+}
+/*地图主体部分*/
+.hs_mapWalk_route{
+    margin-top:0.96rem;
+    height: 100%;
+    width: 100%;
+}
+/*底部导航栏*/
+.hs_mapWalk_nav{
+    position: fixed;
+    left:50%;
+    margin-left: -3.0rem;
+    bottom:0.1rem;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #dddddd;
+}
+.row,.col-xs-4{
+    padding: 0;
+    margin: 0;
+}
+.hs_map_nav>ul{
+    width: 6.00rem;
+}
+.hs_mapWalk_nav>ul>li{
+    float: left;
+    height: 0.9rem;
+    width: 2rem;
+   line-height: 0.9rem;
+}
+.hs_mapWalk_nav>ul>li>a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border-right: 1px solid #dddddd;
+    font-size: 0.26rem;
+}
+.hs_mapWalk_nav>ul>li:last-child>a{
+    border: none;
+}
+
+.hs_mapWalk_nav>ul>.active{
+    background-color: #6A8DC3;
+    padding: 0;
+}
+.active a{
+    color:#fff;
+}
+
+#l-map{height:300px;width:100%;}
+#r-result,#r-result table{width:100%;}

@@ -1,0 +1,53 @@
+<form id="add-user-form" ms-controller="userManageData">
+    <div class="fl">
+        <div class="form-group">
+            <label for="username"><span class="must mr3">*</span>用户名</label>
+            <input type="text" class="form-control" id="userName" name="userName" placeholder="用户名" autocomplete="off" data-bv-notempty>
+        </div>
+
+        <div class="form-group">
+            <label for="password"><span class="must mr3">*</span>密码</label>
+            <input type="text" class="form-control" id="password" name="password" placeholder="密码" autocomplete="off" data-bv-notempty>
+        </div>
+
+        <div class="form-group">
+            <label for="mobilePhone"><span class="must mr3">*</span>联系电话</label>
+            <input type="text" class="form-control" id="mobilePhone" name="mobilePhone" placeholder="手机号" data-bv-notempty>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="email">
+        </div>
+		
+		<div ms-if="avalon.vmodels.root.pubperm.hospitalId!='asiainfo'">
+			<div class="form-group">
+            <label for="departmentId"><span class="must mr3">*</span>科室</label>
+            <select class="form-control" id="departmentId" name="departmentId" data-bv-notempty>
+                <option ms-repeat="departmentName" ms-attr-value="el.departmentId">{{el.departmentName}}</option>
+            </select>
+        	</div>
+		</div>
+
+		<div class="form-group">
+            <label for="description">说明</label>
+            <input type="text" class="form-control" id="description" name="description" placeholder="说明">
+        </div>
+	
+  		 <input type="hidden" name="isDeleted" value="0" checked="checked">    
+    </div>
+
+    <div class="fr" style="margin-left: 30px; margin-right: 12px; min-width: 100px;">
+        <div class="form-group">
+            <label>所属角色</label>
+            <ul id="menu3" class="list-sm">
+                <li ms-repeat="roleList">
+                    <label><input type="radio" ms-attr-value="el.id" name="checkedRoleIds" ms-attr-checked="el.checked"> <span>{{el.name}}</span></label>
+                    <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">提示信息</div></div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</form>

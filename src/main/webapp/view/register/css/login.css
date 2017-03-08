@@ -1,0 +1,105 @@
+html,body,.hs_login , .container{
+    height:100%;
+    
+}
+.hs_login .container{
+    background-color: #4169a6;
+}
+.hs_login .user {
+     padding-top: 1.00rem;
+    padding-bottom: 0.8rem;
+}
+
+.hs_login .user > h2 {
+    color: #fefffd;
+    font-size: 0.32rem;
+    line-height: 1.15rem;
+    text-align: center;
+}
+
+.hs_login form {
+    width: 100%;
+    margin-left: 0.36rem;
+    padding-right: 0.72rem;
+}
+
+.hs_login .input-group-addon {
+    padding: 0.06rem 0.12rem;
+    font-size: 0.14rem;
+    font-weight: normal;
+    line-height: 1;
+    color: #555;
+    text-align: center;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border-bottom-left-radius: 0.08rem;
+    -webkit-border-bottom-left-radius: 0.08rem;
+    border-top-left-radius: 0.08rem;
+    -webkit-border-top-left-radius: 0.08rem;
+}
+
+.hs_login .form-control {
+    display: block;
+    width: 100%;
+    height: 0.83rem;
+    padding: 0.03rem 0.12rem;
+    font-size: 0.26rem;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: none;
+    border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.hs_login .hs_login_btn {
+    height: 0.82rem;
+    width: 5.10rem;
+    background-color: #e26316;
+    color: #fff;
+    font-size: 0.34rem;
+    margin: 1.36rem  0.68rem 0.76rem;
+    border-radius: 0.08rem;
+    -webkit-border-radius: 0.08rem;
+}
+/*提示*/
+.hs_login #hs_login_tip{
+    background-color:rgba(0,0,0,0.6);
+    position:fixed;
+    top:55%;
+    left:50%;
+    color:#fff;
+    font-size:0.24rem;
+    line-height: 0.40rem;
+    text-align: center;
+    border-radius: 0.04rem;
+    padding:0.08rem 0.20rem;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%); /* Safari 和 Chrome */
+    display:none;
+    z-index: 100000;
+}
+.hs_login footer {
+    font-size: 0.30rem;
+    color: #fff;
+    margin-bottom: 1.24rem;
+    text-align: center;
+}
+/*底部提示*/
+footer a:link {
+    color: #a0dbd7;
+    text-decoration: blink;
+}
+footer a:active{
+    color:#a0dbd7;
+}
+footer a:visited{
+    color:#a0dbd7;
+}

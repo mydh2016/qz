@@ -1,0 +1,114 @@
+<div class="p25">
+    <div class="title">用户管理</div>
+    <div class="conbar">
+        <div id="userlist" class="ms-controller" ms-controller="userlist">
+
+            <form id="user-search" class="form-inline p30-10">
+                <div>
+                    <div class="form-group">
+                        <label for="username" class="response-w80 text-right">用户名</label>
+                        <input type="text" class="form-control" id="userName" name="userName" placeholder="搜索用户名...">
+                    </div>
+
+                    <div class="form-group response-ml10">
+                        <label for="dateStart" class="response-w80 text-right">创建时间</label>
+                        <input type="text" class="form-control" id="dateStart" name="dateStart" placeholder="开始时间...">
+                        -
+                        <input type="text" class="form-control" id="dateEnd" name="dateEnd" placeholder="结束时间...">
+                    </div>
+                </div>
+
+                <div class="mt15">
+                    <div class="form-group">
+                        <label for="mobilePhone" class="response-w80 text-right">手机号</label>
+                        <input type="text" class="form-control" id="mobilePhone" name="mobilePhone" placeholder="搜索手机号...">
+                    </div>
+
+                    <div class="form-group response-ml10">
+                        <label for="email" class="response-w80 text-right">Email 地址</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="搜索email...">
+                    </div>
+
+					<!-- 
+                    <div class="form-group">
+						<label for="status" class="response-w80 text-right">审批状态</label>
+						<select id="status" name="status" class="form-control">
+							<option value="1">未审批</option>
+							<option value="0">通过</option>
+						</select>
+					</div>
+	 				-->
+                    <button type="submit" class="btn btn-primary fa fa-search response-ml30">搜索</button>
+                </div>
+
+
+            </form>
+
+            <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+            <div class="of-auto" ms-if="listData.length">
+                <table class="mytable" >
+                    <thead>
+                    <tr>
+                        <th>用户名</th>
+                        <th>手机号</th>
+                        <th>邮箱</th>
+                        <th>创建时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+
+                    <tbody ms-each="listData" id="checks-form">
+                    <tr ms-attr-data-userid="{{el.userId}}" ms-attr-data-status="{{el.status}}">
+                        <td>{{el.userName}}</td>
+                        <td>{{el.mobilePhone}}</td>
+                        <td>{{el.email}}</td>
+                        <td>{{el.createTime | date('y-M-dd HH:mm')}}</td>
+                        <td>
+                            <div class="mytable-console">
+                                <i class="user-edit fa fa-edit" title="编辑"></i>
+                                <i class="user-delete fa fa-trash-o" title="删除"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="p18">
+                <div id="add-user" class="btn btn-success fa fa-plus ml10">添加用户</div>
+                <div id="autidor" class="btn btn-primary ml10" ms-if="avalon.vmodels.root.pubperm.pubUserName == 'auditor' ">审核</div>
+            </div>
+
+            <div class="text-center border-t-gray" ms-if="listData.length">
+                <div class="mytable-pagenum inlineblock">
+                    显示
+                    <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                        <option selected="selected">10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
+                    条
+                </div>
+
+                <ul class="pagination v-middle ml10">
+                    <li class="page-last">
+                        <a href="#"><span aria-hidden="true">«</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+                    </li>
+                    <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                        <a href="#">{{el}}</a>
+                    </li>
+                    <li class="page-next">
+                        <a href="#"><span aria-hidden="true">»</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

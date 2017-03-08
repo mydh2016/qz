@@ -1,0 +1,49 @@
+.hsFeedBack {
+    font-family: "微软雅黑";
+    margin-top: 40px;
+}
+.hsFeedBack .hsFeedBack_phase p{
+    font-size: 20px;
+    line-height: 60px;
+}
+.hsFeedBack .hsFeedBack_cont textarea{
+    width: 60%;
+    height: 200px;
+    padding: 20px 10px;
+    font-size: 14px;
+    border-color: #4068a5;
+    outline-style: none;
+}
+.hsFeedBack .hsFeedBack_btn{
+    margin-top: 20px;
+}
+.hsFeedBack .hsFeedBack_btn button{
+    background-color: #4068a5;
+    color:#fff;
+    padding: 10px 40px;
+}
+/*提示*/
+.hsFeedBack_tip .modal{
+    top: 26%;
+}
+.hsFeedBack_tip .modal-content {
+    border-radius: 0;
+}
+.hsFeedBack_tip .modal-body,.hsFeedBack_tip .modal-footer{
+    text-align: center;
+}
+
+.hsFeedBack_tip .modal-body {
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.hsFeedBack_tip .modal-footer {
+    padding: 10px;
+    background-color: #f5f5f5;
+}
+.hsFeedBack_tip .modal-footer button{
+    background-color: #4068a5;
+    color: #fff;
+    padding: 6px 30px;
+}

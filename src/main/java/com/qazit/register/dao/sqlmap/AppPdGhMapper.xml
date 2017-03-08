@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.register.dao.mapper.AppPdGhMapper" >
+  <resultMap id="pdGhVO" type="com.qazit.register.model.AppPdGhVO" >
+    <id column="product_id" property="productId"/>
+    <result column="depart_id" property="departId"/>
+    <result column="product_type" property="productType"/>
+    <result column="depart_name" property="departName"/>
+    <result column="hospital_name" property="hospitalName"/>
+    <result column="order_number" property="orderNumber"/>
+    <result column="ordered_count" property="orderCount" />
+    <result column="order_price" property="orderPrice" />
+    <result column="phu_user_name" property="userName" />
+     <result column="time_slot" property="timeSolt" />
+    <result column="cons_room" property="consRoom"/>
+    <result column="cons_date" property="consDate"/>
+    <result column="hospital_id" property="hospitalId"/>   
+    <result column="plant_price" property="plantPrice"/>
+    
+  </resultMap>
+  <sql id="Base_Column_List" >
+    product_id,
+    depart_id,
+    product_type,
+    depart_name,
+    hospital_name,
+    order_number,
+    ordered_count,
+    order_price,
+    phu_user_name,
+    time_slot,
+    cons_room,
+    cons_date,
+    hospital_id,
+    plant_price
+  </sql>
+  <select id="queryAllByDate" resultMap="pdGhVO" parameterType="com.qazit.register.model.AppPdGhVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_BAS_PD_GH where hospital_id=#{hospitalId} and depart_id=#{departId} and cons_date=#{consDate}
+  </select>
+   <select id="selectById" resultMap="pdGhVO" parameterType="com.qazit.register.model.AppPdGhVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_BAS_PD_GH where product_id=#{productId} 
+  </select>
+  <update id="updateCount" parameterType="com.qazit.register.model.AppPdGhVO" >
+    update T_BAS_PD_GH
+    <set >
+      <if test="departId!=null">
+        depart_id=#{departId}, 
+       </if>
+      <if test="productType!=null">
+   	    product_type=#{productType},
+      </if>
+      <if test="departName!=null">
+        depart_name=#{departName},
+      </if>
+      <if test="hospitalName!=null">
+       hospital_name= #{hospitalName},
+      </if>
+      <if test="orderNumber!=null">
+        order_number=#{orderNumber},
+      </if>
+      <if test="orderCount!=null">
+        ordered_count=#{orderCount},
+      </if>
+      <if test="orderPrice!=null">
+       order_price=#{orderPrice},
+      </if>
+      <if test="userName!=null">
+       phu_user_name=#{userName},
+      </if>
+      <if test="timeSolt!=null">
+       time_slot=#{timeSolt},
+      </if>
+      <if test="consRoom!=null">
+       cons_room=#{consRoom},
+      </if>
+      <if test="consDate!=null">
+       cons_date=#{consDate},
+      </if>
+      <if test="hospitalId!=null">
+       hospital_id=#{hospitalId},
+      </if>
+      <if test="plantPrice!=null">
+       plant_price=#{plantPrice}
+      </if>
+    </set>
+    where product_id = #{productId}
+  </update> 
+  
+  <select id="queryWebPDByDate" resultMap="pdGhVO" parameterType="com.qazit.register.model.AppPdGhVO" >
+    select 
+    hospital_id,depart_id,SUM(order_number-ordered_count) as order_number,cons_date,time_slot
+    from T_BAS_PD_GH where hospital_id=#{hospitalId} and depart_id=#{departId} and time_slot=#{timeSolt} and cons_date 
+    BETWEEN #{consDate} AND (SELECT TIMESTAMPADD(DAY, 7, #{consDate})) GROUP BY cons_date
+  </select>
+  <select id="queryPDList" resultMap="pdGhVO" parameterType="com.qazit.register.model.AppPdGhVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_BAS_PD_GH where hospital_id=#{hospitalId} and depart_id=#{departId} and cons_date=#{consDate} and time_slot=#{timeSolt}
+  </select>
+</mapper>

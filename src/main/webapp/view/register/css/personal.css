@@ -1,0 +1,80 @@
+/*字体图标*/
+.icon-icon{
+    color:#808080;
+}
+.icon-zhanghao{
+    color:#F05E4B;
+}
+.icon-zhanghaoanquan1{
+    color:#FEA457;
+}
+.icon-jiating{
+    color:#89D043;
+}
+.icon-xiaoshoujiluchaxun{
+    color:#00D1A4;
+}
+.icon-mianzeshengming{
+    color:#FEA356;
+}
+.icon-guanyuwomen1{
+    color:#89D043;
+}
+.icon-changjianwenti{
+    color:#FF6991;
+}
+.icon-zaixianbangzhu{
+    color:#FF3334;
+}
+/*个人中心*/
+/* .hs_personal{
+ margin-bottom:1.4rem;
+} */
+.hs_personal_main.hs_personal_account{
+    margin-top:1.56rem;
+}
+/*个人信息*/
+.hs_personal_main,.hs_systemManage_main{
+    margin-top:0.6rem;
+    margin-left:0.2rem;
+    margin-right:0.2rem;
+    border-radius: 0.08rem;
+    -webkit-border-radius:0.08rem;
+    border: 1px solid #dddddd;
+    background-color: #fff;
+    color:#454545;
+}
+.hs_personal_main .table,.hs_systemManage_main .table{
+    margin:0;
+    font-size: 0.26rem;
+}
+.hs_personal_main .table>tbody>tr,.hs_systemManage_main .table>tbody>tr{
+    cursor: pointer;
+}
+.hs_personal_main .table>tbody>tr>a,.hs_systemManage_main .table>tbody>tr>a{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.hs_personal_main .table>tbody>tr:first-child td,.hs_systemManage_main .table>tbody>tr:first-child td{
+    border-top: none;
+}
+.hs_personal_main .table>tbody>tr>td:first-child,.hs_systemManage_main .table>tbody>tr>td:first-child{
+    width: 0.4rem;
+}
+
+/*退出登录*/
+.hs_personal_logOff{
+    padding-left:0.2rem;
+    padding-right:0.2rem;
+    width: 100%;
+    position: absolute;
+    bottom:0.20rem;
+}
+.hs_personal_logOff .btn{
+    width: 100%;
+}
+.hs_personal_logOff a{
+	color:#fff;
+}

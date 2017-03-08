@@ -1,0 +1,59 @@
+.hs_nav{
+    max-width: 720px;
+    min-width: 320px;
+    width:100%;
+    margin:0 auto;
+}
+/*图片*/
+.hs_nav_img{
+    margin-top:1.36rem;
+}
+.hs_nav_img img{
+    height: 3rem;
+    width: 100%;
+}
+/*分类*/
+.hs_nav_classify{
+    border: 1px solid #dddddd;
+}
+.col-xs-4,.row{
+    padding: 0;
+    margin: 0;
+}
+.hs_nav_classify  li  a{
+    display: block;
+    height:0.7rem;
+    line-height: 0.7rem;
+    font-size: 0.26rem;
+    border-right:1px solid #dddddd;
+    background-color: #fff;
+}
+.hs_nav_classify  li  a.hs_nav_classify_top{
+    border-top: 1px solid #dddddd;
+}
+
+/*具体路线*/
+.hs_nav_route{
+    margin: 0.2rem;
+    border:1px solid #dddddd;
+    background-color: #fff;
+    border-top-left-radius:0.1rem;
+    border-top-right-radius:0.1rem;
+}
+.hs_nav_route h2{
+    height: 0.7rem;
+    line-height: 0.7rem;
+    font-size: 0.3rem;
+    border-bottom:1px solid #dddddd;
+    border-top-left-radius:0.1rem;
+   border-top-right-radius:0.1rem;
+    background: rgba(204,204,204,0.7);
+    /*color:#000000;*/
+}
+.hs_nav_route .hs_nav_route_content{
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;
+    line-height: 0.4rem;
+    height:3rem;
+    font-size: 0.26rem;
+}

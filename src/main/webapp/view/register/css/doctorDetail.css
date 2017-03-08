@@ -1,0 +1,75 @@
+.hs_doctorDel{
+    max-width: 720px;
+    min-width: 320px;
+    margin:0 auto;
+    width: 100%;
+}
+.row,.col-xs-4,.col-xs-8{
+    padding:0;
+    margin:0;
+}
+.hs_doctorDel_info{
+    margin-top:0.96rem;
+    height:2.8rem;
+    background: url("../img/bg.jpg") no-repeat;
+    position: relative;
+}
+.hs_doctorDel_info>div{
+    position: relative;
+}
+.hs_doctorDel_info img{
+    width: 1.8rem;
+    height: 1.8rem;
+    position: absolute;
+    top:50%;
+    left:50%;
+   transform: translate(-50%,30%);
+    -webkit-transform: translate(-50%,30%);
+}
+.hs_doctorDel_info ul{
+    margin-top:0.88rem;
+}
+.hs_doctorDel_info li{
+    color:#fff;
+}
+.hs_doctorDel_info li h4{
+    font-size:0.32rem;
+    font-weight: 700;
+    line-height: 0.5rem;
+}
+.hs_doctorDel_info li p{
+    line-height:0.4rem ;
+    font-size: 0.26rem;
+}
+
+/*个人简介*/
+.hs_doctorDel_perfile, .hs_doctorDel_perfileDel,.hs_doctorDel_prize{
+    margin-top:0.2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+
+}
+.hs_doctorDel_perfile h4,.hs_doctorDel_perfileDel h4,.hs_doctorDel_prize h4{
+    height:0.8rem;
+    line-height: 0.8rem;
+    border-bottom: 1px solid #dddddd;
+    font-size: 0.30rem;
+    padding-left:0.2rem;
+    color:black;
+}
+
+.hs_doctorDel_perfile p,.hs_doctorDel_perfileDel p,.hs_doctorDel_prize p{
+    padding-left:0.2rem;
+    text-indent: 2em;
+    font-size: 0.26rem;
+    margin-top:0.2rem;
+    line-height: 0.4rem;
+    margin-bottom:0.2rem;
+}
+
+/*返回键*/
+.hs_doctorDel .topBar i{
+    color:#fff;
+    font-size: 0.3rem;
+}

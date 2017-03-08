@@ -1,0 +1,108 @@
+
+<div ng-include="'ghheader.html'"></div>
+            <div class="hsreg">
+                <div class="container">
+                    <!-- 导航条 -->
+                    <div class="hsReg_new">
+                        <h3>新用户注册</h3>
+                    </div>
+                    <!-- 注册进度条 -->
+                    
+                    <!-- 注册内容 -->
+                    <div class="hsReg_cont">
+                    	<form name="registerForm" novalidate class="form-horizontal">
+                        <table>
+                            <tr>
+                                <td class="hsReg_cont_text">真实姓名</td>
+                                <td class="hsReg_cont_form">
+                                    <input type="text" placeholder="请输入您的真实姓名" class="form-control" 
+                                    ng-model="webUser.realname" name="realname" required>
+                                    <span class="hsReg_cont_tipName tip" ng-show="registerForm.webUser.realname.$dirty && registerForm.webUser.realname.$invalid">
+                                        <span class="text-danger" ng-show="registerForm.webUser.realname.$error.required">真实姓名不能为空</span>
+                                        <i class="icon iconfont icon-x"></i>
+                                        	请输入真实姓名
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hsReg_cont_text">性别</td>
+                                <td class="hsReg_cont_form sex">
+                                    <label for="male">男</label><input type="radio" id="male" ng-value="1" ng-checked="true" name="gender1" ng-model="webUser.gender"/>
+                                     <label for="female" >女</label><input type="radio" id="female" ng-value="2" name="gender1" ng-model="webUser.gender"/>
+                                </td>
+                            </tr>
+                            
+                             <tr>
+                                <td class="hsReg_cont_text">身份证号</td>
+                                <td class="hsReg_cont_form">
+                                    <input type="text" class="ID" ng-model="webUser.identifynumber" placeholder="请输入证件号码">
+                                    <span class="hsReg_cont_tipID tip">
+                                        <i class="icon iconfont icon-x"></i>
+                                        请输入正确的证件号码
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hsReg_cont_text">设置密码</td>
+                                <td class="hsReg_cont_form">
+                                    <input type="text" class="password" placeholder="请输入6~16位密码" 
+                                    ng-model="webUser.userpassword" required>
+                                    <span class="hsReg_cont_tipPsd tip">
+                                        <i class="icon iconfont icon-x"></i>
+                                        请输入6~16位密码
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hsReg_cont_text">确认密码</td>
+                                <td class="hsReg_cont_form">
+                                    <input type="text" class="surePsd" ng-model="webUser.userpassword2" onpaste="return false"  placeholder="请再次确认密码">
+                                    <span class="hsReg_cont_tipSurePsd tip" >
+                                        <i class="icon iconfont icon-x"></i>
+                                        请再次输入密码
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hsReg_cont_text">手机号码</td>
+                                <td class="hsReg_cont_form">
+                                    <input type="text" ng-model="webUser.cellphonenumber" name="cellphonenumber" placeholder="请输入手机号" required>
+                                      <span ng-show="registerForm.webUser.cellphonenumber.$dirty && registerForm.webUser.cellphonenumber.$invalid">
+                                        <i class="icon iconfont icon-x"></i>
+                                        请输入正确的手机号
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hsReg_cont_text">验证码</td>
+                                <td class="hsReg_cont_form">
+                                    <input type="text" class="code">
+                                    <button class=" btn indetCode">获取验证码</button>
+                                    <span class="hsReg_cont_tipSurePsd tip">
+                                        <i class="icon iconfont icon-x"></i>
+                                        请输入手机验证码
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hsReg_cont_agg">
+                                <td></td>
+                                <td>
+                                    <input type="checkbox" checked class="agree">本人同意<a href="#">《预约挂号服务协议》</a>
+                                    <span class="hsReg_cont_tipSurePsd tip">
+                                        <i class="icon iconfont icon-x"></i>
+                                        请同意服务协议
+                                    </span>
+                                </td>
+                            </tr>  
+                            <tr class="hsReg_cont_btn">
+                                <td></td>
+                                <td>
+                                    <button class="btn " ng-disabled="registerForm.$invalid " ng-click="signup()">注册</button>
+                                </td>
+                            </tr>
+                        </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+<div ng-include="'ghfooter.html'"></div>

@@ -1,0 +1,181 @@
+<div class="p25">
+	<div class="title">信息发布</div>
+
+	<div class="conbar">
+
+		<form id="mssagePushForm" class="p18 form-inline">
+			<div class="conbar-title bold pt20">编辑发送内容</div>
+
+			<div class="mt15">
+				<div id="btnImportTemp" class="btn btn-info">模板导入</div>
+				<div id="btnClearCont" class="btn btn-info">清空内容</div>
+			</div>
+
+			<div class="mt15">
+				<textarea id="modelContent" readonly="readonly" name="modelContent" class="form-control w100 h200px"></textarea>
+				<input type="hidden" name="modelId" value="">
+			</div>
+
+			<div class="conbar-title bold pt20">收信人信息</div>
+			<div class="mt15">
+				<div id="btnClass" class="btn-group">
+					<div id="btnAlAdd" class="btn btn-info" type="1">通过通讯录添加(院内)</div>
+					<div class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+						<span class="caret"></span>
+						<span class="sr-only">Toggle Dropdown</span>
+					</div>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#" type="1">通过通讯录添加(院内)</a></li>
+						<li><a href="#" type="2">通过通讯录添加(院外)</a></li>
+						<li><a href="#" type="3">通过通讯录添加(患者)</a></li>
+					</ul>
+				</div>
+
+				<div id="btnImportPerson" class="btn btn-info">导入收信人</div>
+
+			</div>
+
+			<div id="mssagePush" class="ms-controller" ms-controller="mssagePush">
+
+				<div class="nodata" ms-if="!data.length">暂无数据</div>
+
+				<div class="of-auto mt15" ms-if="data.length">
+					<table class="mytable">
+						<thead>
+						<tr>
+							<th>姓名</th>
+							<th>手机号</th>
+						</tr>
+						</thead>
+
+						<tbody  id="checks-form">
+						<tr ms-repeat="data">
+							<td>{{el.name}}</td>
+							<td>{{el.telphone}}</td>
+						</tr>
+						</tbody>
+
+					</table>
+				</div>
+
+			</div>
+
+			<div class="conbar-title bold pt20">免打扰信息</div>
+			<div id="btnSelectDisturb" class="btn btn-info mt15">选择免打扰</div>
+
+			<div id="disturb_" class="ms-controller" ms-controller="disturb_">
+
+				<div class="nodata" ms-if="!data.length">暂无数据</div>
+
+				<div class="of-auto mt15" ms-if="data.length">
+					<table class="mytable" >
+						<thead>
+						<tr>
+							<th>姓名</th>
+							<th>手机号</th>
+						</tr>
+						</thead>
+
+						<tbody>
+						<tr ms-repeat="data">
+							<td>{{el.name}}</td>
+							<td>{{el.telphone}}</td>
+						</tr>
+						</tbody>
+
+					</table>
+				</div>
+
+			</div>
+
+			<div class="conbar-title bold pt20">发送规则配置</div>
+			<div class="mt15" id="rule" class="ms-controller" ms-controller="rule">
+				<!--<div class="form-group">
+                    <label class="w80">发送方式：</label>
+                    <select name="" class="form-control">
+                        <option value="短信">短信</option>
+                        <option value="app端">app端</option>
+                        <option value="微信">微信</option>
+                    </select>
+                </div>-->
+
+				<div class="form-group ml10">
+					<label class="w80">发送规则：</label>
+					<label>
+						<input type="radio" name="sendType" value="1" ms-duplex-string="type">
+						实时发送
+					</label>
+
+					<label class="ml10">
+						<input type="radio" name="sendType" value="2" ms-duplex-string="type">
+						定时发送
+					</label>
+
+					<label class="ml10">
+						<input type="radio" name="sendType" value="3" ms-duplex-string="type">
+						自定义发送
+					</label>
+
+				</div>
+				<br>
+
+				<div class="form-group mt10 ml10" ms-if="type == 2">
+					<select name="type" class="form-control" ms-duplex="cycle">
+						<option value="1">仅一次</option>
+						<option value="2">每天</option>
+						<option value="3">每周</option>
+						<option value="4">每月</option>
+					</select>
+
+					<div class="inlineblock" ms-if="cycle == 1">
+						<input type="text" class="form-control ml10" id="onceTime" name="cTimes" placeholder="发送时间">
+					</div>
+
+					<div class="inlineblock" ms-if="cycle == 2">
+						<input type="text" class="form-control ml10" id="dayTime" name="time" placeholder="发送时间">
+						<input type="text" class="form-control ml10" id="dayStartTime" name="startTime" placeholder="起始时间">
+						<input type="text" class="form-control ml10" id="dayEndTime" name="endTime" placeholder="终止时间">
+					</div>
+
+					<div class="inlineblock" ms-if="cycle == 3">
+						<select name="weak" class="form-control ml10" >
+							<option value="0">周日</option>
+							<option value="1">周一</option>
+							<option value="2">周二</option>
+							<option value="3">周三</option>
+							<option value="4">周四</option>
+							<option value="5">周五</option>
+							<option value="6">周六</option>
+						</select>
+						<input type="text" class="form-control ml10" id="weakTime" name="point" placeholder="发送时间">
+						<input type="text" class="form-control ml10" id="weekStartTime" name="startTime" placeholder="起始时间">
+						<input type="text" class="form-control ml10" id="weekEndTime" name="endTime" placeholder="终止时间">
+					</div>
+
+					<div class="inlineblock" ms-if="cycle == 4">
+						<input type="text" class="form-control ml10" id="monthTime" name="time" placeholder="发送时间">
+						<input type="text" class="form-control ml10" id="monthStartTime" name="startTime" placeholder="起始时间">
+						<input type="text" class="form-control ml10" id="monthEndTime" name="endTime" placeholder="终止时间">
+					</div>
+				</div>
+
+				<div class="form-group mt10 ml10" ms-if="type == 3">
+					<div id="timeBar" class="fl">
+						<div class="time-item mb10">
+							<input type="text" class="form-control" name="cTimes" placeholder="设置自定义时间">
+							<i class="fa fa-remove ml5" title="删除该项"></i>
+						</div>
+					</div>
+					<div id="addTimeItem" class="btn btn-info fa fa-plus fl ml30">增加一条</div>
+				</div>
+			</div>
+
+
+			<button id="btn-addnews" class="btn btn-primary mt15 ml10">发送</button>
+		</form>
+
+
+	</div>
+
+</div>
+

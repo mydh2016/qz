@@ -1,0 +1,55 @@
+
+        <div>
+        <div ng-include="'ghheader.html'"></div>
+            <div class="container">
+                <div class="hsRegistion">
+                    <!-- 导航条 -->
+                    <div class="hsRegistion_navBar">
+                        <ul class="nav nav-pills" role="tablist">
+                          <li role="presentation" class="{{keshiClass}}"><a ui-sref="appoint.dept">预约挂号</a></li>
+                          <li role="presentation" class="{{jieshaoClass}}"><a ui-sref="appoint.hospital">医院介绍</a></li>
+                          <li role="presentation" class="{{yishengClass}}"><a ui-sref="appoint.doctor">医生介绍</a></li>
+                          <li class="pull-right chooseOthers"><a ui-sref="appointHs">选择其他医院</a></li>
+                        </ul>
+                    </div>
+                    <!-- 预约医院信息 -->
+                    <div class="hsRegistion_info">
+                     
+                            <div class="hsRegistion_info_title">
+                                  <a href="#"> <h3>{{hs.hospitalName}}<small>三级甲等</small></h3> </a>
+                            </div>  
+                            <ul class="clearfix">
+                                <li class="hsRegistion_info_img pull-left">
+                                    <a href="#"><img src="./../{{hs.picAddr}}" alt="医院"></a>
+                                </li>
+                                <li class="hsRegistion_info_content pull-left">
+                                    <ol >
+                                        <li >
+                                            <i class="icon iconfont icon-ditu1"></i>
+                                            <p>{{hs.hospitalAddress}}</p>
+                                        </li>
+                                        <li >
+                                            <i class="icon iconfont icon-phone"></i>
+                                            <p>咨询电话：{{hs.telNumber}}</p>
+                                        </li>
+                                        <!-- 
+                                        <li>
+                                            <i class="icon iconfont icon-phone icon-sousuo-sousuo"></i>
+                                            <p>东院：106,108,110,111,116,684,685到东单路口北； 41,104快，814到东单路口南； 1,52,728,802到东单路口西；20,25,37，39,到东单路口东；103,104,420，803到新东安市场；地铁1、5号线到东单。西院：68到辟才胡同东口；更多乘车路线详见须知 </p>
+                                        </li>
+                                         -->
+                                    </ol>
+                                </li>
+                                <li class="hsRegistion_info_map pull-right" id="allmap">
+                                    
+                                </li>
+                            </ul>
+                       
+                    </div>
+                    <!-- 科室 -->
+                    <div ui-view></div>
+                    
+                </div>
+            </div>
+            <div ng-include="'ghfooter.html'"></div>
+        </div>

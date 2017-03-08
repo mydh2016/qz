@@ -1,0 +1,166 @@
+.hsRegistion{
+    font-family: "微软雅黑";
+}
+/*导航栏*/
+.hsRegistion_navBar {
+    border-bottom:4px solid #4068a5;
+    background-color: #f5f5f5;
+}
+.hsRegistion_navBar .nav-pills > li > a {
+    border-radius: 0;
+    font-size: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+.hsRegistion_navBar .nav-pills >.chooseOthers>a{
+    text-decoration: underline;
+}
+.hsRegistion_navBar .nav-pills >.chooseOthers>a:hover{
+    color:#4068a5;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+    background-color: #4068a5;
+    
+}
+/*预约医院信息*/
+.hsRegistion_info{
+    padding-left:20px;
+    padding-right:20px;
+    background-color: #f5f5f5;
+}
+.hsRegistion_info_title{
+    border-bottom: 1px solid #dddddd;
+}
+.hsRegistion_info_title>a:hover{
+    color:#4068a5;
+}
+.hsRegistion_info_title h3{
+    line-height: 52px;
+    font-size: 18px;
+    font-family: "微软雅黑";
+}
+.hsRegistion_info_title h3 small{
+    margin-left: 14px;
+    color:#fb7e00;
+}
+.hsRegistion_info>ul{
+    padding:20px 0;
+}
+.hsRegistion_info .hsRegistion_info_img{
+    padding-right: 30px;
+}
+.hsRegistion_info .hsRegistion_info_img img{
+    width: 212px;
+    height: 164px;
+    overflow: hidden;
+}
+.hsRegistion_info_content{
+    margin-left: 20px;
+    width: 580px;
+}
+.hsRegistion_info_content li{
+    padding:10px 0;
+    position: relative;
+}
+.hsRegistion_info_content li i{
+    position: absolute;
+    top:50%;
+    left:-24px;
+    margin-top: -11px;
+    color:#136fc2;
+}
+.hsRegistion_info_content li i.icon-sousuo-sousuo{
+    top:0;
+    margin-top: 9px;
+}
+.hsRegistion_info_content li p{
+    line-height: 20px;
+     color:#585657;
+}
+.hsRegistion_info_map{
+    width: 252px;
+    height: 164px;
+    border: 1px solid #000;
+}
+/*选择科室*/
+.row,.col-xs-2,.col-xs-4,.col-xs-10{
+    margin:0;
+    padding:0;
+}
+.hsRegistion_department{
+    width: 862px;
+    margin-top: 20px;
+}
+.hsRegistion_department table{
+    width: 100%;
+}
+.hsRegistion_department  .hsRegistion_department_title{
+     background-color:#ecf0f6;
+}
+.hsRegistion_department h2{
+    width: 100%;
+    font-size: 16px;
+    color:#000;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.hsRegistion_department .hsRegistion_department_main{
+    text-align: center;
+    font-size: 14px;
+   border-bottom:4px solid #fff;
+}
+.hsRegistion_department .hsRegistion_department_main_left{
+    background-color: #b2c2db;
+    font-size: 16px;
+}
+.hsRegistion_department .hsRegistion_department_main_right{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #d9e1ed;
+}
+.hsRegistion_department .hsRegistion_department_main_right a{
+    line-height: 30px;
+    font-size: 14px;
+    display: block;
+}
+.hsRegistion_department .hsRegistion_department_main_right a:hover{
+    color:#4068a5;
+}
+/*预约规则*/
+.hsRegistion_rule{
+    margin-top:20px;
+    width: 270px;
+}
+.hsRegistion_rule .hsRegistion_rule_title{
+    background-color: #ecf0f6;
+}
+.hsRegistion_rule .hsRegistion_rule_title h3{
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+}
+.hsRegistion_rule .hsRegistion_rule_content ul{
+    border:1px solid #ecf0f6;
+    border-top: none;
+    width: 100%;
+    height: 200px;
+    overflow-x:hidden;
+    overflow-y:scroll;  
+    padding:10px 10px 40px;
+}
+.hsRegistion_rule .hsRegistion_rule_content ul li{
+    line-height: 24px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.hsRegistion_rule .hsRegistion_rule_content ul i{
+    color:#000;
+     display: inline-block;
+     vertical-align: top;
+}
+.hsRegistion_rule .hsRegistion_rule_content ul span{
+    color:#585657;
+    display: inline-block;
+    width: 164px;
+}

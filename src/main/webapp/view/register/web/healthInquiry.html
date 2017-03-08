@@ -1,0 +1,50 @@
+<div ng-include="'ghheader.html'"></div>
+        <div class="hsNews">
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">健康咨询</div>
+                    <div class="panel-body hsNews_list">
+                        <ul>
+                            <li class="clearfix" ng-repeat="med in medList">
+                                <h4 class="hsNews_list_title pull-left">
+                                    <a ui-sref="healthInquiryDel({contentId:med.publish_content_id})">
+                                        <span>●</span>{{med.publish_content_name}}
+                                    </a>
+                                </h4>
+                                <div class="pull-right hsNews_list_info">
+                                    <span class="hsNtcList_list_info_time ">
+                                        {{med.publishDate}}
+                                    </span>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    <div class="hsNews_page">
+                        <nav aria-label="Page navigation">
+                          <ul class="pagination">
+                            <li class="disabled">
+                              <a href="#" aria-label="Previous">
+                                <span aria-hidden="true">上一页</span>
+                              </a>
+                            </li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li>
+                              <a href="#" aria-label="Next">
+                                <span aria-hidden="true">下一页</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </nav>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div ng-include="'ghfooter.html'"></div>

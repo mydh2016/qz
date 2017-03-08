@@ -1,0 +1,52 @@
+<div id="disturb_list" class="ms-controller" ms-controller="disturb_list">
+    <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+    <form id="disturbForm" class="of-auto" ms-if="listData.length">
+        <table class="mytable">
+            <thead>
+            <tr>
+                <th></th>
+                <th>姓名</th>
+                <th>类别</th>
+                <th>手机号码</th>
+            </tr>
+            </thead>
+
+            <tbody ms-each="listData" id="checks-form">
+            <tr>
+                <td><input class="_check" type="checkbox" name="ids" ms-attr-value="el.id"></td>
+                <td>{{el.name}}</td>
+                <td>{{el.category}}</td>
+                <td>{{el.telphone}}</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </form>
+
+    <div class="text-center border-t-gray" ms-if="listData.length">
+        <div class="mytable-pagenum inlineblock">
+            显示
+            <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                <option selected="selected">10</option>
+                <option>15</option>
+                <option>20</option>
+            </select>
+            条
+        </div>
+
+        <ul class="pagination v-middle ml10">
+            <li class="page-last">
+                <a href="#"><span aria-hidden="true">«</span></a>
+                <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+            </li>
+            <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                <a href="#">{{el}}</a>
+            </li>
+            <li class="page-next">
+                <a href="#"><span aria-hidden="true">»</span></a>
+                <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+            </li>
+        </ul>
+    </div>
+</div>

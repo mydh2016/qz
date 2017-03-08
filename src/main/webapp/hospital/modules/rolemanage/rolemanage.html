@@ -1,0 +1,89 @@
+<div class="p25">
+    <div class="title">医院角色管理</div>
+
+    <div class="conbar">
+        <div id="rolelist" class="ms-controller" ms-controller="rolelist">
+
+            <form id="role-search" class="form-inline p30-20">
+                <div>
+                    <div class="form-group">
+                        <label for="rolename">角色名</label>
+                        <input type="text" class="form-control" id="roleName" name="roleName" placeholder="搜索角色名...">
+                    </div>
+
+                    <div class="form-group response-ml10">
+                        <label for="dateStart">创建时间</label>
+                        <input type="text" class="form-control" id="dateStart" name="dateStart" placeholder="开始时间...">
+                        -
+                        <input type="text" class="form-control" id="dateEnd" name="dateEnd" placeholder="结束时间...">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary fa fa-search">搜索</button>
+                </div>
+
+            </form>
+
+            <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+            <div class="of-auto" ms-if="listData.length">
+                <table class="mytable" >
+                    <thead>
+                    <tr>
+                        <th>角色名称</th>
+                        <th>创建时间</th>
+                        <th>描述</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+
+                    <tbody ms-each="listData">
+                    <tr ms-attr-data-roleId="{{el.roleId}}" ms-attr-data-status="{{el.isDeleted}}" >
+                        <td>{{el.roleName}}</td>
+                        <td>{{el.createTime | date('y-M-dd HH:mm')}}</td>
+                        <td>{{el.description}}</td>
+                        <td>
+                            <div class="mytable-console">
+                                <i class="role-edit fa fa-edit" title="编辑"></i>
+                                <i class="role-delete fa fa-trash-o" title="删除"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="p18">
+                <div id="add-role" class="btn btn-success fa fa-plus ml10">添加角色</div>
+            </div>
+
+            <div class="text-center border-t-gray" ms-if="listData.length">
+                <div class="mytable-pagenum inlineblock">
+                    显示
+                    <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                        <option selected="selected">10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
+                    条
+                </div>
+
+                <ul class="pagination v-middle ml10">
+                    <li class="page-last">
+                        <a href="#"><span aria-hidden="true">«</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+                    </li>
+                    <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                        <a href="#">{{el}}</a>
+                    </li>
+                    <li class="page-next">
+                        <a href="#"><span aria-hidden="true">»</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</div>

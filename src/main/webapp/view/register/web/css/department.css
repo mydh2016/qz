@@ -1,0 +1,222 @@
+.hsDepartment{
+    font-family: "微软雅黑";
+    margin-top: 20px;
+}
+/*列表*/
+.hsDepartment .nav-tabs{
+    margin-bottom: 40px;
+}
+.hsDepartment .nav-tabs li a{
+    color:#000;
+    font-size: 16px;
+}
+.hsDepartment .nav-tabs .backList a{
+    text-decoration: underline;
+}
+.hsDepartment .nav-tabs .backList a:hover{
+    color:#335197;
+}
+/*科室排班表*/
+.hsDepartment table{
+    width: 823px;
+    border:1px solid #4068a5;
+    font-size: 16px;
+}
+.hsDepartment table td,.hsDepartment table th{
+    border:1px solid #4068a5;
+}
+.hsDepartment table td{
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    width: 100px;
+    overflow: hidden;
+    position: relative;
+}
+.hsDepartment table th{
+    background-color: #b2c2db;
+}
+.hsDepartment table th li,.hsDepartment table td li{
+    float:left;
+    border-right:1px solid #4068a5;
+    width: 100px;
+    height: 100%;
+}
+.hsDepartment table td li{
+    line-height: 80px;
+    font-size: 16px;
+}
+.hsDepartment table .hsDepartment_table_date>div,.hsDepartment table .hsDepartment_table_cont>div{
+    overflow: hidden;
+    width: 700px;
+    position: relative;
+    height: 60px;
+}
+.hsDepartment table .hsDepartment_table_cont>div {
+    height: 80px;
+}
+.hsDepartment table .hsDepartment_table_date ul, .hsDepartment table .hsDepartment_table_cont ul{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 60px;
+    text-align: center;
+    width: 3500px;
+}
+.hsDepartment table .hsDepartment_table_cont ul {
+    height: 80px;
+    line-height: 80px;
+}
+.hsDepartment table  ul .right{
+    border-right:none;
+}
+.hsDepartment table  ul .left{
+    border-left: none;
+}
+.hsDepartment table .hsDepartment_table_date p{
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: 400;
+}
+.hsDepartment table .hsDepartment_table_appTime,.hsDepartment table .hsDepartment_table_rowspan{
+    width: 60px;
+    background-color: #b2c2db;
+}
+.hsDepartment table .overplus a{
+    background-color: #b2c2db;
+    color:#fff;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+    font-size: 16px;
+}
+.hsDepartment table .full{
+    background-color: #f5f5f5;
+}
+/*箭头*/
+.hsDepartment table .hsDepartment_table_rowZuo,.hsDepartment table .hsDepartment_table_rowYou{
+    background-color: #fff;
+    text-align: center;
+    color:#4068a5;
+    cursor: pointer;
+}
+/*预约规则*/
+.hsDepartment_rule{
+    width: 300px;
+    height: 305px;
+}
+.hsDepartment_rule .hsDepartment_rule_title{
+   background-color: #b2c2db;
+    
+}
+.hsDepartment_rule .hsDepartment_rule_title h3{
+    font-size: 16px;
+    line-height: 60px;
+    text-align: center;
+}
+.hsDepartment_rule .hsDepartment_rule_content ul{
+    border:1px solid #ecf0f6;
+    border-top: none;
+    width: 100%;
+    height: 245px;
+    overflow-x:hidden;
+    overflow-y:scroll;  
+    padding:10px 10px 40px;
+}
+.hsDepartment_rule .hsDepartment_rule_content ul li{
+    line-height: 24px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.hsDepartment_rule .hsDepartment_rule_content ul i{
+    color:#000;
+     display: inline-block;
+     vertical-align: top;
+}
+.hsDepartment_rule .hsDepartment_rule_content ul span{
+    color:#585657;
+    display: inline-block;
+    width: 168px;
+}
+
+/*预约医生*/
+.hsDepartment_appDoc{
+    width: 100%;
+    margin-top: 34px;
+    border:1px solid #dddddd;
+    border-top: none;
+}
+.hsDepartment_appDoc .hsDepartment_appDoc_tip{
+    border-top:1px solid #dddddd;
+    height:80px;
+    line-height: 80px;
+    font-size: 16px;
+    color:#b7b5b6;
+    text-align: center;
+}
+.hsDepartment_appDoc_lis li{
+    padding:20px 40px;
+    border-top:1px solid #dddddd;
+
+}
+.hsDepartment_appDoc_lis li:hover{
+    background-color: #e7f6fc;
+}
+.hsDepartment_appDoc_lis_img img{
+    width: 100px;
+    height: 100px;
+    margin-left: 40px;
+}
+.hsDepartment_appDoc_lis_cont{
+    width: 500px;
+    padding-left: 30px;
+    margin-top: 10px;
+}
+.hsDepartment_appDoc_lis_cont h3{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 40px;
+}
+.hsDepartment_appDoc_lis_cont p,.hsDepartment_appDoc_lis_money p{
+    font-size: 16px;
+    line-height: 30px;
+    color:#585657;
+}
+.hsDepartment_appDoc_lis_money {
+    padding: 20px 50px;
+    border-right: 1px dashed #dddddd;
+    border-left: 1px dashed #dddddd;
+}
+.hsDepartment_appDoc_lis_money .money{
+    color:#d65454;
+}
+.hsDepartment_appDoc_lis_money .overplus{
+    color:#d36d00;
+}
+.hsDepartment_appDoc_lis_btn{
+    padding-top:30px;
+    padding-right: 40px;
+}
+.hsDepartment_appDoc_lis_btn button{
+    width: 100px;
+    height: 40px;
+}
+/*科室介绍*/
+.hsDepartment_introduce {
+    margin-bottom: 40px;
+}
+.hsDepartment_introduce  li{
+    margin-bottom: 20px;
+}
+.hsDepartment_introduce  li h3{
+    font-size: 18px;
+    color:#4068a5;
+    line-height: 50px;
+}
+.hsDepartment_introduce  li p{
+    font-size: 14px;
+    text-indent: 2em;
+    line-height: 30px;
+    margin-bottom: 10px;
+}

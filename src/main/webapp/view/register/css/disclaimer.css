@@ -1,0 +1,12 @@
+.hs_disclaimer_main{
+    margin-top:1.16rem;
+    background-color: #fff;
+    padding:0.2rem;
+}
+.hs_disclaimer_main p{
+    text-indent: 2em;
+    font-size: 0.26rem;
+    margin-top:0.2rem;
+    line-height: 0.4rem;
+    margin-bottom:0.2rem;
+}

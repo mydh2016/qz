@@ -1,0 +1,42 @@
+/*地图*/
+.hs_periphery_main{
+    margin-top: 0.96rem;
+}
+#l-map{height:300px;width:100%;}
+#r-result{width:100%;}
+/*底部导航栏*/
+.row,.col-xs-3{
+    padding: 0;
+    margin: 0;
+}
+footer{
+    position: fixed;
+    bottom:0rem;
+    z-index: 10000;
+    width: 100%;
+}
+footer>ul{
+    border: 1px solid #dddddd;
+}
+footer>ul>li{
+    float:left;
+    height:0.9rem;
+    background-color: #fff;
+    width: 100%;
+    font-size: 0.26rem;
+    text-align: center;
+    line-height: 0.9rem;
+    border-right: 1px solid #dddddd;
+}
+footer>ul>li:last-child {
+    border: none;
+}
+footer>ul>li>a{
+    display:block;
+}
+.active{
+    background-color: #6A8DC3;
+}
+.active a{
+    color:#ffffff;
+}

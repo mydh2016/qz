@@ -1,0 +1,228 @@
+
+<!doctype html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="甘肃挂号平台 挂号 甘肃 登陆"/>
+    <meta name="description" content="甘肃挂号平台登陆"/>
+    <title>医院挂号系统</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./lib/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/recordQuery.css"/>
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <script src="js/recordQuery.js"></script>
+    <!--[if lt IE 9]>
+        <script src="./lib/html5shiv/html5shiv.js"></script>
+        <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+    <body>
+        <div class="hsPersonal">
+            <!-- 头部搜索栏 -->
+            <div class="topBar">
+               <div class="container">
+                   <a href="#" class="topBar_logo">LOGO</a>
+                   <input type="text" >
+                    <a href="#" class="topBar_back">
+                      <i class="icon iconfont icon-fanhuijiantou"></i>
+                      返回首页
+                  </a>
+                  <a href="#" class="topBar_icon"><i class="icon iconfont icon-sousuo-sousuo"></i></a> 
+               </div>
+            </div>
+            <!-- 中间主要内容 -->
+            <div class="container">
+               <!-- 侧边栏 -->
+               <div class="hsPersonal_sliderBar">
+                   <div class="hsPersonal_sliderBar_layer">
+                       <!-- 头像 -->
+                       <div class="hsPersonal_sliderBar_layer_header">
+                           <i class="icon iconfont icon-7"></i>
+                           <h4>刘玉华</h4>
+                       </div>
+                       <!-- 目录 -->
+                       <div class="hsPersonal_sliderBar_layer_cata">
+                           <ul>
+                               <li>
+                                    <i class="icon iconfont icon-wodeshoucang"></i>
+                                    <a href="#">我的收藏</a>
+                                </li>
+                                 <li>
+                                    <i class="icon iconfont icon-personal-family"></i>
+                                    <a href="#">家庭成员</a>
+                                </li>
+                                 <li>
+                                    <i class="icon iconfont icon-zhanghaoanquan"></i>
+                                    <a href="#">账号安全</a>
+                                </li>
+                                 <li>
+                                    <i class="icon iconfont icon-zhanghuguanli"></i>
+                                    <a href="#">账户管理</a>
+                                </li>
+                           </ul>
+                       </div>
+                       <!-- 退出登录 -->
+                       <button >退出登录</button>
+                   </div>
+                </div>
+                <!-- 主要内容 -->
+                <div class="hsPersonal_main">
+                    <!-- 记录查询 -->
+                    <div class="hsRecordQuery">
+                       <!-- 导航栏 -->
+                        <div class="hsRecordQuery_navBar">
+                            <ul class="nav nav-pills" role="tablist">
+                                <li role="presentation" class="active"><a href="#appoint" data-toggle="tab" role="tab">预约挂号记录查询</a></li>
+                                <li role="presentation"><a href="#visit" role="tab" data-toggle="tab">就诊记录查询</a></li>
+                                <li role="presentation " class="pull-right back"><a href="#">返回上一页</a></li>
+                            </ul>
+                        </div>
+                        <!-- 预约就诊记录 -->
+                        <div class="tab-content">
+                        <!-- 预约挂号记录查询 -->
+                             <div role="tabpanel" class="tab-pane active hsRecordQuery_appoint" id="appoint">
+                            <table class="row">
+                                <tr>
+                                    <th class="col-xs-1">姓名</th>
+                                    <th class="col-xs-2">医院</th>
+                                    <th class="col-xs-2">科室</th>
+                                    <th class="col-xs-1">医生</th>
+                                    <th class="col-xs-3">时间</th>
+                                    <th class="col-xs-1">挂号费</th>
+                                    <th class="col-xs-1">状态</th>
+                                    <th class="col-xs-1">二维码</th>
+                                    <th class="col-xs-1">操作</th>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>甘肃人民医院</td>
+                                    <td>精神科</td>
+                                    <td>李时珍</td>
+                                    <td>2017年2月13日上午9点</td>
+                                    <td>7元</td>
+                                    <td>未就诊</td>
+                                    <td class="hsRecordQuery_appoint_img">
+                                        <i class="icon iconfont icon-erweima" data-toggle="modal" data-target=".bs-example-modal-sm"></i> 
+                                    </td>
+                                    <td class="hsRecordQuery_appoint_btn">
+                                        <button class="btn btn-danger pull-right" data-toggle="modal" data-target=".bs-example-modal-sm">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>中国核工业总公司</td>
+                                    <td>妇科</td>
+                                    <td>李时珍</td>
+                                    <td>2017年2月13日上午9点</td>
+                                    <td>7元</td>
+                                    <td>未就诊</td>
+                                    <td class="hsRecordQuery_appoint_img">
+                                       <i class="icon iconfont icon-erweima" data-toggle="modal" data-target=".bs-example-modal-sm"></i>
+                                    </td>
+                                    <td class="hsRecordQuery_appoint_btn">
+                                        <button class="btn btn-danger pull-right" data-toggle="modal" data-target=".bs-example-modal-sm">删除</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 就诊记录查询 -->
+                        <div role="tabpanel" class="tab-pane hsRecordQuery_vis " id="visit">
+                            <table class="row">
+                                <tr>
+                                    <th class="col-xs-1">姓名</th>
+                                    <th class="col-xs-2">医院</th>
+                                    <th class="col-xs-2">科室</th>
+                                    <th class="col-xs-1">医生</th>
+                                    <th class="col-xs-3">时间</th>
+                                    <th class="col-xs-1">挂号费</th>
+                                    <th class="col-xs-1">状态</th>
+                                    <th class="col-xs-1">二维码</th>
+                                    <th class="col-xs-1">操作</th>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>中国核工业</td>
+                                    <td>妇科</td>
+                                    <td>李时珍</td>
+                                    <td>2017年2月13日上午9点</td>
+                                    <td>7元</td>
+                                    <td>已就诊</td>
+                                    <td class="hsRecordQuery_vis_img">
+                                        <i class="icon iconfont icon-erweima" data-toggle="modal" data-target=".bs-example-modal-sm"></i>
+                                    </td>
+                                    <td class="hsRecordQuery_vis_btn">
+                                        <button class="btn btn-danger pull-right" data-toggle="modal" data-target=".bs-example-modal-sm">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>张三</td>
+                                    <td>中国核工业总公司</td>
+                                    <td>妇科</td>
+                                    <td>李时珍</td>
+                                    <td>2017年2月13日上午9点</td>
+                                    <td>7元</td>
+                                    <td>过期</td>
+                                    <td class="hsRecordQuery_vis_img"><i class="icon iconfont icon-erweima" data-toggle="modal" data-target=".bs-example-modal-sm"></i></td>
+                                    <td class="hsRecordQuery_vis_btn">
+                                        <button class="btn btn-danger pull-right" data-toggle="modal" data-target=".bs-example-modal-sm">删除</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- 模态框 -->
+                        <div class="hsRecordQuery_modal ">
+                            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                    <!-- 删除提示框 -->
+                                        <div class="hsRecordQuery_modal_tip">
+                                            <div class="modal-header">
+                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                <h4 class="modal-title">提示！</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>您确认要删除信息吗？</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary">确认</button>
+                                                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                            </div>
+                                        </div>
+                                        <!-- 二维码模态框 -->
+                                        <div class="hsRecordQuery_modal_img">
+                                             <div class="modal-header">
+                                               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="../img/Image1.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+           <!-- 底部说明内容 -->
+           <div class="footerBar">
+               <div class="container">
+                    <p>Copyright©2016&nbsp 京ICP备 10011656号-20</p>
+                    <div class="footerBar_share">
+                      <a href="#"><i class="icon iconfont icon-weixin"></i></a>
+                      <a href="#"><i class="icon iconfont icon-qq"></i></a>
+                      <a href="#"><i class="icon iconfont icon-weibo"></i></a>
+                    </div> 
+               </div>                
+           </div>
+    </body>
+</html>

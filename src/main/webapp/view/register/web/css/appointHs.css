@@ -1,0 +1,48 @@
+.hsAppoint{
+    border:1px solid #dddddd;
+    border-top: none;
+    font-family: "微软雅黑"
+}
+.hsAppoint_hospital{
+    padding:20px 30px 20px 14px;
+    position: relative;
+    border-top: 1px solid #dddddd
+}
+.hsAppoint_hospital:hover{
+    background-color: #e7f6fc;
+}
+
+.hsAppoint .hsAppoint_hospital_img{
+    margin-right: 20px;
+}
+.hsAppoint .hsAppoint_hospital_img img{
+    width: 212px;
+    height: 164px;
+}
+.hsAppoint .hsAppoint_hospital_del{
+
+}
+.hsAppoint .hsAppoint_hospital_del h2{
+    font-size: 16px;
+    color:#000;
+    line-height: 40px;
+}
+.hsAppoint .hsAppoint_hospital_del h2 small{
+    color:#fb7e00
+}
+.hsAppoint .hsAppoint_hospital_del p{
+    color:#8a8a8a;
+    line-height: 34px;
+}
+.hsAppoint .hsAppoint_hospital_del p i{
+    color:#1f76c6;
+}
+
+.hsAppoint .hsAppoint_hospital_now button{
+    background-color: #fd7d00;
+    color:#fff;
+    position: absolute;
+    top:50%;
+    margin-top: -17px;
+    right:30px;
+}

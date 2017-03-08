@@ -1,0 +1,28 @@
+<div ng-include="'ghheader.html'"></div>
+        <div class="hsNewList">
+            <div class="container">
+                  <!-- 导航栏 -->
+                <div class="hsNewList_nav">
+                    <h3>健康咨询</h3>
+                </div>
+                <!-- 新闻内容 -->
+                <div class="hsNewList_main">
+                    <!-- 标题 -->
+                    <h4>{{detail.publish_content_name}}</h4>
+                    <div class="hsNewList_main_info clearfix">
+                            <span class="hsNewList_main_info_time pull-right">
+                                {{detail.publishDate}}
+                            </span>
+                            <span class="hsNewList_main_info_collect pull-right current">
+                                <!-- <i class="icon iconfont icon-wodeshoucang" id="collect"></i>
+                                收藏 -->
+                            </span>
+                    </div>
+                    <!-- 内容 -->
+                    <div class="hsNewList_main_cont">
+                        <p>{{detail.description}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div ng-include="'ghfooter.html'"></div>

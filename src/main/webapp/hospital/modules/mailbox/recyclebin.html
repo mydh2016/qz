@@ -1,0 +1,116 @@
+<div class="p25">
+    <div class="title">回收站</div>
+
+    <div class="conbar">
+        <div id="recyclebin" class="ms-controller" ms-controller="recyclebin">
+
+            <form id="al-search" class="form-inline p20">
+                <div>
+                    <div class="form-group">
+                        <label class="text-right">发送人</label>
+                        <input type="text" class="form-control" id="" name="sendName" placeholder="姓名...">
+                    </div>
+					<div class="form-group">
+                        <label class="text-right">短信内容</label>
+                        <input type="text" class="form-control" id="" name="smsContent" placeholder="短信内容...">
+                    </div>
+                </div>
+
+                <div class="mt15">
+                    <div class="form-group">
+                        <label class="text-right">接收号码</label>
+                        <input type="text" class="form-control" id="" name="sendTelphone" placeholder="手机号码...">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="text-right">发送时间</label>
+                        <input type="text" class="form-control" id="dateStart" name="sTime" placeholder="起始时间">
+                        <input type="text" class="form-control ml10" id="dateEnd" name="eTime" placeholder="终止时间">
+                    </div>
+                    
+                </div>
+
+                <div class="mt15">
+                <div class="form-group">
+                        <select name="look">
+                        	<option value="1">查看所有</option>
+                        	<option selected="selected" value="2">只看自己</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary ml20">查询</button>
+                </div>
+
+            </form>
+
+            <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+            <div class="of-auto" ms-if="listData.length">
+                <div class="p18">
+                    <div id="update" class="btn btn-info response-ml10">恢复</div>
+                    <div id="btnDelete" class="btn btn-info response-ml10">删除</div>
+                </div>
+			<form id="selectForm">
+                <table class="mytable" >
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>发送人</th>
+                        <th>发送号码</th>
+                        <th>短信内容</th>
+                        <th>发送时间</th>
+                        <th>接收人</th>
+                    </tr>
+                    </thead>
+
+                    <tbody ms-each="listData" id="checks-form">
+                    <tr ms-attr-data-id="{{el.id}}">
+                        <td><input class="_check" type="checkbox" name="ids" ms-attr-value="el.id+'#'+el.refId+'#'+el.status"></td>
+                        <td>{{el.sendName}}</td>
+                        <td>{{el.sendTelphone}}</td>
+                        <td>{{el.smsContent}}</td>
+                        <td>{{el.sendTime}}</td>
+                        <td>{{el.receiveName}}</td>
+                    </tr>
+                    </tbody>
+
+                </table>
+			</form>
+                <div class="p18">
+                    <div id="allSelect" class="btn btn-success response-ml10">全选</div>
+                    <div id="currentAllSelect" class="btn btn-success response-ml10">当前页全选</div>
+                    <div id="currentInvert" class="btn btn-success response-ml10">当前页反选</div>
+                </div>
+
+            </div>
+
+            <div class="text-center border-t-gray" ms-if="listData.length">
+                <div class="mytable-pagenum inlineblock">
+                    显示
+                    <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                        <option selected="selected">10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
+                    条
+                </div>
+
+                <ul class="pagination v-middle ml10">
+                    <li class="page-last">
+                        <a href="#"><span aria-hidden="true">«</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+                    </li>
+                    <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                        <a href="#">{{el}}</a>
+                    </li>
+                    <li class="page-next">
+                        <a href="#"><span aria-hidden="true">»</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

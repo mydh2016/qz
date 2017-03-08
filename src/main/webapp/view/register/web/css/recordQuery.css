@@ -1,0 +1,205 @@
+.hsPerInfo{
+    font-family: "微软雅黑";
+}
+/*导航栏*/
+.hsPersonal_main_title{
+    border-bottom: 4px solid #4068a5;
+}
+.hsPersonal_main_title h3{
+    padding:6px 20px;
+    font-size: 16px;
+    background-color: #4068a5;
+    color:#fff;
+    display: inline-block;
+}
+.hsPersonal_main_title a{
+    display: inline-block;
+    line-height: 36px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.hsPersonal_main_title a:hover{
+    color:#2a7fcf;
+}
+/*字体图标*/
+.icon-jiaotongtubiaoguochejiluchaxun{
+    font-size: 48px;
+    color:#d65454;
+    margin-left:-24px; 
+}
+.icon-chaxun{
+    font-size: 54px;
+    color:#d28501;
+    margin-left:-27px;
+}
+.icon-call-queue{
+    font-size: 62px;
+    color:#1570c3;
+    margin-left:-31px;
+}
+.icon-iconxianchanghudong{
+    font-size: 74px;
+    color:#1faa71;
+    margin-left:-37px;
+    margin-top: -7px;
+}
+/*中间主要内容*/
+.hsPersonal{
+    font-family: "微软雅黑";
+}
+/*侧边栏*/
+.hsPersonal_sliderBar{
+    background: url(../img/personbg-.jpg) no-repeat;
+    width: 300px;
+    height: 798px;
+    background-size: 100% 100%;
+    color:#fff;
+    float:left;
+}
+.hsPersonal_sliderBar_layer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    background-color: rgb(0,0,0)\0;
+    filter:alpha(opacity=70)\0;
+}
+.hsPersonal_sliderBar_layer a{
+    color: #fff;
+}
+.hsPersonal_sliderBar_layer_header{
+    padding-top:180px;
+    text-align: center;
+}
+/*头像*/
+.hsPersonal_sliderBar_layer_header i{
+    font-size:104px;
+   
+}
+.hsPersonal_sliderBar_layer_header h4{
+    font-size: 18px;
+    line-height: 30px;
+    margin-top:14px;
+}
+/*目录*/
+.hsPersonal_sliderBar_layer_cata{
+    margin-top: 50px;
+}
+.hsPersonal_sliderBar_layer_cata li {
+    line-height: 72px;
+    height: 72px;
+    position: relative;
+}
+.hsPersonal_sliderBar_layer_cata li i{
+    font-size: 32px;
+    position: absolute;
+    left:80px;
+    top:50%;
+    margin-top:-35px;
+}
+.hsPersonal_sliderBar_layer_cata li a{
+    font-size: 18px;
+    display: inline-block;
+    margin-left:141px;
+}
+/*退出登录按钮*/
+.hsPersonal_sliderBar button{
+    width: 197px;
+    height: 56px;
+    margin-left:51px;
+    margin-top:56px;
+    font-size: 22px;
+    background-color: #d13737;
+    border-radius: 4px;
+}
+/*主要内容*/
+.hsPersonal_main{
+    margin-left: 300px;
+    margin-right: 0;
+    padding-top:74px; 
+}
+
+
+/*记录查询*/
+.hsRecordQuery{
+    padding:20px 0 0 20px;
+
+}
+/*导航栏*/
+.hsRecordQuery_navBar {
+    border-bottom:4px solid #4068a5;
+    height: 40px;
+}
+.hsRecordQuery_navBar .nav-pills > li > a {
+    border-radius: 0;
+    font-size: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 36px;
+}
+.hsRecordQuery_navBar .nav-pills >.back>a{
+    text-decoration: underline;
+    padding-right: 0
+}
+.hsRecordQuery_navBar .nav-pills >.back>a:hover{
+    color:#4068a5;
+    background-color: #fff;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+    background-color: #4068a5;
+}
+/*预约挂号记录查询*//*就诊记录查询*/
+.row ,.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4{
+    padding: 0;
+    margin: 0;
+}
+.hsRecordQuery_appoint,.hsRecordQuery_vis{
+    margin-top: 20px;
+    padding-left:10px;
+}
+.hsRecordQuery_appoint table,.hsRecordQuery_vis table{
+    width: 100%;
+}
+.hsRecordQuery_appoint table th,.hsRecordQuery_appoint table td,.hsRecordQuery_vis table th,.hsRecordQuery_vis table td{
+    font-size: 14px;
+    padding:6px 4px 6px 0;
+    line-height: 26px;
+}
+.hsRecordQuery_appoint table th,.hsRecordQuery_vis table th{
+    font-weight: 400;
+    color:#2b7ecc;
+}
+.hsRecordQuery_appoint table .hsRecordQuery_appoint_img i,.hsRecordQuery_vis_img i{
+    font-size: 30px;
+    cursor: pointer;
+}
+.hsRecordQuery_appoint table .hsRecordQuery_appoint_btn .btn,..hsRecordQuery_vis_btn .btn{
+    padding:4px 16px;
+}
+
+/*删除提示*/
+.hsRecordQuery_modal .modal{
+    top:30%;
+    width: 300px;
+    margin:0 auto;
+}
+.hsRecordQuery_modal .hsRecordQuery_modal_tip{
+    display: none;
+}
+.hsRecordQuery_modal .modal .modal-header,.hsRecordQuery_modal .modal .modal-footer{
+    border:0;
+}
+.hsRecordQuery_modal .modal .modal-title{
+    font-size: 24px;
+}
+.hsRecordQuery_modal .modal .modal-body p{
+    font-size: 14px;
+}
+/*二维码模态框*/
+.hsRecordQuery_modal .hsRecordQuery_modal_img{
+    display: none;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.hsRecordQuery_modal .active{
+    display: block;
+}

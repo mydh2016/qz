@@ -1,0 +1,64 @@
+<div class="p25">
+    <div class="title">修改通讯录（患者）</div>
+
+    <div class="conbar">
+        <div id="aleditpatient" class="ms-controller" ms-controller="aleditpatient">
+
+            <form id="aleditpatientForm" class="form-inline p20">
+            <input id="id" type="hidden" name="id" ms-attr-value="data.id">
+                <div class="form-group">
+                    <label class="text-right" for="name">姓名</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="姓名..." ms-attr-value="data.name">
+                </div>
+                <br>
+                <div class="form-group mt15">
+                    <label class="text-right" for="sex">性别</label>
+
+                    <select id="sex" name="sex" class="form-control" ms-duplex="sex">
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group mt15">
+                    <label class="text-right" for="telphone">手机号码</label>
+                    <input type="text" class="form-control" id="telphone" name="telphone" placeholder="手机号码..." ms-attr-value="data.telphone">
+                </div>
+                <br>
+
+                <div class="form-group mt15">
+                    <label class="text-right" for="dateBirth">出生日期</label>
+                    <input type="text" class="form-control" id="dateBirth" name="dateBirth" placeholder="出生日期" ms-attr-value="data.dateBirth">
+                </div>
+                <br>
+                <div class="form-group mt15">
+                    <label class="text-right" for="sex">类别</label>
+                    <select id="category" name="category" class="form-control" ms-duplex="data.category">
+                        <option ms-repeat="type" ms-attr-value="el">{{el}}</option>
+                    </select>
+                </div>
+
+                <br>
+                <div class="form-group mt15">
+                    <label class="text-right" for="address">地址</label>
+                    <input type="text" class="form-control" id="address" name="address" placeholder="地址" ms-attr-value="data.address">
+                </div>
+
+                <br>
+                <div class="form-group mt15">
+                    <label class="text-right" for="unit">单位</label>
+                    <input id="unit" name="unit" class="form-control" ms-attr-value="data.unit">
+                </div>
+
+                <div class="mt15">
+                    <button type="submit" class="btn btn-primary">保存</button>
+                </div>
+
+            </form>
+
+        </div>
+
+
+    </div>
+
+</div>

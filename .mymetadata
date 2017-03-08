@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="qazitem"
+  id="myeclipse.1445507802088"
+  context-root="/qazitem"
+  j2ee-spec="5.0"
+  archive="qazitem.war">
+  <attributes>
+    <attribute name="webrootdir" value="/src/main/webapp" />
+  </attributes>
+</project-module>
+

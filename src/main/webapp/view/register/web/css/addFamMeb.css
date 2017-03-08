@@ -1,0 +1,214 @@
+.hsPerInfo{
+    font-family: "微软雅黑";
+}
+/*导航栏*/
+.hsPersonal_main_title{
+    border-bottom: 4px solid #4068a5;
+}
+.hsPersonal_main_title h3{
+    padding:6px 20px;
+    font-size: 16px;
+    background-color: #4068a5;
+    color:#fff;
+    display: inline-block;
+}
+.hsPersonal_main_title a{
+    display: inline-block;
+    line-height: 36px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.hsPersonal_main_title a:hover{
+    color:#2a7fcf;
+}
+/*字体图标*/
+.icon-jiaotongtubiaoguochejiluchaxun{
+    font-size: 48px;
+    color:#d65454;
+    margin-left:-24px; 
+}
+.icon-chaxun{
+    font-size: 54px;
+    color:#d28501;
+    margin-left:-27px;
+}
+.icon-call-queue{
+    font-size: 62px;
+    color:#1570c3;
+    margin-left:-31px;
+}
+.icon-iconxianchanghudong{
+    font-size: 74px;
+    color:#1faa71;
+    margin-left:-37px;
+    margin-top: -7px;
+}
+/*中间主要内容*/
+.hsPersonal{
+    font-family: "微软雅黑";
+}
+/*侧边栏*/
+.hsPersonal_sliderBar{
+    background: url(../img/personbg-.jpg) no-repeat;
+    width: 300px;
+    height: 798px;
+    background-size: 100% 100%;
+    color:#fff;
+    float:left;
+}
+.hsPersonal_sliderBar_layer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    background-color: rgb(0,0,0)\0;
+    filter:alpha(opacity=70)\0;
+}
+.hsPersonal_sliderBar_layer a{
+    color: #fff;
+}
+.hsPersonal_sliderBar_layer_header{
+    padding-top:180px;
+    text-align: center;
+}
+/*头像*/
+.hsPersonal_sliderBar_layer_header i{
+    font-size:104px;
+   
+}
+.hsPersonal_sliderBar_layer_header h4{
+    font-size: 18px;
+    line-height: 30px;
+    margin-top:14px;
+}
+/*目录*/
+.hsPersonal_sliderBar_layer_cata{
+    margin-top: 50px;
+}
+.hsPersonal_sliderBar_layer_cata li {
+    line-height: 72px;
+    height: 72px;
+    position: relative;
+}
+.hsPersonal_sliderBar_layer_cata li i{
+    font-size: 32px;
+    position: absolute;
+    left:80px;
+    top:50%;
+    margin-top:-35px;
+}
+.hsPersonal_sliderBar_layer_cata li a{
+    font-size: 18px;
+    display: inline-block;
+    margin-left:141px;
+}
+/*退出登录按钮*/
+.hsPersonal_sliderBar button{
+    width: 197px;
+    height: 56px;
+    margin-left:51px;
+    margin-top:56px;
+    font-size: 22px;
+    background-color: #d13737;
+    border-radius: 4px;
+}
+/*主要内容*/
+.hsPersonal_main{
+    margin-left: 300px;
+    margin-right: 0;
+    padding-top:74px; 
+}
+
+
+/*添加个人信息*/
+.hsAddFamMeb{
+    padding:20px 0 0 20px;
+}
+
+/*个人信息*/
+.hsAddFamMeb_cont{
+    margin-top: 40px;
+    font-size: 14px;
+    padding-left: 30px;
+}
+.hsAddFamMeb_cont td{
+    height: 50px;
+}
+.hsAddFamMeb_cont .left{
+    width: 100px;
+    text-align: right;
+    color:#888888;
+    padding-right: 6px;
+}
+.hsAddFamMeb_cont .right input{
+    width: 260px;
+    color:#3a3a3a;
+    font-size: 16px;
+    line-height: 40px;
+    height: 40px;
+    padding-left: 10px;
+    border: 1px solid #dddddd;
+}
+/*性别*/
+.hsAddFamMeb_cont .chooseSex label{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 20px;
+
+}
+.hsAddFamMeb_cont .chooseSex input{
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+    width:28px\9;
+    height:28px\9;
+    border:none;
+}
+/* 验证码
+.hsAddFamMeb_cont .hsPerInfo_cont_identCode{
+    display: none;
+}
+.hsPerInfo_cont .hsPerInfo_cont_identCode input{
+    width: 150px;
+}
+.hsPerInfo_cont .hsPerInfo_cont_identCode_text{
+    width: 100px;
+    border: 1px solid #dddddd;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color:#156fc5;
+    cursor: pointer;
+} */
+/*证件类型*/
+.hsAddFamMeb_cont_docuType select{
+    height: 40px;
+    width: 260px;
+    font-size: 16px;
+    padding-left: 10px;
+    border-color: #dddddd;
+    border-width: 1px;
+
+ }
+
+/*按钮*/
+.hsAddFamMeb_cont_btn .confirmAdd{
+    width: 260px;      
+    height: 40px;
+    margin-top: 40px;
+    background-color: #fd7d00;
+    font-size: 16px;
+    color:#fff;
+}
+
+/*提示*/
+.hsAddFamMeb_cont  .tip{
+    color:#d65454;
+    padding-left: 20px;
+    position: relative;
+    display:none;
+}
+.hsAddFamMeb_cont .tip i{
+    position: absolute;
+    top:2px;
+    left:0;
+}

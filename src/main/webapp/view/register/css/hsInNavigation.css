@@ -1,0 +1,19 @@
+html,body,.hs_inNav,.container{
+    height: 100%;
+}
+.hs_inNav {
+    max-width: 720px;
+    min-width: 320px;
+    margin: 0 auto;
+    height:100%;
+}
+/*院内导航图片*/
+.hs_inNav_img{
+    width: 100%;
+    margin-top: 1.16rem;
+    height: 100%;
+}
+img{
+    height: 100%;
+    width: 100%;
+}

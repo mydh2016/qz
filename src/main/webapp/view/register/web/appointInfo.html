@@ -1,0 +1,95 @@
+
+<!doctype html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="甘肃挂号平台 挂号 甘肃 登陆"/>
+    <meta name="description" content="甘肃挂号平台登陆"/>
+    <title>医院挂号系统</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./lib/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/appointInfo.css"/>
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+   <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=PISH0NzaAasfXUtdSin1mW491xV5hFH8"></script>
+    <script src="js/appointInfo.js"></script>
+    <!--[if lt IE 9]>
+        <script src="./lib/html5shiv/html5shiv.js"></script>
+        <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+    <body>
+        <div>
+            <div class="container">
+                <div class="hsAppInfo">
+                <!-- 就诊信息 -->
+                    <div class="hsAppInfo_vis">
+                        <h3>就诊信息</h3>
+                        <div class="hsAppInfo_vis_main row">
+                            <ol>
+                                <li class="col-xs-6">
+                                    医生：<span>李时珍</span>
+                                </li>
+                                <li class="col-xs-6">
+                                    时间：<span>2017年1月22日晚上</span>
+                                </li>
+                                <li class="col-xs-6">
+                                    科室：<span>甘肃人民医院-外科</span>
+                                </li>
+                                <li class="col-xs-6">
+                                    挂号费：<span class="money">￥7</span>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                 <!-- 就诊人信息    -->
+                 <div class="hsAppInfo_person">
+                    <h3 class="hsAppInfo_person_title">选择就诊人</h3>
+                    <div class="hsAppInfo_person_choose">
+                        <div class="hsAppInfo_person_choose_info">
+                            <span class="left text-right">就诊人：</span>
+                            <select>
+                                <option value="name">李四&nbsp;|&nbsp;18077668899</option>
+                            </select>
+                            <div class="addBtn">+添加就诊人</div>
+                        </div>
+                        <table class="hsAppInfo_person_choose_add">
+                         <tr>
+                             <td class="left text-right">姓名：</td>
+                             <td class="right">
+                                <input type="text" class="addName">
+                                <i class="tipName"></i>
+                             </td>
+                         </tr>
+                         <tr>
+                             <td class="left text-right">手机号码：</td>
+                             <td class="right">
+                                <input type="text" class="addPhone">
+                                <i class="tipPhone"></i>
+                             </td>
+                         </tr>
+                          <tr>
+                             <td class="left text-right">身份证号：</td>
+                             <td class="right">
+                                <input type="text" class="addID">
+                                <i class="tipID"></i>
+                             </td>
+                         </tr>
+                    </table>
+                    <div class="hsAppInfo_person_choose_btn">
+                        <button class="btn btn-primary appoint">预约</button>
+                        <button class="btn btn-default back">返回</button>
+                    </div>
+                    </div>
+                    
+                 </div>
+                </div>  
+            </div>
+
+        </div>
+    </body>
+</html>

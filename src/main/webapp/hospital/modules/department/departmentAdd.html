@@ -1,0 +1,55 @@
+	<div class="p25">
+		<div class="title">添加科室</div>
+
+		<div class="conbar">
+			<div>
+				<form id="departmentAdd" class="p18 form-inline ms-controller" ms-controller="departmentAdd">
+					<div class="mt15">
+						<div class="form-group">
+							<span class="must mr3">*</span>
+							<select id="dptId" name="dptId" class="form-control" data-bv-notempty>
+								<option value="0">请选择科室类型</option>
+								<option ms-repeat="departmentType" ms-attr-value="el.departmentTypeId">{{el.departmentTypeName}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="mt15">
+						
+						<div class="form-group">
+							<label class="w80" for="departmentName"><span class="must mr3">*</span>科室名称：</label>
+							<input type="text" class="form-control" id="departmentName" name="departmentName" placeholder="科室名称" data-bv-notempty>
+						</div>
+					</div>
+
+					<div class="mt15">
+						<div class="form-group">
+							<label class="w80" for="telphone">科室电话：</label>
+							<input type="text" class="form-control" id="telphone" name="telphone" placeholder="科室电话">
+						</div>
+					</div>
+
+					<div class="mt15">
+						<div class="form-group">
+							<label>是否特色科室：</label>
+							<input type="radio" name="isSpecial" ms-duplex-number="isSpecial" value="1">是 <input type="radio" class="ml10" ms-duplex-number="isSpecial" name="isSpecial" value="2">否
+						</div>
+					</div>
+
+					<div class="mt15" ms-if='isSpecial == 1'>
+						<label for="specialDescribe">特色描述：</label>
+						<div><textarea id="specialDescribe" name="specialDescribe" class="form-control w50"></textarea></div>
+					</div>
+
+					<div class="mt15">
+						<label class="w80" for="depDescribe">科室描述：</label>
+						<div><textarea id="depDescribe" name="depDescribe" class="form-control w50"></textarea></div>
+						<button id="btn-addnews" class="btn btn-primary mt15">提交</button>
+					</div>
+				</form>
+			</div>
+
+
+		</div>
+
+	</div>
+

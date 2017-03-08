@@ -1,0 +1,37 @@
+html.body,.hs_bulletinDel,.container,.hs_bulletinDel_main{
+  height: 100%;
+}
+/*标题*/
+.hs_bulletinDel_title{
+    margin-top:0.96rem;
+    background-color: #fff;
+    padding:0.3rem 0 0.5rem;
+    position: relative;
+}
+.hs_bulletinDel_title h4{
+    font-size: 0.3rem;
+    text-align:center;
+}
+.hs_bulletinDel_title .hs_bulletinDel_title_time{
+   position:absolute;
+   right:0.2rem;
+   bottom:0.2rem;
+   font-size:0.26rem;
+   height:0.3rem;
+   line-height:0.3rem;
+}
+/*主要内容*/
+.hs_bulletinDel_main{
+    background-color: #fff;
+    padding:0.2rem 0.2rem 0.4rem;
+  border: 1px solid #dddddd;
+}
+.hs_bulletinDel_main p{
+    font-size:0.26rem;
+    text-indent: 2em;
+    line-height:0.5rem;
+    margin-top:0.2rem;
+}
+.hs_bulletinDel_main p:first-child{
+    margin:0;
+}

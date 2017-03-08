@@ -1,0 +1,17 @@
+<!-- 顶部搜索框 -->
+<div class="topSearch col-blue">
+   <div class="container clearfix">
+       <a href="#" class="hsLayout_logo">logo</a>
+       <input type="text" class="hsLayout_search">
+       <div class="hsLayout_user">
+           
+           <!-- <a ui-sref="login" class="hsLayout_user_login">登录</a> -->
+           <a ui-sref="login" class="hsLayout_user_register" ng-if="!s_webUser.s_username">登录</a>
+           <a ui-sref="register" class="hsLayout_user_register" ng-if="!s_webUser.s_username">注册</a>
+           <a ui-sref="index"  class="hsLayout_user_register">首页</a>
+           <a ui-sref="personal"  class="hsLayout_user_register" ng-if="s_webUser.s_username">个人中心</a>
+       </div>
+       <a href="#"><i class="icon iconfont icon-sousuo-sousuo"></i></a>
+   </div>                
+</div>
+            

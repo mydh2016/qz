@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="甘肃挂号平台 挂号 甘肃"/>
+    <meta name="description" content="甘肃挂号平台"/>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>账号管理</title>
+    <link rel="stylesheet" href="lib/bootstrap-3.3.5-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/accountMessage.css"/>
+    <script src="lib/jquery.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="lib/zepto/touch.js"></script>
+    <script src="lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <script src="js/accountMessage.js"></script>
+</head>
+<body>
+<div class="hs_accontMsg">
+    <div class="container">
+        <header class="topBar">
+            <a href="personal.html"><i class="icon iconfont icon-fanhuijian"></i></a>
+
+            <h1>账号管理</h1>
+        </header>
+        <section class="hs_accontMsg_headPor">
+            <i class="iocn iconfont icon-yonghu"></i>
+        </section>
+        <section class="hs_accontMsg_info">
+            <form>
+                <table class="formArray">
+                    <tr>
+                    <td><i>*</i></td>
+                        <td> 姓&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp名：</td>
+                       
+                        <td>
+                            <input type="text" name="addUserName" class="addUserName" value="张三" disabled/>
+                        </td>
+                    </tr>
+                    <tr class="hs_accontMsg_info_sex">
+                    <td></td>
+                        <td >性&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp别：</td>
+                        <td>
+                            <input type="text" name="sex" class="sex" disabled value="女" />
+
+                            <div class="chooseSex">
+                                <label for="female">女</label><input type="radio" id="female" checked/>
+                                <label for="male">男</label><input type="radio" id="male"/>
+                            </div>
+                        </td>
+                    </tr>
+                   <!--  <tr>
+                   <td></td>
+                       <td>年&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp龄：</td>
+                       <td>
+                           <input type="text" name="addPhone" class="sex" disabled value="24"/>
+                       </td>
+                   </tr> -->
+                    <tr>
+                        <td><i>*</i></td>
+                        <td>
+                        手机号码：</td>
+                        <td>
+                            <input type="text" name="addPhone" class="phone" disabled value="12300002222"/>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td> </td>
+                        <td>办公电话：</td>
+                        <td>
+                            <input type="text" name="addPhone" class="officePhone" disabled value="67878888"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i>*</i></td>
+                        <td >身份证号：</td>                           
+                        <td>
+                            <input type="text" name="addPhone" class="ID" disabled value="130002999922221111"/>
+                        </td>
+                    </tr>
+                   
+                     <tr>
+                     <td></td>
+                     <td>提示：<i>*</i>为必填内容</td>                       
+                    </tr>
+                </table>
+            </form>
+        </section>
+        <footer>
+            <a href="#" class="hs_accontMsg_btn btn btn-primary btn-lg btn-block">修改信息</a>
+
+            <div class="hs_accontMsg_whether ">
+                <input type="button" value="取消" class="hs_accontMsg_whether_cancel btn  btn-danger btn-lg "/>
+                <input type="button" value="确认" class="hs_accontMsg_whether_confirm btn btn-primary  btn-lg "/>
+            </div>
+        </footer>
+        <section class="hs_accontMsg_tip"></section>
+    </div>
+</div>
+</body>
+</html>

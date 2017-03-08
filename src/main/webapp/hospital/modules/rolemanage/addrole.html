@@ -1,0 +1,83 @@
+<div id="tab" class="tab" ms-controller="roleData">
+<form id="add-role-form">
+    <div class="btnbar tabbtn">
+        <div class="btn tabBtn-title act">基本信息</div>
+        <div class="btn tabBtn-title">菜单权限</div>
+    </div>
+
+    <div class="tab-con tabcon open">
+        
+            <div class="fl">
+                <div class="form-inline mt15">
+                    <div class="form-group">
+                        <label for="rolename"><span class="must mr3">*</span>角色名</label>
+                        <input type="text" class="form-control" id="roleName" name="roleName" placeholder="角色名" data-bv-notempty>
+                    </div>
+                </div>
+				
+				<div class="form-inline mt15">
+                    <div class="form-group w100">
+                        <label for="rolename">描述</label>
+                        <textarea type="text" class="form-control w100" id="description" name="description" ms-attr-value="data.description" placeholder="描述"></textarea>
+                    </div>
+                </div>
+				<!-- 
+                <div class="form-group mt15">
+                    <label>角色状态</label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="status" value="0" checked="checked"> 正常
+                    </label>
+
+                    <label class="radio-inline">
+                        <input type="radio" name="status" value="1"> 锁定
+                    </label>
+                </div>
+                 -->
+            </div>
+
+            <div class="fl role-tree">
+                <div class="">所属用户</div>
+
+                <div class="tree-item" ms-repeat="roleList">
+                    <label>
+                        <input type="checkbox" name="checkedUserIds" ms-attr-value="el.id" >
+                        <span>{{el.name}}</span>
+                    </label>
+                </div>
+
+            </div>
+    </div>
+
+    <div class="tab-con tabcon">
+        <div class="mt15">
+            	<!-- <input id="fome-roleid" type="hidden" name="roleId" value="0"> -->
+                <div class="tree-item" ms-repeat="roleMenuList">
+                    <label>
+                        <input type="checkbox" name="permissionIds" ms-attr-value="el.resourceid" ms-attr-checked="el.check" ms-click="treeSelect">
+                        <span>{{el.resourcename}}</span>
+                    </label>
+
+                    <div class="tree-item" ms-repeat="el.children" ms-if-loop="el.children">
+                        <label>
+                            <input type="checkbox" name="permissionIds" ms-attr-value="el.resourceid" ms-attr-checked="el.check" ms-click="treeSelect">
+                            <span>{{el.resourcename}}</span>
+                        </label>
+
+                        <div class="tree-item" ms-repeat="el.children" ms-if-loop="el.children">
+                            <label>
+                                <input type="checkbox" name="permissionIds" ms-attr-value="el.resourceid" ms-attr-checked="el.check" ms-click="treeSelect">
+                                <span>{{el.resourcename}}</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+            
+        </div>
+    </div>
+    </form>
+</div>
+
+

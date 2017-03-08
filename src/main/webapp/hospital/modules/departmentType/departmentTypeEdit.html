@@ -1,0 +1,26 @@
+	<div class="p25">
+		<div class="title">编辑科室类型</div>
+
+		<div class="conbar">
+			<div id="tempEdit" class="ms-controller" ms-controller="tempEdit">
+				<form id="tempEditForm" class="p18 form-inline">
+				<input name="departmentTypeId" type="hidden" ms-attr-value="{{data.departmentTypeId}}">
+					<div class="form-group">
+						<label for="departmentTypeName">科室类型名称：</label>
+						<input type="text" class="form-control" id="departmentTypeName" name="departmentTypeName" placeholder="科室类型名称" ms-attr-value="data.departmentTypeName">
+					</div>
+					<br>
+
+					<div class="mt15">
+						<label for="description">科室类型描述：</label>
+						<textarea id="description" name="description" class="form-control w100 h200px" ms-attr-value="data.description"></textarea>
+					</div>
+					<button id="btn-addnews" class="btn btn-primary mt15">提交</button>
+				</form>
+			</div>
+
+
+		</div>
+
+	</div>
+

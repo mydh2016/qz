@@ -1,0 +1,109 @@
+.hsDoctor{
+    font-family: "微软雅黑";
+    margin-top: 20px;
+}
+.row,.col-xs-10,.col-xs-2,.col-xs-4{
+    margin: 0;
+    padding: 0;
+}
+/*导航栏*/
+.hsDoctor_title{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-color: #ecf0f6;
+}
+.hsDoctor_title h3{
+    line-height: 50px;
+    font-size: 16px;
+}
+.hsDoctor_content{
+    width:100%;
+}
+/*左侧科室列表*/
+
+.hsDoctor_content_list{
+    text-align: center;
+}
+
+.hsDoctor_content_list .active a{
+    color:#4068a5;
+    background-color: #ecf0f6;
+}
+
+.hsDoctor_content_list a{
+    font-size: 16px;
+    line-height: 50px;
+    display: block;
+    width: 100%;
+    background-color: #b2c2db;
+}
+/*右侧医生列表*/
+.hsDoctor_content_detail{
+    padding-top: 10px;
+    background-color: #ecf0f6;
+    padding-right:10px;
+}
+.hsDoctor_content_detail>div{
+    padding-left:20px;
+}
+.hsDoctor .caption{
+    text-align: left;
+}
+
+.hsDoctor .caption h3{
+    line-height: 30px;
+}
+.hsDoctor .caption p{
+    line-height: 24px;
+}
+.hsDoctor .caption p a{
+    margin-top: 10px;
+}
+
+.second .thumbnail{
+    padding-bottom: 20px;
+    position: relative;
+}
+.second .thumbnail>a{
+    float: left;
+    margin:6px 10px 0px 6px;
+}
+.second .thumbnail>a>img{
+    width: 104px;
+    height: 126px;
+}
+.second .thumbnail>a:hover{
+    box-shadow: 0px 0px 2px #53d1f9;
+     -webkit-box-shadow:0px 0px 2px #53d1f9;
+     -moz-box-shadow:0px 0px 2px #53d1f9;
+}
+.second .thumbnail .caption h3{
+    font-size: 16px;
+}
+.second .thumbnail .button{
+   position: absolute;
+   right:20px;
+   top:50%;
+   margin-top: -10px;
+}
+.btn.btn-appoint{
+    background-color: #d26e00;
+    color:#Fff;
+}
+.second .thumbnail {
+    padding-bottom: 0px;
+    position: relative;
+    height: 148px;
+    overflow: hidden;
+}
+.thumbnail .caption {
+    padding:0;
+    padding-top: 9px; 
+    color: #333;
+}
+.thumbnail .caption h3{
+    font-weight: 700;
+}
+.thumbnail .caption a{
+    color:#fc7f01;
+}

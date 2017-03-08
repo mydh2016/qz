@@ -1,0 +1,96 @@
+<div id="patientList" class="ms-controller" ms-controller="patientList">
+    <form id="al-search" class="form-inline pt10 pb10">
+        <input type="hidden" name="status" value="1">
+
+
+        <div class="form-group ml10">
+            <label class="text-right" for="unit">单位</label>
+            <input type="text" class="form-control" id="unit" name="unit" placeholder="单位">
+        </div>
+
+        <div class="form-group ml10">
+            <label class="text-right">类别</label>
+
+            <select id="category" name="category" class="form-control" ms-controller="category">
+                <!--<option ms-attr-value="{{el}}" ms-repeat="data">{{el}}</option>-->
+            </select>
+        </div>
+
+        <div class="form-group ml10">
+            <label class="text-right" for="sex">性别</label>
+
+            <select id="sex" name="sex" class="form-control">
+                <option value="">不限</option>
+                <option value="1">男</option>
+                <option value="2">女</option>
+            </select>
+        </div>
+
+        <div class="form-group ml10">
+            <label class="text-right" for="telphone">手机号码</label>
+            <input type="text" class="form-control" id="telphone" name="telphone" placeholder="手机号码...">
+        </div>
+
+        <button type="submit" class="btn btn-primary ml20">查询</button>
+
+    </form>
+
+    <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+    <form id="allistForm" class="of-auto" ms-if="listData.length">
+        <table class="mytable" >
+            <thead>
+            <tr>
+                <th></th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>类别</th>
+                <th>手机号码</th>
+                <th>出生日期</th>
+                <th>单位</th>
+                <th>地址</th>
+            </tr>
+            </thead>
+
+            <tbody ms-each="listData" id="checks-form">
+            <tr>
+                <td><input class="_check" type="checkbox" name="ids" ms-attr-value="el.id"></td>
+                <td>{{el.name}}</td>
+                <td>{{sex[el.sex]}}</td>
+                <td>{{el.category}}</td>
+                <td>{{el.telphone}}</td>
+                <td>{{el.dateBirth}}</td>
+                <td>{{el.unit}}</td>
+                <td>{{el.address}}</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </form>
+
+    <div class="text-center border-t-gray" ms-if="listData.length">
+        <div class="mytable-pagenum inlineblock">
+            显示
+            <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                <option selected="selected">10</option>
+                <option>15</option>
+                <option>20</option>
+            </select>
+            条
+        </div>
+
+        <ul class="pagination v-middle ml10">
+            <li class="page-last">
+                <a href="#"><span aria-hidden="true">«</span></a>
+                <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+            </li>
+            <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                <a href="#">{{el}}</a>
+            </li>
+            <li class="page-next">
+                <a href="#"><span aria-hidden="true">»</span></a>
+                <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+            </li>
+        </ul>
+    </div>
+</div>

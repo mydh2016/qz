@@ -1,0 +1,73 @@
+.hs_hospital{
+    max-width: 720px;
+    min-width:320px;
+    width:100%;
+    margin:0 auto;
+}
+.hs_hospital_img{
+    position: relative;
+}
+.hs_hospital_img img{
+    margin-top:0.96rem;
+    height: 3.08rem;
+    width: 100%;
+}
+.hs_hospital_img h4{
+    font-size: 0.26rem;
+    position: absolute;
+    bottom:0.2rem;
+    left:0.2rem;
+    color:#fff;
+    z-index: 1000;
+    font-weight: 700;
+}
+.hs_hospital_info{
+    padding:0.2rem ;
+    background-color: #fff;
+    border-bottom: 1px solid #dddddd;
+}
+
+.hs_hospital_info h4{
+    font-size:0.28rem;
+}
+.hs_hospital_info .hs_hospital_info_text{
+    height:2.1rem;
+    overflow: hidden;
+    margin-bottom: 0.4rem;
+}
+.hs_hospital_info .hs_hospital_info_text p{
+    line-height: 0.5rem;
+    font-size: 0.28rem;
+    margin-top:0.2rem;
+    color:#454545;
+}
+
+.hs_hospital_info .hs_hospital_info_open{
+    font-size:0.28rem;
+    height: 0.28rem;
+    line-height: 0.28rem;
+    cursor: pointer;
+    padding-right:0.2rem;
+}
+.hs_hospital_address{
+    background-color: #fff;
+    border-bottom: 1px solid #dddddd;
+    line-height: 0.36rem;
+    height:0.76rem;
+}
+.hs_hospital_address a{
+    padding:0.2rem;
+    color:#454545;
+    position:relative;
+    line-height: 0.36rem;
+    height: 0.76rem;
+    display: block;
+}
+.hs_hospital_address i{
+    position:absolute;
+}
+.hs_hospital_address p{
+    font-size: 0.28rem;
+    line-height: 0.36rem;
+    padding-left: 0.3rem;
+}

@@ -1,0 +1,61 @@
+.hsResetPsd{
+    font-family: "微软雅黑";
+}
+/*标题*/
+.hsResetPsd_title{
+    border-bottom: 4px solid #4068a5;
+}
+.hsResetPsd_title h3{
+    padding:6px 20px;
+    font-size: 16px;
+    background-color: #4068a5;
+    color:#fff;
+    display: inline-block;
+}
+/*重置密码*/
+.hsResetPsd_info{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #dddddd;
+    padding:40px 0;
+    font-size: 14px;
+
+}
+.hsResetPsd_info .hsResetPsd_info_tip{
+    font-size: 16px;
+    margin-left: 140px;
+    margin-bottom: 40px;
+}
+.hsResetPsd_info_reset{
+    margin-left: 384px;
+}
+.hsResetPsd_info_reset td{
+    height: 60px;
+}
+.hsResetPsd_info_reset .left{
+    text-align: right;
+}
+.hsResetPsd_info_reset input{
+    width: 280px;
+    height: 32px;
+    border: 1px solid #dddddd;
+}
+.hsResetPsd_info_reset .right button{
+    width: 120px;
+}
+.hsResetPsd_info_reset .right button.sure{
+    margin-right: 38px;
+}
+/*提示*/
+.hsResetPsd_info_reset .tip{
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    color:#d65454;
+    display: none;
+}
+.hsResetPsd_info_reset .tip i{
+    position: absolute;
+    top:1px;
+    left:0;
+}

@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+::-webkit-scrollbar
+{
+    height: 8px;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color:#AAAAAB;
+    border-radius:4px;
+    border: 2px solid #F3F1F2;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background-color:#838383;
+}
+
+::-webkit-scrollbar-track
+{
+    background-color: #F3F1F2;
+}
+

@@ -1,0 +1,30 @@
+.hs_bulletin_main{
+    margin-top:1.16rem;
+    padding-left: 0.2rem;
+    padding-right:0.2rem;
+    background-color: #fff;
+}
+.hs_bulletin_main>ul>li{
+    padding-top:0.2rem;
+    padding-bottom:0.2rem;  
+    padding-left:0.2rem;
+    border-bottom: 1px solid #dddddd;
+    height:1.5rem;
+    position: relative;
+}
+.hs_bulletin_main>ul>li>a>h4{
+    color:black;
+    font-size:0.3rem;
+    line-height:0.5rem;
+}
+.hs_bulletin_main>ul>li>a>.hs_bulletin_main_time{
+    font-size:0.26rem;
+    margin-top:0.3rem;
+}
+.hs_bulletin_main>ul>li>a>i{
+    position: absolute;
+    right:0.2rem;
+    top:50%;
+    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+}

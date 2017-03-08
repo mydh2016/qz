@@ -1,0 +1,48 @@
+.hsNtcList{
+    font-family: "微软雅黑";
+}
+
+/*公告列表*/
+
+.hsNtcList .panel-heading{
+    font-size: 16px;
+}
+
+.hsNtcList_list{
+    padding:20px;
+}
+
+.hsNtcList_list li{
+    padding:10px 0;
+}
+
+.hsNtcList_list li h4{
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.hsNtcList_list li h4 a:hover{
+    color:#2b7ecc;
+}
+
+.hsNtcList_list li h4 span{
+    margin-right: 6px;
+}
+
+.hsNtcList_list li .hsNtcList_list_info{
+    padding-left:30px; 
+}
+
+.hsNtcList_list li .hsNtcList_list_info span{
+    font-size: 14px;
+    line-height: 32px;
+}
+
+/*分页*/
+.hsNotice_page{
+    margin-top: 40px;
+    text-align: center;
+}
+.hsNotice_page .pagination > li > a{
+    padding:10px 16px;
+}

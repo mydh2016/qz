@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.hospital.web.dao.mapper.ModelMapper" >
+  <resultMap id="model" type="com.qazit.hospital.web.model.Model" >
+    <id column="id" property="id"/>
+    <result column="model_number" property="modelNumber"/>
+    <result column="model_name" property="modelName"/>
+    <result column="model_parent_type" property="modelParentType"/>
+    <result column="model_children_type" property="modelChildrenType"/>
+    <result column="model_content" property="modelContent"/>
+    <result column="parent_id" property="parentId"/>
+    <result column="state" property="state"/>
+    <result column="model_status" property="modelStatus"/>
+    <result column="create_time" property="createTime" />
+    <result column="creater" property="creater"/>
+    <result column="update_time" property="updateTime" />
+    <result column="updater" property="updater"/>
+    <result column="creater_id" property="createrId"/>
+    <result column="creater_name" property="createrName"/>
+    <result column="hp_id" property="hpId"/>
+    <result column="is_on" property="isOn"/>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id,
+	model_number,
+	model_name,
+	model_parent_type,
+	model_children_type,
+	model_content,
+	parent_id,
+	state,
+	model_status,
+	create_time,
+	creater,
+	update_time,
+	updater,
+	creater_id,
+	creater_name,
+	hp_id,
+	is_on
+
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="model" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_MODEL
+    where id = #{_parameter}
+  </select>
+  <select id="selectCount" resultType="Long" parameterType="com.qazit.hospital.web.model.Model" >
+    select 
+    count(*)
+    from T_MODEL
+    where state=0
+      <if test="modelName != null and modelName!=''" >
+       and model_name like '%${modelName}%'
+      </if>
+      <if test="modelParentType != null and modelParentType !=''" >
+        and model_parent_type=#{modelParentType}
+      </if>
+      <if test="modelChildrenType != null and modelChildrenType !=''" >
+       and model_children_type=#{modelChildrenType}
+      </if>
+      <if test="modelStatus != null" >
+       and model_status=#{modelStatus}
+      </if>
+      <if test="parentId != null" >
+       and parent_id=#{parentId}
+      </if>
+      <if test="id!= null" >
+       and id!=#{id}
+      </if>
+      <if test="createrId!= null" >
+       and creater_id=#{createrId}
+      </if>
+      <if test="hpId!= null" >
+       and hp_id=#{hpId}
+      </if>
+  </select>
+  <select id="selectForList" resultMap="model" parameterType="com.qazit.hospital.web.model.Model" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_MODEL
+    where state=0
+      <if test="modelName != null and modelName!=''" >
+       and model_name like '%${modelName}%'
+      </if>
+      <if test="modelParentType != null and modelParentType !=''" >
+        and model_parent_type=#{modelParentType}
+      </if>
+      <if test="modelChildrenType != null and modelChildrenType !=''" >
+       and model_children_type=#{modelChildrenType}
+      </if>
+      <if test="modelStatus != null" >
+       and model_status=#{modelStatus}
+      </if>
+      <if test="parentId != null" >
+       and parent_id=#{parentId}
+      </if>
+      <if test="id!= null" >
+       and id!=#{id}
+      </if>
+      <if test="createrId!= null" >
+       and creater_id=#{createrId}
+      </if>
+      <if test="hpId!= null" >
+       and hp_id=#{hpId}
+      </if>
+      <if test="firstRecord!=null">
+      	ORDER BY create_time
+		LIMIT #{firstRecord},#{pageSize}
+      </if>
+  </select>
+  <select id="selectParentType" resultType="String" parameterType="String">
+  	select distinct model_parent_type from T_MODEL where state=0 and hp_id=#{_parameter}
+  </select>
+  <select id="selectChildrenType" resultType="String" parameterType="Map">
+  	select distinct model_children_type from T_MODEL where state=0 and model_parent_type=#{modelParentType} and hp_id=#{hpId}
+  </select>
+  <update id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    update  T_MODEL
+    set state=1
+    where id = #{id}
+  </update>
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.qazit.hospital.web.model.Model" >
+    insert into T_MODEL
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="modelNumber != null" >
+        model_number,
+      </if>
+      <if test="modelName != null" >
+        model_name,
+      </if>
+      <if test="modelParentType != null" >
+        model_parent_type,
+      </if>
+      <if test="modelChildrenType != null" >
+        model_children_type,
+      </if>
+      <if test="modelContent != null" >
+        model_content,
+      </if>
+      <if test="parentId != null" >
+        parent_id,
+      </if>
+      <if test="state != null" >
+        state,
+      </if>
+      <if test="modelStatus != null" >
+        model_status,
+      </if>
+	  <if test="createTime != null" >
+        create_time,
+      </if>
+      <if test="creater != null" >
+        creater,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+      <if test="updater != null" >
+        updater,
+      </if>
+      <if test="createrId !=null">
+      	creater_id,
+      </if>
+      <if test="createrName !=null">
+      	creater_name,
+      </if>
+      <if test="hpId !=null">
+      	hp_id,
+      </if>
+      <if test="isOn !=null">
+      	is_on
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id},
+      </if>
+      <if test="modelNumber != null" >
+        #{modelNumber},
+      </if>
+      <if test="modelName != null" >
+        #{modelName},
+      </if>
+      <if test="modelParentType != null" >
+        #{modelParentType},
+      </if>
+      <if test="modelChildrenType != null" >
+        #{modelChildrenType},
+      </if>
+      <if test="modelContent != null" >
+        #{modelContent},
+      </if>
+      <if test="parentId != null" >
+        #{parentId},
+      </if>
+      <if test="state != null" >
+        #{state},
+      </if>
+      <if test="modelStatus != null" >
+        #{modelStatus},
+      </if>
+	  <if test="createTime != null" >
+        #{createTime},
+      </if>
+      <if test="creater != null" >
+        #{creater},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime},
+      </if>
+      <if test="updater != null" >
+        #{updater},
+      </if>
+      <if test="createrId !=null">
+      	#{createrId},
+      </if>
+      <if test="createrName !=null">
+      	#{createrName},
+      </if>
+      <if test="hpId !=null">
+      	#{hpId},
+      </if>
+      <if test="isOn !=null">
+      	#{isOn}
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.qazit.hospital.web.model.Model" >
+    update T_MODEL
+    <set >
+      <if test="modelNumber != null" >
+       model_number =#{modelNumber},
+      </if>
+      <if test="modelName != null" >
+        model_name=#{modelName},
+      </if>
+      <if test="modelParentType != null" >
+        model_parent_type=#{modelParentType},
+      </if>
+      <if test="modelChildrenType != null" >
+       model_children_type=#{modelChildrenType},
+      </if>
+      <if test="modelContent != null" >
+       model_content= #{modelContent},
+      </if>
+      <if test="parentId != null" >
+        parent_id=#{parentId},
+      </if>
+      <if test="state != null" >
+        state=#{state},
+      </if>
+      <if test="modelStatus != null" >
+        model_status=#{modelStatus},
+      </if>
+	  <if test="createTime != null" >
+        create_time=#{createTime},
+      </if>
+      <if test="creater != null" >
+       creater=#{creater},
+      </if>
+      <if test="updateTime != null" >
+        update_time=#{updateTime},
+      </if>
+      <if test="updater != null" >
+        updater=#{updater},
+      </if>
+      <if test="createrId !=null">
+      	creater_id=#{createrId},
+      </if>
+      <if test="createrName !=null">
+      	creater_name=#{createrName},
+      </if>
+      <if test="hpId !=null">
+      	hp_id=#{hpId},
+      </if>
+      <if test="isOn !=null">
+      	is_on=#{isOn},
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+</mapper>

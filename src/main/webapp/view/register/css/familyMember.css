@@ -1,0 +1,122 @@
+
+.hs_familyMeb{
+    max-width: 720px;
+    min-width: 320px;
+    width: 100%;
+    margin:0 auto;
+    margin-bottom:1.4rem;
+}
+.familyInfo{
+    margin-top:1.16rem;
+}
+
+/*成员信息*/
+.hs_familyMeb .hs_familyMeb_info {
+    border-top: 1px solid #dcdedd;
+    margin-top: 0.20rem;
+    background-color: #ffffff;
+    font-size: 0.26rem;
+    padding-top:0.1rem;
+}
+
+.hs_familyMeb .hs_familyMeb_info table {
+    width: 100%;
+}
+
+.hs_familyMeb .hs_familyMeb_info table td:first-of-type {
+    width: 1.50rem;
+}
+
+.hs_familyMeb .hs_familyMeb_info table tr, .hs_familyMeb .hs_familyMeb_info table th {
+    height: 0.60rem;
+    padding-left: 0.20rem;
+    line-height: 0.50rem;
+}
+
+.hs_familyMeb .hs_familyMeb_info .hs_familyMeb_info_ID {
+    padding-right: 0.20rem;
+    border-bottom: 1px solid #dcdedd;
+}
+
+.hs_familyMeb .hs_familyMeb_info .hs_familyMeb_info_ID > td:last-child {
+    margin-right: 0.20rem;
+}
+
+/*按钮*/
+.hs_familyMeb_info_mod{
+    height:0.7rem;
+    background-color: #fff;
+    position: relative;
+}
+.hs_familyMeb_info_mod a{
+    position: absolute;
+    right:0.2rem;
+    top:50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    color:#FFF;
+}
+.hs_familyMeb_info_mod  .btn {
+    padding: 0.06rem 0.2rem;
+    font-size: 0.24rem;
+    border-radius: 0.04rem;
+}
+.hs_familyMeb_info_mod  .first{
+    right:1.4rem;
+}
+/*提示框*/
+.modal {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.modal-content {
+    -webkit-box-shadow: 0  0.05rem 0.15rem rgba(0, 0, 0, .5);
+    box-shadow: 0 0.05rem 0.15rem rgba(0, 0, 0, .5);
+}
+.modal-dialog {
+    width: 6.00rem;
+    margin: 0.30rem auto;
+}
+.modal-header {
+    padding: 0.2rem;
+    padding-top: 0;
+    border-bottom: none;
+}
+.hs_familyMeb_tip h4{
+    font-size: 0.4rem;
+    margin-top:0.2rem;
+}
+.modal-body {
+    padding: 0.2rem;
+    font-size: 0.28rem;
+    line-height: 0.28rem;
+}
+.modal-footer {
+    padding: 0.15rem;
+    text-align: right;
+    border: none;
+    height:1rem;
+    position: relative;
+}
+.modal-footer button{
+   position: absolute;
+    right:0.2rem;
+}
+.modal-footer button:first-child{
+    right:1.4rem
+}
+/*添加家庭成员*/
+footer{
+    width:100%;
+    padding-left:0.2rem;
+    padding-right:0.2rem;
+    position:fixed;
+    bottom:0.20rem;
+}
+footer a:link{
+    color:#fff;
+}
+footer a:visited{
+    color:#fff;
+}

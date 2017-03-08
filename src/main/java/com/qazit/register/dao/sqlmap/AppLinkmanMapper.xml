@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.register.dao.mapper.AppLinkmanMapper" >
+  <resultMap id="appLinkman" type="com.qazit.register.model.AppLinkmanVO" >
+    <id column="linkman_id" property="linkmanid"/>
+    <result column="linkman_name" property="linkmanname"/>
+    <result column="gender" property="gender"/>
+    <result column="identify_number" property="identifynumber"/>
+    <result column="cellphone_number" property="cellphonenumber"/>
+    <result column="peu_user_id" property="userid"/>
+  </resultMap>
+ 
+  <sql id="Base_Column_List" >
+	linkman_name,
+	gender,
+	identify_number,
+	cellphone_number,
+    linkman_id,
+  	peu_user_id
+	
+  </sql>
+  <select id="selectByLId" resultMap="appLinkman" parameterType="com.qazit.register.model.AppLinkmanVO" >
+  	select 
+		<include refid="Base_Column_List" />
+		from T_PEU_USER_CONTACT
+	where 
+		peu_user_id = #{userid};
+  </select>
+  
+  <select id="selectLId" resultMap="appLinkman" parameterType="com.qazit.register.model.AppLinkmanVO" >
+  	select 
+		<include refid="Base_Column_List" />
+		from T_PEU_USER_CONTACT
+	where
+		linkman_id=#{linkmanid}; 
+  </select>
+   
+  <select id="Bycard"  resultType="java.lang.Integer" parameterType="com.qazit.register.model.AppLinkmanVO">
+  	select 
+  	count(*)
+		from T_PEU_USER_CONTACT
+	where
+		peu_user_id=#{userid}
+		and
+		identify_number=#{identifynumber}; 
+  </select>
+  <select id="selectBycard" resultMap="appLinkman" parameterType="com.qazit.register.model.AppLinkmanVO" >
+  	select 
+		<include refid="Base_Column_List" />
+		from T_PEU_USER_CONTACT
+	where
+		peu_user_id = #{userid}
+		
+		and
+		
+		identify_number=#{identifynumber}; 
+  </select>
+  
+  <insert id="createLinkm"  parameterType="com.qazit.register.model.AppLinkmanVO" >
+    insert into T_PEU_USER_CONTACT 
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+     
+    <if test="linkmanname!=null">
+       linkman_name,
+       </if>
+        <if test="gender!=null">
+        gender,
+       </if>
+       <if test="identifynumber!=null">
+     identify_number,
+     </if>
+     <if test="cellphonenumber!=null">
+      cellphone_number,
+    </if>
+      <if test="linkmanid!=null">
+   			linkman_id,
+   		</if>
+     <if test="userid!=null">
+        peu_user_id 
+       </if>
+       
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+    
+      <if test="linkmanname!=null">
+        #{linkmanname}, 
+       </if>
+         <if test="gender!=null">
+       #{gender},
+       </if>
+      <if test="identifynumber!=null">
+        #{identifynumber},
+      </if>
+      <if test="cellphonenumber!=null">
+        #{cellphonenumber},
+      </if>
+    	<if test="linkmanid!=null">
+   			#{linkmanid},
+   		</if>
+       <if test="userid!=null">
+        #{userid} 
+       </if>
+        
+    </trim>
+  </insert>
+  
+  <update id="updateLinkm" parameterType="com.qazit.register.model.AppLinkmanVO" >
+    update T_PEU_USER_CONTACT
+    <set >
+      <if test="linkmanname!=null">
+        linkman_name=#{linkmanname}, 
+       </if>
+        <if test="gender!=null">
+        gender=#{gender},
+      	</if>
+      <if test="identifynumber!=null">
+       identify_number= #{identifynumber},
+      </if>
+      <if test="cellphonenumber!=null">
+        cellphone_number=#{cellphonenumber},
+      </if>
+        <if test="userid!=null">
+        peu_user_id=#{userid}
+       </if>
+        
+    </set>
+    where
+   	linkman_id=#{linkmanid}; 
+  </update> 
+  
+   <delete id="deleteLinkm" parameterType="java.lang.Integer" >
+    delete from T_PEU_USER_CONTACT
+   where  linkman_id=#{linkmanid};
+  </delete>
+  
+</mapper>

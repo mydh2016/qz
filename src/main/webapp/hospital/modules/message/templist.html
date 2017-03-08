@@ -1,0 +1,64 @@
+<div id="templist" class="ms-controller" ms-controller="templist">
+    <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+    <div class="of-auto" ms-if="listData.length">
+        <table class="mytable" >
+            <thead>
+            <tr>
+                <th></th>
+                <th>模板编号</th>
+                <th>模板名称</th>
+                <th>模板大类</th>
+                <th>模板小类</th>
+                <th>模板状态</th>
+                <th>创建时间</th>
+                <th>创建人</th>
+                <th>修改时间</th>
+                <th>修改人</th>
+            </tr>
+            </thead>
+
+            <tbody ms-each="listData" id="checks-form">
+            <tr data-id="{{el.id}}">
+                <td><input type="radio" name="id" ms-attr-value="el.id"></td>
+                <td>{{el.modelNumber}}</td>
+                <td>{{el.modelName}}</td>
+                <td>{{el.modelParentType}}</td>
+                <td>{{el.modelChildrenType}}</td>
+                <td>{{modelStatus[el.modelStatus]}}</td>
+                <td>{{el.createTime}}</td>
+                <td>{{el.creater}}</td>
+                <td>{{el.updateTime}}</td>
+                <td>{{el.updater}}</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <div class="text-center border-t-gray" ms-if="listData.length">
+        <div class="mytable-pagenum inlineblock">
+            显示
+            <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                <option selected="selected">10</option>
+                <option>15</option>
+                <option>20</option>
+            </select>
+            条
+        </div>
+
+        <ul class="pagination v-middle ml10">
+            <li class="page-last">
+                <a href="#"><span aria-hidden="true">«</span></a>
+                <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+            </li>
+            <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                <a href="#">{{el}}</a>
+            </li>
+            <li class="page-next">
+                <a href="#"><span aria-hidden="true">»</span></a>
+                <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+            </li>
+        </ul>
+    </div>
+</div>

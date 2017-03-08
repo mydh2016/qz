@@ -1,0 +1,104 @@
+<div id="allist" class="ms-controller" ms-controller="allist">
+    <form id="al-search" class="form-inline pt10 pb10">
+        <input type="hidden" name="status" value="1">
+
+
+        <div class="form-group ml10">
+            <label class="text-right" for="departments">科室</label>
+
+            <select id="departments" name="departments" class="form-control">
+                <option value="">不限</option>
+            </select>
+        </div>
+
+        <div class="form-group ml10">
+            <label class="text-right" for="duties">职务</label>
+
+            <select id="duties" name="duties" class="form-control">
+                <option value="">不限</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label class="text-right" for="title">职称</label>
+
+            <select id="title" name="title" class="form-control">
+                <option value="">不限</option>
+            </select>
+        </div>
+
+        <div class="form-group ml10">
+            <label class="text-right" for="unit">单位</label>
+
+            <select id="unit" name="unit" class="form-control">
+                <option value="">不限</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary ml20">查询</button>
+
+    </form>
+
+    <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+    <form id="allistForm" class="of-auto" ms-if="listData.length">
+        <table class="mytable" >
+            <thead>
+            <tr>
+                <th></th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>手机号码</th>
+                <th>出生日期</th>
+                <th>科室</th>
+                <th>职务</th>
+                <th>职称</th>
+                <th>单位</th>
+                <th>地址</th>
+            </tr>
+            </thead>
+
+            <tbody ms-each="listData" id="checks-form">
+            <tr>
+                <td><input class="_check" type="checkbox" name="ids" ms-attr-value="el.id"></td>
+                <td>{{el.name}}</td>
+                <td>{{sex[el.sex]}}</td>
+                <td>{{el.telphone}}</td>
+                <td>{{el.dateBirth}}</td>
+                <td>{{el.departments}}</td>
+                <td>{{el.duties}}</td>
+                <td>{{el.title}}</td>
+                <td>{{el.unit}}</td>
+                <td>{{el.address}}</td>
+            </tr>
+            </tbody>
+
+        </table>
+    </form>
+
+    <div class="text-center border-t-gray" ms-if="listData.length">
+        <div class="mytable-pagenum inlineblock">
+            显示
+            <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                <option selected="selected">10</option>
+                <option>15</option>
+                <option>20</option>
+            </select>
+            条
+        </div>
+
+        <ul class="pagination v-middle ml10">
+            <li class="page-last">
+                <a href="#"><span aria-hidden="true">«</span></a>
+                <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+            </li>
+            <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                <a href="#">{{el}}</a>
+            </li>
+            <li class="page-next">
+                <a href="#"><span aria-hidden="true">»</span></a>
+                <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+            </li>
+        </ul>
+    </div>
+</div>

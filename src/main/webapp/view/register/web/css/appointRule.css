@@ -1,0 +1,11 @@
+.hsAppRule li{
+    margin-bottom: 10px;
+}
+.hsAppRule h3 {
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 14px;
+}
+.hsAppRule p {
+    line-height: 30px;
+}

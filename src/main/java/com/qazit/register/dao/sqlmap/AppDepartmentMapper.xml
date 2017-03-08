@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.register.dao.mapper.AppDepartmentMapper" >
+  <resultMap id="department" type="com.qazit.register.model.AppDepartmentVO" >
+    <id column="DEPARTMENT_ID" property="departmentId"/>
+    <result column="HOSPITAL_SN" property="hospitalSn"/>
+    <result column="DEPARTMENT_SN" property="departmentSn"/>
+    <result column="DEPARTMENT_NAME" property="departmentName"/>
+    <result column="DEPARTMENT_TYPE_SN" property="departmentTypeSn"/>
+    <result column="DESCRIPTION" property="description"/>
+    <result column="IS_SPECIAL_DEPARTMENT" property="isSpecialDepartment"/>
+    <result column="SPECIAL_DESCRIPTION" property="specialDescription"/>
+    <result column="PICTURE_PATH" property="picturePath"/>
+    <result column="TELEPHONE" property="telephone"/>
+    <result column="STATUS" property="status"/>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    DEPARTMENT_ID,
+	HOSPITAL_SN,
+	DEPARTMENT_SN,
+	DEPARTMENT_NAME,
+	DEPARTMENT_TYPE_SN,
+  	DESCRIPTION,
+  	IS_SPECIAL_DEPARTMENT,
+  	SPECIAL_DESCRIPTION,
+  	PICTURE_PATH,
+  	TELEPHONE,
+  	STATUS
+	
+  </sql>
+  
+   <select id="selectAlldepartment" resultMap="department" parameterType="com.qazit.register.model.AppDepartmentVO" >
+	SELECT
+		<include refid="Base_Column_List" />
+	FROM
+		DEPARTMENT
+	WHERE
+		HOSPITAL_SN = #{hospitalSn}
+	AND 
+		department_type_sn = #{departmentTypeSn};
+  </select>
+  <select id="selectDepart" resultMap="department" parameterType="com.qazit.register.model.AppDepartmentVO" >
+	SELECT
+		<include refid="Base_Column_List" />
+	FROM
+		DEPARTMENT
+	WHERE
+		HOSPITAL_SN = #{hospitalSn}
+	AND 
+		DEPARTMENT_SN = #{departmentSn};
+  </select>
+     <select id="selectdepartment" resultMap="department" parameterType="com.qazit.register.model.AppDepartmentVO" >
+	SELECT
+		<include refid="Base_Column_List" />
+	FROM
+		DEPARTMENT
+	WHERE
+		HOSPITAL_SN = #{hospitalSn}
+	AND
+		IS_SPECIAL_DEPARTMENT = '1';
+	
+  </select>
+  <!-- 科室详细介绍  -->
+    <select id="selectDepartmentx" resultMap="department" parameterType="com.qazit.register.model.AppDepartmentVO" >
+	SELECT
+		<include refid="Base_Column_List" />
+	FROM
+		DEPARTMENT
+	WHERE
+		DEPARTMENT_ID = #{departmentId}
+	AND 
+		HOSPITAL_SN = #{hospitalSn};
+  </select>
+  
+  <!-- web使用 -->
+  <select id="queryAlldepartment" resultMap="department" parameterType="com.qazit.register.model.AppDepartmentVO" >
+	SELECT
+		<include refid="Base_Column_List" />
+	FROM
+		DEPARTMENT
+	WHERE
+		HOSPITAL_SN = #{hospitalSn}
+	<if test="departmentTypeSn != null and departmentTypeSn != '' ">
+		AND 
+			department_type_sn = #{departmentTypeSn};
+	</if>
+  </select>
+  </mapper>

@@ -1,0 +1,242 @@
+.hsPerInfo{
+    font-family: "微软雅黑";
+}
+/*标题*/
+.hsPersonal_main_title{
+   
+    border-bottom: 4px solid #4068a5;
+}
+.hsPersonal_main_title h3{
+    padding:6px 20px;
+    font-size: 16px;
+    background-color: #4068a5;
+    color:#fff;
+    display: inline-block;
+}
+.hsPersonal_main_title a{
+    display: inline-block;
+    line-height: 36px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.hsPersonal_main_title a:hover{
+    color:#2a7fcf;
+}
+/*字体图标*/
+.icon-jiaotongtubiaoguochejiluchaxun{
+    font-size: 48px;
+    color:#d65454;
+    margin-left:-24px; 
+}
+.icon-chaxun{
+    font-size: 54px;
+    color:#d28501;
+    margin-left:-27px;
+}
+.icon-call-queue{
+    font-size: 62px;
+    color:#1570c3;
+    margin-left:-31px;
+}
+.icon-iconxianchanghudong{
+    font-size: 74px;
+    color:#1faa71;
+    margin-left:-37px;
+    margin-top: -7px;
+}
+/*中间主要内容*/
+.hsPersonal{
+    font-family: "微软雅黑";
+}
+/*侧边栏*/
+.hsPersonal_sliderBar{
+    background: url(../img/personbg-.jpg) no-repeat;
+    width: 300px;
+    height: 798px;
+    background-size: 100% 100%;
+    color:#fff;
+    float:left;
+}
+.hsPersonal_sliderBar_layer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    background-color: rgb(0,0,0)\0;
+    filter:alpha(opacity=70)\0;
+}
+.hsPersonal_sliderBar_layer a{
+    color: #fff;
+}
+.hsPersonal_sliderBar_layer_header{
+    padding-top:180px;
+    text-align: center;
+}
+/*头像*/
+.hsPersonal_sliderBar_layer_header i{
+    font-size:104px;
+   
+}
+.hsPersonal_sliderBar_layer_header h4{
+    font-size: 18px;
+    line-height: 30px;
+    margin-top:14px;
+}
+/*目录*/
+.hsPersonal_sliderBar_layer_cata{
+    margin-top: 50px;
+}
+.hsPersonal_sliderBar_layer_cata li {
+    line-height: 72px;
+    height: 72px;
+    position: relative;
+}
+.hsPersonal_sliderBar_layer_cata li i{
+    font-size: 32px;
+    position: absolute;
+    left:80px;
+    top:50%;
+    margin-top:-35px;
+}
+.hsPersonal_sliderBar_layer_cata li a{
+    font-size: 18px;
+    display: inline-block;
+    margin-left:141px;
+}
+/*退出登录按钮*/
+.hsPersonal_sliderBar button{
+    width: 197px;
+    height: 56px;
+    margin-left:51px;
+    margin-top:56px;
+    font-size: 22px;
+    background-color: #d13737;
+    border-radius: 4px;
+}
+/*主要内容*/
+.hsPersonal_main{
+    margin-left: 300px;
+    margin-right: 0;
+    padding-top:74px; 
+}
+/*我的收藏*/
+
+.myCol{
+    padding:20px 0 0 20px;
+}
+
+.myCol_table{
+    margin-top: 20px;
+}
+
+.myCol_table table{
+    width: 100%;
+    border: 1px solid #4068a5;
+    font-size: 14px;
+}
+
+.myCol_table table th,.myCol_table table td{
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+}
+
+.myCol_table table .odd{
+    background-color: #ecf0f6;
+}
+
+.myCol_table table .even{
+    background-color: #f5f5f5;
+}
+
+.myCol_table table th{
+    border-bottom: 1px solid #4068a5;
+    font-weight: 400;
+    background-color: #ecf0f6;
+}
+
+.myCol_table_top .myCol_table_top_title{
+    padding-left: 40px;
+    text-align: left;
+}
+
+.myCol_table_cont .myCol_table_cont_title{
+    width: 500px;
+}
+
+.myCol_table_cont .myCol_table_cont_title h4{
+    font-size: 14px;
+    position: relative;
+    height: 60px;
+    overflow: hidden;
+    line-height: 60px;
+    padding:0 11px 0 20px; 
+}
+
+.myCol_table_cont .myCol_table_cont_title h4 a:hover{
+    color:#2b7ecc;
+}
+
+.myCol_table_cont .myCol_table_cont_title h4 span{
+    margin-right: 6px;
+}
+
+.myCol_table_cont .myCol_table_cont_title h4 a{
+    display: inline-block;
+    overflow: hidden;
+    height: 60px;
+}
+
+.myCol_table_cont .myCol_table_cont_title h4 i{
+    position: absolute;
+    right:0;
+    top:0;
+    color:#fd7d00;
+}
+
+.myCol_table_cont_edit,.myCol_table_top_edit{
+    padding-left: 20px;
+    width: 120px;
+}
+
+.myCol_table_cont_edit{
+    cursor: pointer;
+    color:#e56061;
+ }
+
+.myCol_table_cont_edit i{
+    font-size: 22px;
+}
+
+.myCol_table_cont  .myCol_table_cont_source,.myCol_table_top_source{
+    width: 100px;
+}
+
+/*分页*/
+
+.myCol_page{
+    text-align: right;
+}
+
+.myCol_page .pagination {
+    margin: 20px 0;
+}
+
+.myCol_page .pagination > li > a{
+    padding: 10px 18px;
+}
+/*取消收藏提示*/
+/*删除提示*/
+.myCol_tip .modal{
+    top:30%;
+    width: 300px;
+    margin:0 auto;
+}
+.myCol_tip .modal .modal-header,.myCol_tip .modal .modal-footer{
+    border:0;
+}
+.myCol_tip .modal .modal-title{
+    font-size: 24px;
+}
+.myCol_tip .modal .modal-body p{
+    font-size: 14px;
+}

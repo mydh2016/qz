@@ -1,0 +1,26 @@
+.hs_depDetail{
+    max-width:720px;
+    min-width:320px;
+    width:100%;
+    margin:0 auto;
+}
+/*图片*/
+.hs_depDetail_img{
+    margin-top:0.96rem;
+}
+.hs_depDetail_img img{
+    width: 100%;
+    height: 3.00rem;
+}
+/*科室介绍*/
+.hs_depDetail_info{
+    margin-top:0.2rem;
+    padding:0.2rem;
+    background-color: #fff;
+}
+.hs_depDetail_info p{
+    line-height: 0.5rem;
+    font-size: 0.26rem;
+    text-indent: 2em;
+    margin-top:0.2rem;
+}

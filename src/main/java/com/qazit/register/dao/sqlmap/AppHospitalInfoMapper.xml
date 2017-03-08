@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.register.dao.mapper.AppHospitalInfoMapper" >
+  <resultMap id="hospitalVO" type="com.qazit.register.model.AppHospitalVO" >
+    <id column="id" property="hospitalId"/>
+    <result column="hcode" property="hcode"/>
+    <result column="hospitalName" property="hospitalName"/>
+    <result column="hospitalintroduce" property="hospitalintroduce"/>
+    <result column="hospitaladdress" property="hospitalAddress"/>
+    <result column="telnumber" property="telNumber" />
+    <result column="province" property="province"/>
+    <result column="longitude" property="longitude" />
+    <result column="latitude" property="latitude"/>
+    <result column="city" property="city" />
+    <result column="county" property="county"/>
+    <result column="status" property="status"/>
+    <result column="pic_addr" property="picAddr"/>
+    
+  </resultMap>
+  <sql id="Base_Column_List" >
+	id,
+	hcode,
+    hospitalName,
+	hospitalintroduce,
+	hospitaladdress,
+	telnumber,
+	province,
+	longitude,
+	latitude,
+	city,
+	county,
+	status,
+	pic_addr
+  </sql>
+  <select id="queryAllHospital" resultMap="hospitalVO" parameterType="com.qazit.register.model.AppHospitalVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from HOSPITAL
+  </select>
+  <select id="selectById" resultMap="hospitalVO" parameterType="com.qazit.register.model.AppHospitalVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from HOSPITAL where id=#{hospitalId}
+  </select>
+  
+    <select id="selectbyHospital" resultMap="hospitalVO" parameterType="com.qazit.register.model.AppHospitalVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from HOSPITAL where hcode=#{hcode}
+  	</select> 
+  
+</mapper>

@@ -1,0 +1,142 @@
+<div class="p25">
+	<div class="title">个人中心</div>
+
+	<div id="profile" class="conbar response-p18 position-r" ms-controller="profileData">
+	<!-- 
+		<div class="pos-img">
+			<img class="profile-pice" src="img/userface/1.jpg">
+		</div>
+ -->
+		<div class="pmb">
+			<div class="pmb-header">
+				<h2>基本信息</h2>
+				<i class="profile-edit fa fa-edit" title="编辑" ms-on-click="toggleEditInfo"></i>
+			</div>
+
+			<div class="pl30" ms-if="editInfo === 0">
+				<dl class="dl-horizontal">
+					<dt>用户名</dt>
+					<dd>{{data.userName}}</dd>
+				</dl>
+
+				<dl class="dl-horizontal">
+					<dt>邮箱</dt>
+					<dd>{{data.email}}</dd>
+				</dl>
+
+				<dl class="dl-horizontal">
+					<dt>联系电话</dt>
+					<dd>{{data.mobilePhone}}</dd>
+				</dl>
+
+				<dl class="dl-horizontal">
+					<dt>创建时间</dt>
+					<dd>{{data.createTime | date('y-M-dd HH:mm:ss')}}</dd>
+				</dl>
+				
+				<div ms-if="data.hospitalId!='asiainfo'">
+					<div ms-if="data.isAdmin==0">
+						<dl class="dl-horizontal">
+						<dt>科室</dt>
+						<dd>{{data.departmentName}}</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+
+			<form ms-if="editInfo === 1" ms-on-submit="submitUserInfo">
+				<input type="hidden" name="userId" ms-attr-value="{{data.userId}}">
+				<input type="hidden" name="isAdmin" ms-attr-value="{{data.isAdmin}}">
+				<div class="pl30" ms-if="editInfo === 1">
+					<dl class="dl-horizontal">
+						<dt>用户名</dt>
+						<dd>
+							<input type="text" class="form-control" id="userName" name="userName" placeholder="用户名" ms-attr-value="data.userName">
+						</dd>
+					</dl>
+
+					<dl class="dl-horizontal">
+						<dt>联系电话</dt>
+						<dd>
+							<input type="text" class="form-control" id="mobilePhone" name="mobilePhone" placeholder="手机号" ms-attr-value="data.mobilePhone">
+      				</dd>
+					</dl>
+
+					<dl class="dl-horizontal">
+						<dt>Email</dt>
+						<dd>
+							<input type="email" class="form-control" id="email" name="email" placeholder="email" ms-attr-value="data.email">
+        			</dd>
+					</dl>
+
+					<dl class="dl-horizontal">
+						<dt>说明</dt>
+						<dd>
+							<input type="description" class="form-control" id="description" name="description" placeholder="说明" ms-attr-value="data.description">
+       				</dd>
+					</dl>
+					
+					<div ms-if="data.hospitalId!='asiainfo'">
+						<div ms-if="data.isAdmin==0">
+							<dl class="dl-horizontal">
+							<dt>科室</dt>
+							<dd>
+								<select class="form-control" id="departmentId" name="departmentId" ms-duplex="data.departmentId">
+	               				 <option ms-repeat="departmentName" ms-attr-value="el.departmentId">{{el.departmentName}}</option>
+	            				</select>	
+							</dd>
+							</dl>
+						</div>
+					</div>
+					
+					
+					
+					<button class="btn btn-info btn-sm">提交</button>
+					<div class="btn btn-link btn-sm" ms-on-click="toggleEditInfo">取消</div>
+				</div>
+			</form>
+
+		</div>
+
+		<div class="pmb mt20" style="border-top: 1px solid #ddd;">
+			<div class="pmb-header">
+				<h2>密码设置</h2>
+			</div>
+
+			<div class="pl30" ms-if="changePwd === 0">
+				<div class="btn btn-primary ripple" ms-on-click="toggleChangePwd">修改密码</div>
+			</div>
+
+			<form ms-if="changePwd === 1" ms-on-submit="submitPwd">
+				<input type="hidden" name="userId" ms-attr-value="{{data.userId}}">
+				<div class="pl30">
+					<dl class="dl-horizontal">
+						<dt>原密码</dt>
+						<dd>
+							<input type="password" class="form-control" name="oldPassword" placeholder="请填写您的原始密码...">
+						</dd>
+					</dl>
+
+					<dl class="dl-horizontal">
+						<dt>新密码</dt>
+						<dd>
+							<input type="password" class="form-control" name="newPassword1" placeholder="请填写您的新密码...">
+						</dd>
+					</dl>
+
+					<dl class="dl-horizontal">
+						<dt>确认密码</dt>
+						<dd>
+							<input type="password" class="form-control" name="newPassword" placeholder="重新输入一次密码...">
+						</dd>
+					</dl>
+
+					<button class="btn btn-info btn-sm">修改</button>
+					<div class="btn btn-link btn-sm" ms-on-click="toggleChangePwd">取消</div>
+				</div>
+			</form>
+		</div>
+
+	</div>
+
+</div>

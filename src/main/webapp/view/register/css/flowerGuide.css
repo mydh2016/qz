@@ -1,0 +1,30 @@
+.hs_flowerGuide{
+    max-width:720px;
+    min-width:320px;
+    width: 100%;
+    margin:0 auto;
+}
+/*楼层*/
+.hs_flowerGuide_del{
+    margin-top:1.16rem
+}
+.hs_flowerGuide_del>ul>li>h2{
+    font-size: 0.30rem;
+    line-height: 0.7rem;
+    height: 0.7rem;
+    background-color: #4068a5;
+    color:#ffffff;
+}
+.hs_flowerGuide_del>ul>li>.hs_flowerGuide_del_depart{
+    padding-left: 0.2rem;
+    background-color: #fff;
+}
+.hs_flowerGuide_del .hs_flowerGuide_del_depart li{
+    border-bottom: 1px solid #dddddd;
+    line-height: 0.6rem;
+    height: 0.6rem;
+    font-size: 0.26rem;
+}
+.hs_flowerGuide_del .hs_flowerGuide_del_depart li:last-child {
+    border:none;
+}

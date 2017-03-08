@@ -1,0 +1,50 @@
+                    <!-- 科室 -->
+                    <div class="hsRegistion_department pull-left ">
+                        <table>
+                            <tr class="hsRegistion_department_title">
+                                 <th  colspan="4"><h2>预约科室</h2></th>
+                            </tr>
+                            <tr class="row hsRegistion_department_main" ng-repeat="departmentType in departmentTypeList">
+                                <td class="col-xs-2 hsRegistion_department_main_left">{{departmentType.departmentTypeName}}</td>
+                                <td class="col-xs-10 hsRegistion_department_main_right">
+                                    <ul class="row">
+                                        <li class="col-xs-4" ng-repeat="dept in departmentType.deptList">
+                                        	<a ui-sref="appoint.department({departmentId:dept.departmentId})">{{dept.departmentName}}</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- 预约规则 -->
+                    <div class="hsRegistion_rule pull-right">
+                       <ul>
+                           <li class="hsRegistion_rule_title">
+                               <h3>预约规则</h3>
+                           </li>
+                           <li class="hsRegistion_rule_content">
+                                <ul>
+                                    <li>
+                                        <i>预约周期：</i>
+                                        <span>7天</span>
+                                    </li>
+                                    <li>
+                                        <i>放号时间：</i>
+                                        <span>8:30</span>
+                                    </li>
+                                    <li>
+                                        <i>停挂时间：</i>
+                                        <span>下午14:00停止次日预约挂（周五14:00后停挂至下周一）</span>
+                                    </li>
+                                    <li>
+                                        <i>退号时间：</i>
+                                        <span>就诊前一工作日14:00前取消</span>
+                                    </li>
+                                    <li>
+                                        <i>特殊规则：</i> 
+                                        <span>①  取号地点不同：西院区预取号地点：西院区门诊楼一层大厅挂号窗口取东院区预约号取号地点：东院区老门诊楼一层挂号窗口或新门诊楼各楼层挂号/收费窗口取</span>
+                                    </li>
+                              </ul>
+                           </li>
+                       </ul>
+                    </div>

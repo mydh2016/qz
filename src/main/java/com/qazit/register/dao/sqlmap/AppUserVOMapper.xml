@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.register.dao.mapper.AppUserVOMapper" >
+  <resultMap id="userVO" type="com.qazit.register.model.AppUserVO" >
+    <id column="peu_user_id" property="userid"/>
+    <result column="peu_user_name" property="username"/>
+    <result column="peu_use_passwd" property="userpassword"/>
+    <result column="real_name" property="realname"/>
+    <result column="identify_number" property="identifynumber"/>
+    <result column="e_mail" property="email"/>
+    <result column="cellphone_number" property="cellphonenumber"/>
+    <result column="officephone_number" property="officephonenumber"/>
+    <result column="user_state" property="userstate"/>
+    <result column="effect_time" property="effecttime"/>
+    <result column="unend_time" property="unendtime"/>
+    <result column="erro_test_cnt" property="testcnt"/>
+    <result column="gender" property="gender" />
+  </resultMap>
+   
+  <sql id="Base_Column_List" >
+    peu_user_id,
+	peu_user_name,
+	peu_use_passwd,
+	real_name,
+	identify_number,
+	e_mail,
+	cellphone_number,
+	officephone_number,
+	user_state,
+	effect_time,
+	unend_time,
+	erro_test_cnt,
+	gender
+  </sql>
+  <select id="getUser" resultMap="userVO" parameterType="com.qazit.register.model.AppUserVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_PEU_USER
+    where peu_user_name = #{username} and peu_use_passwd=#{userpassword}
+  </select>
+  <select id="selectByUserId" resultMap="userVO" parameterType="com.qazit.register.model.AppUserVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_PEU_USER
+    where peu_user_id=#{userid}
+    <!-- <choose> 
+     <when test="_parameter!=null and _parameter!=''">peu_user_id = #{_parameter}</when>
+     </choose>  -->
+  </select>
+   <select id="selectByUserPhone" resultMap="userVO" parameterType="com.qazit.register.model.AppUserVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_PEU_USER
+    where peu_user_name=#{username}
+    <!-- <choose> 
+     <when test="_parameter!=null and _parameter!=''">cellphone_number = #{_parameter}</when>
+     </choose>  -->
+  </select>
+  <select id="selectByUserIdCard" resultMap="userVO" parameterType="com.qazit.register.model.AppUserVO" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_PEU_USER
+    where identify_number=#{identifynumber}
+  </select>
+  <insert id="createUser" parameterType="com.qazit.register.model.AppUserVO" >
+    insert into T_PEU_USER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+    <if test="userid!=null">
+   		peu_user_id,
+    </if>
+    <if test="username!=null">
+       peu_user_name,
+    </if>
+    <if test="userpassword!=null">
+   	   peu_use_passwd,
+    </if>
+    <if test="realname!=null">
+     real_name,
+    </if>
+    <if test="identifynumber!=null">
+     identify_number,
+    </if>
+    <if test="email!=null">
+      e_mail,
+    </if>
+    <if test="cellphonenumber!=null">
+      cellphone_number,
+    </if>
+    <if test="officephonenumber!=null">
+      officephone_number,
+    </if>
+    <if test="userstate!=null">
+      user_state,
+    </if>
+    <if test="effecttime!=null">
+      effect_time,
+    </if>
+    <if test="unendtime!=null">
+      unend_time,
+    </if>
+    <if test="testcnt!=null">
+      erro_test_cnt,
+    </if>
+    <if test="gender!=null">
+      gender
+    </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid},
+      </if>
+      <if test="username!=null">
+        #{username}, 
+       </if>
+      <if test="userpassword!=null">
+   	    #{userpassword},
+      </if>
+      <if test="realname!=null">
+        #{realname},
+      </if>
+      <if test="identifynumber!=null">
+        #{identifynumber},
+      </if>
+      <if test="email!=null">
+        #{email},
+      </if>
+      <if test="cellphonenumber!=null">
+        #{cellphonenumber},
+      </if>
+      <if test="officephonenumber!=null">
+       #{officephonenumber},
+      </if>
+      <if test="userstate!=null">
+       #{userstate},
+      </if>
+      <if test="effecttime!=null">
+       #{effecttime},
+      </if>
+      <if test="unendtime!=null">
+       #{unendtime},
+      </if>
+      <if test="testcnt!=null">
+       #{testcnt},
+      </if>
+      <if test="gender!=null">
+       #{gender}
+      </if>
+    </trim>
+  </insert>
+  <update id="updateUser" parameterType="com.qazit.register.model.AppUserVO" >
+    update T_PEU_USER
+    <set >
+      <if test="username!=null">
+        peu_user_name=#{username}, 
+       </if>
+      <if test="userpassword!=null">
+   	    peu_use_passwd=#{userpassword},
+      </if>
+      <if test="realname!=null">
+        real_name=#{realname},
+      </if>
+      <if test="identifynumber!=null">
+       identify_number= #{identifynumber},
+      </if>
+      <if test="email!=null">
+        e_mail=#{email},
+      </if>
+      <if test="cellphonenumber!=null">
+        cellphone_number=#{cellphonenumber},
+      </if>
+      <if test="officephonenumber!=null">
+       officephone_number=#{officephonenumber},
+      </if>
+      <if test="userstate!=null">
+       user_state=#{userstate},
+      </if>
+      <if test="effecttime!=null">
+       effect_time=#{effecttime},
+      </if>
+      <if test="unendtime!=null">
+       unend_time=#{unendtime},
+      </if>
+      <if test="testcnt!=null">
+       erro_test_cnt=#{testcnt},
+      </if>
+      <if test="gender!=null">
+       gender=#{gender}
+      </if>
+    </set>
+    where peu_user_id = #{userid}
+  </update> 
+  
+  <!-- 根据用户信息修改邮箱和手机号 -->
+   <update id="updateByUser" parameterType="com.qazit.register.model.AppUserVO" >
+    update T_PEU_USER
+    <set >
+     <!--  <if test="username!=null">
+        peu_user_name=#{username}, 
+       </if>
+      <if test="userpassword!=null">
+   	    peu_use_passwd=#{userpassword},
+      </if>
+      <if test="realname!=null">
+        real_name=#{realname},
+      </if>
+      <if test="identifynumber!=null">
+       identify_number= #{identifynumber},
+      </if> -->
+      <if test="email!=null">
+        e_mail=#{email},
+      </if>
+      <if test="cellphonenumber!=null">
+        cellphone_number=#{cellphonenumber},
+      </if>
+     <!--  <if test="officephonenumber!=null">
+       officephone_number=#{officephonenumber},
+      </if>
+       <if test="userstate!=null">
+       user_state=#{userstate},
+      </if>
+     <if test="effecttime!=null">
+       effect_time=#{effecttime},
+      </if>
+      <if test="unendtime!=null">
+       unend_time=#{unendtime},
+      </if>
+      <if test="testcnt!=null">
+       erro_test_cnt=#{testcnt},
+      </if>
+      <if test="gender!=null">
+       gender=#{gender}
+      </if> -->
+    </set>
+    where peu_user_id = #{userid}
+  </update> 
+  
+  <!--  <update id="updateByMail" parameterType="com.qazit.register.model.AppUserVO" >
+    update T_PEU_USER
+    <set >
+      <if test="email!=null">
+        e_mail=#{email}
+      </if>
+    </set>
+    where peu_user_id = #{userid}
+  </update>
+  
+  <update id="updateByCellphone" parameterType="com.qazit.register.model.AppUserVO" >
+    update T_PEU_USER
+    <set >
+      <if test="cellphonenumber!=null">
+        cellphone_number=#{cellphonenumber}
+      </if>
+    </set>
+    where peu_user_id = #{userid}
+  </update>  -->
+  
+</mapper>

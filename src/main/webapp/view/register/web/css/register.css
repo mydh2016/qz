@@ -1,0 +1,170 @@
+
+.hsreg{
+    font-family: "微软雅黑";
+}
+/*导航条*/
+.hsReg_new{
+   
+    border-bottom: 4px solid #4068a5;
+}
+.hsReg_new h3{
+    padding:6px 20px;
+    font-size: 16px;
+    background-color: #4068a5;
+    color:#fff;
+    display: inline-block;
+}
+/*注册进度条*/
+.hsReg_proBar{
+    width: 550px;
+    margin:30px auto 0;
+} 
+/*文字部分*/
+.row,.col-xs-4{
+    padding: 0;
+    margin: 0;
+}
+.hsReg_proBar li{
+    font-size:16px;
+}
+.hsReg_proBar .hsReg_proBar_cont .active{
+    color:#4068a5;
+}
+.hsReg_proBar .hsReg_proBar_cont .left{
+   text-align: left; 
+}
+.hsReg_proBar .hsReg_proBar_cont .right{
+    text-align: right;
+    padding-right:1em;
+}
+.hsReg_proBar .hsReg_proBar_cont .center{
+    text-align: center;
+}
+/*点*/
+.hsReg_proBar_bar{
+    margin-top:15px;
+    position: relative;
+}
+.hsReg_proBar_bar i{
+    font-size: 46px;
+    color:#dcdcdc;
+}
+.hsReg_proBar_bar .active{
+    color:#4068a5;
+}
+.hsReg_proBar_bar .left{
+    margin-left: 28px;
+}
+.hsReg_proBar_bar .center{
+    margin-left:174px;
+}
+.hsReg_proBar_bar .right{
+    margin-left:174px;
+}
+.hsReg_proBar_bar .lineLeft,.hsReg_proBar_bar .lineRight{
+    height:2px;
+    width: 212px;
+    background-color: #dcdcdc;
+    position: absolute;
+    top:6px;
+    left:57px;
+}
+.hsReg_proBar_bar .lineRight{
+    left:280px;
+}
+/*注册内容*/
+.hsReg_cont{
+    width: 800px;
+    margin:0 auto;
+    margin-top: 20px;
+}
+.hsReg_cont td{
+    height: 50px;
+}
+.hsReg_cont_text{
+    font-size: 14px;
+    text-align: right;
+    padding-right: 14px;
+    width: 270px;
+}
+
+.hsReg_cont_form.sex label{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.hsReg_cont_form.sex input{
+    width: 18px;
+    margin:2px 40px 0px 7px;
+    width:28px\9;
+    border:none;
+}
+.hsReg_cont_form .active{
+    color:#a9a9a9;
+}
+.hsReg_cont_form input{
+    height: 32px;
+    border: 1px solid #dddddd;
+    padding-left: 10px;
+    width: 280px;
+    font-size: 14px;
+    line-height: 32px;
+    color:#a9a9a9;
+}
+.hsReg_cont_form .hsReg_cont_form_choseID,.hsReg_cont_form.birthDate select{
+    height: 32px;
+    border-color: #dddddd;
+    font-size: 14px;
+    padding-left: 5px;
+    border-width: 1px;
+    line-height: 32px;
+}
+.hsReg_cont_form .hsReg_cont_form_choseID{
+    width: 280px;
+}
+.hsReg_cont_form.birthDate select{
+    width: 86px;
+    margin-right: 8px;
+}
+.hsReg_cont_form .code{
+    width: 168px;
+}
+.hsReg_cont_form .indetCode{
+    display: inline-block;
+    background-color: #4068a5;
+    font-size: 14px;
+    height: 32px;
+    color:#fff;
+    margin-left:13px;
+}
+.hsReg_cont_agg{
+    font-size: 14px;
+}
+.hsReg_cont_agg .agree{
+    height: 18px;
+    width: 18px;
+    margin-top:0;
+    margin-right:10px;
+    background-color: #fff;
+}
+.hsReg_cont_agg  a{
+    color:#2b7ecc;
+}
+.hsReg_cont_btn button{
+    width: 160px;
+    color:#fff;
+    background-color: #fd7d00;
+    font-size: 16px;
+    height: 42px;
+}
+.hsReg_cont .tip{
+    color:#d9534f;
+    position: relative;
+    padding-left:20px;
+    display:none;
+}
+.hsReg_cont .tip i{
+    position: absolute;
+    left:0;
+    top:1px;
+}

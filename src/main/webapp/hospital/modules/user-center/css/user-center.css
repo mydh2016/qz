@@ -1,0 +1,83 @@
+.response-p18 {
+    padding: 18px 18px 18px 80px;
+}
+@media (max-width: 767px) {
+    .response-p18 {
+        padding: 100px 18px 18px 18px;
+    }
+}
+
+.pos-img {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+}
+@media (max-width: 767px) {
+    .pos-img {
+        width: 100%;
+        left: 0;
+        text-align: center;
+    }
+}
+
+.profile {}
+.profile-pice {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    border: 3px solid rgba(0, 0, 0, 0.14);
+}
+
+.pmb{
+    padding: 30px 20px 0;
+}
+@media (min-width: 1200px) {
+    .pmb {
+        padding: 40px 42px 0;
+    }
+}
+@media (max-width: 1199px) {
+    .pmb{
+        padding: 30px 20px 0;
+    }
+}
+.pmb-header {
+    position: relative;
+    margin-bottom: 25px;
+
+}
+.pmb-header h2 {
+    margin: 0;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.profile-edit {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    color: #a4a9ae;
+    font-size: 20px;
+    cursor: pointer;
+
+    -webkit-transition: color .2s;
+    transition: color .2s;
+}
+.profile-edit:hover {
+    color: #3598DB;
+}
+
+.pmb-body {
+
+}
+
+.dl-horizontal dt {
+    text-align: left;
+}
+
+

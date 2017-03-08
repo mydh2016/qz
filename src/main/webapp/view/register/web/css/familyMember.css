@@ -1,0 +1,180 @@
+.hsPerInfo{
+    font-family: "微软雅黑";
+}
+/*标题*/
+.hsPersonal_main_title{
+    border-bottom: 4px solid #4068a5;
+}
+.hsPersonal_main_title h3{
+    padding:6px 20px;
+    font-size: 16px;
+    background-color: #4068a5;
+    color:#fff;
+    display: inline-block;
+}
+.hsPersonal_main_title a{
+    display: inline-block;
+    line-height: 36px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.hsPersonal_main_title a:hover{
+    color:#2a7fcf;
+}
+
+/*字体图标*/
+.icon-jiaotongtubiaoguochejiluchaxun{
+    font-size: 48px;
+    color:#d65454;
+    margin-left:-24px; 
+}
+.icon-chaxun{
+    font-size: 54px;
+    color:#d28501;
+    margin-left:-27px;
+}
+.icon-call-queue{
+    font-size: 62px;
+    color:#1570c3;
+    margin-left:-31px;
+}
+.icon-iconxianchanghudong{
+    font-size: 74px;
+    color:#1faa71;
+    margin-left:-37px;
+    margin-top: -7px;
+}
+/*中间主要内容*/
+.hsPersonal{
+    font-family: "微软雅黑";
+}
+/*侧边栏*/
+.hsPersonal_sliderBar{
+    background: url(../img/personbg-.jpg) no-repeat;
+    width: 300px;
+    height: 798px;
+    background-size: 100% 100%;
+    color:#fff;
+    float:left;
+}
+.hsPersonal_sliderBar_layer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    background-color: rgb(0,0,0)\0;
+    filter:alpha(opacity=70)\0;
+}
+.hsPersonal_sliderBar_layer a{
+    color: #fff;
+}
+.hsPersonal_sliderBar_layer_header{
+    padding-top:180px;
+    text-align: center;
+}
+/*头像*/
+.hsPersonal_sliderBar_layer_header i{
+    font-size:104px;
+   
+}
+.hsPersonal_sliderBar_layer_header h4{
+    font-size: 18px;
+    line-height: 30px;
+    margin-top:14px;
+}
+/*目录*/
+.hsPersonal_sliderBar_layer_cata{
+    margin-top: 50px;
+}
+.hsPersonal_sliderBar_layer_cata li {
+    line-height: 72px;
+    height: 72px;
+    position: relative;
+}
+.hsPersonal_sliderBar_layer_cata li i{
+    font-size: 32px;
+    position: absolute;
+    left:80px;
+    top:50%;
+    margin-top:-35px;
+}
+.hsPersonal_sliderBar_layer_cata li a{
+    font-size: 18px;
+    display: inline-block;
+    margin-left:141px;
+}
+/*退出登录按钮*/
+.hsPersonal_sliderBar button{
+    width: 197px;
+    height: 56px;
+    margin-left:51px;
+    margin-top:56px;
+    font-size: 22px;
+    background-color: #d13737;
+    border-radius: 4px;
+}
+/*主要内容*/
+.hsPersonal_main{
+    margin-left: 300px;
+    margin-right: 0;
+    padding-top:74px; 
+}
+/*添加家庭成员*/
+.hsPersonal_main .hsFamMem{
+    padding:20px 0 0 20px;
+}
+.row,.col-xs-3,.col-xs-1,.col-xs-2,.col-xs-4{
+    padding: 0;
+    margin: 0;
+}
+.hsPersonal_main .hsFamMem .hsFamMem_info{
+    padding-left: 20px;
+}
+.hsPersonal_main .hsFamMem table{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.hsPersonal_main .hsFamMem table th{
+    font-weight: 400;
+    color:#2b7ecc;
+    font-size: 14px;
+}
+.hsPersonal_main .hsFamMem table th,.hsPersonal_main .hsFamMem table td{
+     height: 36px;
+}
+.hsPersonal_main .hsFamMem .hsFamMem_member_btn{
+
+}
+.hsPersonal_main .hsFamMem .hsFamMem_member_btn .btn{
+    padding: 4px 18px;
+}
+.hsPersonal_main .hsFamMem .hsFamMem_member_add{
+    height: 100px;
+}
+.hsPersonal_main .hsFamMem .hsFamMem_member_add button{
+    color:#fd7d00;
+    border:1px solid #fd7d00;
+}
+.hsPersonal_main .hsFamMem  .hsFamMem_member_add button:hover{
+    background-color: #fd7d00;
+    color:#fff;
+}
+.hsPersonal_main .hsFamMem .hsFamMem_member_add .btn{
+    padding:8px 20px;
+}
+/*删除提示*/
+.hsFamMem_delTip .modal{
+    top:30%;
+    width: 300px;
+    margin:0 auto;
+}
+.hsFamMem_delTip .modal .modal-header,.hsFamMem_delTip .modal .modal-footer{
+    border:0;
+}
+.hsFamMem_delTip .modal .modal-title{
+    font-size: 24px;
+}
+.hsFamMem_delTip .modal .modal-body p{
+    font-size: 14px;
+}

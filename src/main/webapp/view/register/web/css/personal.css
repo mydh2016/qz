@@ -1,0 +1,120 @@
+/*字体图标*/
+.icon-jiaotongtubiaoguochejiluchaxun{
+    font-size: 48px;
+    color:#d65454;
+    margin-left:-24px; 
+}
+.icon-chaxun{
+    font-size: 54px;
+    color:#d28501;
+    margin-left:-27px;
+}
+.icon-call-queue{
+    font-size: 62px;
+    color:#1570c3;
+    margin-left:-31px;
+}
+.icon-iconxianchanghudong{
+    font-size: 74px;
+    color:#1faa71;
+    margin-left:-37px;
+    margin-top: -7px;
+}
+/*中间主要内容*/
+.hsPersonal{
+    font-family: "微软雅黑";
+}
+/*侧边栏*/
+.hsPersonal_sliderBar{
+    background: url(../img/personbg-.jpg) no-repeat;
+    width: 300px;
+    height: 798px;
+    background-size: 100% 100%;
+    color:#fff;
+    float:left;
+}
+.hsPersonal_sliderBar_layer{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    background-color: rgb(0,0,0)\0;
+    filter:alpha(opacity=70)\0;
+}
+.hsPersonal_sliderBar_layer a{
+    color: #fff;
+}
+.hsPersonal_sliderBar_layer_header{
+    padding-top:180px;
+    text-align: center;
+}
+/*头像*/
+.hsPersonal_sliderBar_layer_header i{
+    font-size:104px;
+   
+}
+.hsPersonal_sliderBar_layer_header h4{
+    font-size: 18px;
+    line-height: 30px;
+    margin-top:14px;
+}
+/*目录*/
+.hsPersonal_sliderBar_layer_cata{
+    margin-top: 50px;
+}
+.hsPersonal_sliderBar_layer_cata li {
+    line-height: 72px;
+    height: 72px;
+    position: relative;
+}
+/* .hsPersonal_sliderBar_layer_cata li.active{
+    background-color: #fff;
+}  */
+.hsPersonal_sliderBar_layer_cata li i{
+    font-size: 32px;
+    position: absolute;
+    left:80px;
+    top:50%;
+    margin-top:-35px;
+}
+.hsPersonal_sliderBar_layer_cata li a{
+    font-size: 18px;
+    display: inline-block;
+    margin-left:141px;
+}
+/*退出登录按钮*/
+.hsPersonal_sliderBar button{
+    width: 197px;
+    height: 56px;
+    margin-left:51px;
+    margin-top:56px;
+    font-size: 22px;
+    background-color: #d13737;
+    border-radius: 4px;
+}
+/*主要内容*/
+.hsPersonal_main{
+    margin-left: 300px;
+    margin-right: 0;
+    padding-top:74px; 
+}
+.hsPersonal_main_index{
+    margin-left: 108px;
+    padding-top: 178px;
+}
+.hsPersonal_main li{
+    text-align: center;
+   
+}
+.hsPersonal_main li >a{
+     position: relative;
+     display: block;
+}
+.hsPersonal_main li >a>i{
+    position: absolute;
+    top:-60px;
+    left:50%;
+}
+.hsPersonal_main li >a>p{
+    font-size: 18px;
+    line-height: 18px;
+}

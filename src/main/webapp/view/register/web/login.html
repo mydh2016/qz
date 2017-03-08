@@ -1,0 +1,50 @@
+
+<div ng-include="'ghheader.html'"></div>
+            <div class="hsreg">
+                <div class="container">
+                    <!-- 导航条 -->
+                    <div class="hsReg_new">
+                        <h3>登录</h3>
+                    </div>
+                    <!-- 注册进度条 -->
+                    
+                    <!-- 注册内容 -->
+                    <div class="hsReg_cont">
+                    	<form name="registerForm" novalidate class="form-horizontal">
+                        <table>
+                            <tr>
+                                <td class="hsReg_cont_text">账号</td>
+                                <td class="hsReg_cont_form">
+                                    <input type="text" placeholder="请输入您账号" class="form-control" 
+                                    ng-model="webUser.username" name="username" required>
+                                    <span class="hsReg_cont_tipName tip" ng-show="registerForm.webUser.name.$dirty && registerForm.webUser.name.$invalid">
+                                        <span class="text-danger" ng-show="registerForm.webUser.name.$error.required">不能为空</span>
+                                        <i class="icon iconfont icon-x"></i>
+                                        	请输入账号
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="hsReg_cont_text">密码</td>
+                                <td class="hsReg_cont_form">
+                                    <input type="password" class="form-control" placeholder="请输入密码" 
+                                    ng-model="webUser.userpassword" required>
+                                    <span class="hsReg_cont_tipPsd tip">
+                                        <i class="icon iconfont icon-x"></i>
+                                        	请输入密码
+                                    </span>
+                                </td>
+                            </tr>
+                             
+                            <tr class="hsReg_cont_btn">
+                                <td></td>
+                                <td>
+                                    <button class="btn " ng-disabled="registerForm.$invalid " ng-click="login()">登录</button>
+                                </td>
+                            </tr>
+                        </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+<div ng-include="'ghfooter.html'"></div>

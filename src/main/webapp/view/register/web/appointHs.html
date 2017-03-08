@@ -1,0 +1,31 @@
+<div ng-include="'ghheader.html'"></div>
+        <div ng-controller="appointHsCtrl">
+            <div class="container">
+                <div class="hsAppoint">
+                    <ul>
+                        <li class="hsAppoint_hospital first" ng-repeat="hs in hsList"><a ui-sref="appoint.dept({hospitalId:hs.hospitalId})">
+                            <ul class="clearfix">
+                                <li class="pull-left hsAppoint_hospital_img">
+                                    <img src="./../{{hs.picAddr}}" alt="医院">
+                                </li>
+                                <li class="pull-left hsAppoint_hospital_del">
+                                    <h2>{{hs.hospitalName}} <small>{{hs.hospitalName}}</small></h2>
+                                    <p>
+                                        <i class="icon iconfont icon-phone"></i>
+                                        {{hs.telNumber}}
+                                    </p>
+                                    <p>
+                                        <i class="icon iconfont icon-ditu1"></i>
+                                        {{hs.hospitalAddress}}
+                                    </p>
+                                </li>
+                                <li class="pull-right hsAppoint_hospital_now">
+                                    <button type="button" class="btn" >现在预约</button>
+                                </li>
+                            </ul>
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+<div ng-include="'ghheader.html'"></div>

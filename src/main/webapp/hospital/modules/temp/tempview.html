@@ -1,0 +1,63 @@
+<div class="p25">
+    <div class="title">模板预览</div>
+	
+    <div class="conbar">
+
+        <div id="tempView" class="pmb pb20 ms-controller" ms-controller="tempView">
+            <div class="pmb-header of-hidden pb10">
+                <h2 class="fl pt5">模板信息</h2>
+                <a href="#/tempmanage" class="btn btn-info fl ml30">返回</a>
+            </div>
+
+            <div class="pl30">
+                <dl class="dl-horizontal">
+                    <dt>模板名称</dt>
+                    <dd>{{data.modelName}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>模板大类</dt>
+                    <dd>{{data.modelParentType}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>模板小类</dt>
+                    <dd>{{data.modelChildrenType}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>模板状态</dt>
+                    <dd>{{modelStatus[data.modelStatus]}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>创建时间</dt>
+                    <dd>{{data.createTime}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>创建人</dt>
+                    <dd>{{data.creater}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>修改时间</dt>
+                    <dd>{{data.updateTime}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>修改人</dt>
+                    <dd>{{data.updater}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal">
+                    <dt>模板内容</dt>
+                    <dd>{{data.modelContent}}</dd>
+                </dl>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

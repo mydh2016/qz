@@ -1,0 +1,68 @@
+.hsNewList{
+    font-family: "微软雅黑";
+}
+
+/*导航栏*/
+
+.hsNewList_nav{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    background-color: #ecf0f6;
+}
+
+.hsNewList_nav h3{
+    line-height: 50px;
+    font-size: 16px;
+}
+
+/*新闻内容*/
+
+.hsNewList_main{
+    padding:20px;
+}
+
+.hsNewList_main h4{
+    font-size: 26px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 80px;
+}
+
+.hsNewList_main_info{
+    border-bottom: 1px solid #dddddd;
+}
+
+.hsNewList_main_info span{
+    line-height: 40px;
+    color:#595758;
+}
+
+.hsNewList_main_info .hsNewList_main_info_collect{
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.hsNewList_main_info .hsNewList_main_info_collect:hover{
+    color:#e56061;
+}
+
+.hsNewList_main_info .hsNewList_main_info_collect.current{
+    color:#e56061;
+}
+
+.hsNewList_main_info .hsNewList_main_info_collect i{
+    position: absolute;
+    left:0;
+    top:1px;
+}
+.hsNewList_main_cont{
+    padding:20px 0;
+}
+.hsNewList_main_cont p{
+    font-size: 16px;
+    line-height: 40px;
+    text-indent: 2em;
+    margin-bottom: 20px;
+}

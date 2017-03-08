@@ -1,0 +1,69 @@
+.docDetail{
+    font-family: "微软雅黑";
+}
+/*标题*/
+.docDetail_title{
+    background-color: #ecf0f6;
+    padding-left: 20px;
+    line-height: 50px;
+    padding-right: 20px;
+}
+.docDetail_title h2{
+    font-size: 16px;
+    display: inline-block;
+   
+}
+.docDetail_title a{
+    float: right;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.docDetail_title a:hover{
+    color:#4068a5;
+}
+/*医生简介*/
+.docDetail_int{
+    margin-top: 20px;
+}
+.docDetail_int .thumbnail{
+    border: none;
+}
+.thumbnail {
+    padding: 20px;
+}
+.thumbnail img{
+    margin-right: 20px;
+    width: 120px;
+}
+.thumbnail .caption h3{
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: 600;
+}
+.thumbnail .caption p{
+    line-height: 40px;
+    font-size: 16px;
+}
+.thumbnail .caption span{
+    color:#595758;
+}
+.docDetail_int .thumbnail>img,.docDetail_int .thumbnail .caption{
+    float:left;
+}
+/*医生擅长领域*//*医生详细介绍*/
+.docDetail_special,.docDetail_info{
+    margin-top: 20px;
+}
+.docDetail_special>h3,.docDetail_info>h3{
+    font-size: 18px;
+    line-height: 50px;
+    color:#4068a5;
+    padding-left: 20px;
+}
+.docDetail_special>.docDetail_special_detail>p,.docDetail_info>.docDetail_info_detail>p{
+    font-size: 14px;
+    line-height: 30px;
+    text-indent: 2em;
+    margin-top: 10px
+}
+

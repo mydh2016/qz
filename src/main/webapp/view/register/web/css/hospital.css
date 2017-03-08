@@ -1,0 +1,18 @@
+.hsIntroduce{
+    font-family: "微软雅黑";
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.hsIntroduce h3{
+    font-size: 16px;
+    line-height: 50px;
+    padding-left: 20px;
+    margin-bottom: 40px;
+    background-color: #ecf0f6;
+}
+.hsIntroduce  p{
+    text-indent: 2em;
+    line-height: 30px;
+    font-size: 14px;
+    margin-top: 20px;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.register.dao.mapper.AppMedpediaMapper" >
+  <resultMap id="appMedpedia" type="com.qazit.register.model.AppMedpediaVO" >
+    <id column="publish_content_id" property="publish_content_id"/>
+    <result column="publish_content_sn" property="publish_content_sn"/>
+    <result column="publish_content_name" property="publish_content_name"/>
+    <result column="description" property="description"/>
+    <result column="doctor_sn" property="doctor_sn"/>
+    <result column="publish_date" property="publish_date"/>
+    <result column="review_doctor_sn" property="review_doctor_sn"/>
+    <result column="review_date" property="review_date"/>
+    <result column="status" property="status"/>
+    <result column="publish_module_sn" property="publish_module_sn"/>
+  </resultMap>
+ 
+  <sql id="Base_Column_List" >
+    publish_content_id,
+	publish_content_sn,
+	publish_content_name,
+	description,
+	doctor_sn,
+  	publish_date,
+  	review_doctor_sn,
+  	review_date,
+  	status,
+  	publish_module_sn
+  </sql>
+  <select id="getMedpediaList" resultMap="appMedpedia" parameterType="com.qazit.register.model.AppMedpediaVO" >
+  	select 
+		<include refid="Base_Column_List" />
+		from publish_content
+	where publish_module_sn=#{publish_module_sn} and status=0
+	ORDER BY review_date DESC
+	limit #{startNum},#{pageNum}
+  </select>
+  
+  <select id="getMedpediaById" resultMap="appMedpedia" parameterType="com.qazit.register.model.AppMedpediaVO" >
+  	select 
+		<include refid="Base_Column_List" />
+		from publish_content
+	where
+		publish_content_id=#{publish_content_id}; 
+  </select>
+  
+  
+  
+  
+  
+</mapper>

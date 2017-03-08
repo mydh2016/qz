@@ -1,0 +1,101 @@
+.hs_appoint {
+    max-width: 720px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding-top:1.16rem;
+}
+
+/*预约系统搜索*/
+.hs_appoint .hs_appoint_search {
+    margin: 1.16rem 0.20rem 0rem;
+}
+
+.hs_appoint .hs_appoint_search .hs_appoint_search_inp {
+    height: 0.70rem;
+    font-size: 0.24rem;
+    padding: 0;
+    padding-left: 0.20rem;
+    width: 100%;
+    border-radius: 0.35rem;
+    line-height: 0.70rem;
+}
+
+.search{
+    width:100%;
+    position: relative;
+    overflow: hidden;
+}
+.search  i{
+    position: absolute;
+    right:0.1rem;
+    bottom:-0.46rem;
+    z-index: 100000;
+}
+.iconfont.icon-msnui-find-bold {
+    font-size: 0.50rem;
+}
+/*预约医院*/
+.col-xs-5,.col-xs-7 ,.row{
+    padding: 0;
+    margin:0;
+}
+
+.hs_appoint_hos {
+    border: 1px solid #dcdedd;
+    margin-top:0.4rem;
+}
+.hs_appoint .hs_appoint_hos:first-child{
+    margin-top:0.2rem;
+}
+
+/*图片*/
+.hs_appoint_hos .hs_appoint_hos_img{
+    height: 2.26rem;
+    background-color: #fff;
+}
+.hs_appoint_hos .hs_appoint_hos_img img {
+    padding:0.1rem;
+    width: 100%;
+    height:100%;
+}
+/*图片信息*/
+.hs_appoint_hos .hs_appoint_hos_text {
+    padding-left: 0.20rem;
+    background-color: #fff;
+}
+
+.hs_appoint_hos .hs_appoint_hos_text h3 a{
+    width: 100%;
+    height:2.46rem;
+    display: inline-block;
+	height:2.26rem;
+	display:inline-block;
+	width:100%;
+    font-size: 0.30rem;
+    line-height: 0.76rem;
+    color:black;
+}
+
+.hs_appoint_hos .hs_appoint_hos_text p {
+    font-size: 0.28rem;
+    line-height: 0.76rem;
+}
+
+.hs_appoint_hos .hs_appoint_hos_text div {
+    font-size: 0.28rem;
+    line-height: 0.76rem;
+}
+
+.hs_appoint_hos .hs_appoint_hos_text div a {
+    border: 1px solid #dcdedd;
+    padding: 0.04rem 0.06rem;
+    margin-right: 0.12rem
+}
+
+.hs_appoint_hos .hs_appoint_hos_text div a:last-child {
+    margin: 0;
+}
+
+.hs_appoint_hos .hs_appoint_hos_text div a:visited {
+    color: #444444;
+}

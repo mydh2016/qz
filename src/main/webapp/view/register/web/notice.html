@@ -1,0 +1,23 @@
+<div ng-include="'ghheader.html'"></div>
+        <div class="hsNotice">
+            <div class="container">
+                  <!-- 导航栏 -->
+                <div class="hsNotice_nav">
+                    <h3>公告</h3>
+                </div>
+                <!-- 新闻内容 -->
+                <div class="hsNotice_main">
+                    <!-- 标题 -->
+                    <h4>{{notice.publicNoticeName}}</h4>
+                 
+                    <!-- 内容 -->
+                    <div class="hsNotice_main_cont">
+                        <p>{{notice.description}}</p>
+                    </div>
+                    <div class="hsNotice_main_footer pull-right">
+                        <p>{{notice.publishedTime1}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<div ng-include="'ghheader.html'"></div>

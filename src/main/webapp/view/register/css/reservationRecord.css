@@ -1,0 +1,102 @@
+.hs_resRecord{
+    max-width: 720px;
+    min-width: 320px;
+    width:100%;
+    margin:0 auto;
+    padding-top:0.96rem;
+}
+
+.hs_resRecord_info{
+    margin-top:0.3rem;
+    background-color: #fff;
+    font-size: 0.26rem;
+}
+
+.hs_resRecord_info>.table{
+    margin: 0;
+}
+.hs_resRecord_info>.table h2{
+    font-size:0.3rem;
+}
+.hs_resRecord_info>table>tbody>tr>td{
+    padding-left: 0.2rem;
+    padding-right: 0rem;
+    border:none;
+}
+.hs_resRecord_info>table>tbody>tr:first-child>td{
+    font-size: 0.3rem;
+    padding-right: 0.2rem;
+    padding-top: 0.14rem;
+    padding-bottom: 0.14rem;
+}
+.hs_resRecord_info>table>tbody>tr>td:first-child{
+    width: 1.4rem;
+}
+.hs_resRecord_info>table>tbody>tr:nth-child(2){
+    border-top: 1px solid #dddddd;
+}
+.hs_resRecord_info>table>tbody>tr:nth-child(5){
+    border-bottom: 1px solid #dddddd;
+}
+.table > tbody > tr > td{
+    padding:0.1rem;
+}
+/*按钮*/
+.hs_resRecord_info_btn{
+    height:0.7rem;
+    background-color: #fff;
+    position: relative;
+}
+.hs_resRecord_info_btn button{
+    position: absolute;
+    right:0.2rem;
+    top:50%;
+    transform: translateY(-50%);
+}
+.btn {
+    padding: 0.06rem 0.2rem;
+    font-size: 0.24rem;
+    border-radius: 0.04rem;
+}
+/*提示框*/
+.modal {
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+.modal-content {
+    -webkit-box-shadow: 0  0.05rem 0.15rem rgba(0, 0, 0, .5);
+    box-shadow: 0 0.05rem 0.15rem rgba(0, 0, 0, .5);
+}
+.modal-dialog {
+    width: 6.00rem;
+    margin: 0.30rem auto;
+}
+.modal-header {
+    padding: 0.2rem;
+    padding-top: 0;
+    border-bottom: none;
+}
+.hs_resRecord_tip h4{
+    font-size: 0.4rem;
+    margin-top:0.2rem;
+}
+.modal-body {
+    padding: 0.2rem;
+    font-size: 0.28rem;
+    line-height: 0.28rem;
+}
+.modal-footer {
+    padding: 0.15rem;
+    text-align: right;
+    border: none;
+    height:1rem;
+    position: relative;
+}
+.modal-footer button{
+   position: absolute;
+    right:0.2rem;
+}
+.modal-footer button:first-child{
+    right:1.4rem
+}

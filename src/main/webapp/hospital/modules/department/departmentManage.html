@@ -1,0 +1,82 @@
+<div class="p25">
+    <div class="title">科室管理</div>
+
+    <div class="conbar">
+        <div id="departmentList" class="ms-controller" ms-controller="departmentList">
+
+            <form id="temp-search" class="form-inline p30-10">
+                <div class="form-group">
+                    <label for="departmentName" class="response-w80 text-right">科室名称</label>
+                    <input type="text" class="form-control" id="departmentName" name="departmentName" placeholder="科室名称...">
+                </div>
+                <div class="form-group">
+                    <label for="telphone" class="response-w80 text-right">科室电话</label>
+                    <input type="text" class="form-control" id="telphone" name="telphone" placeholder="科室电话...">
+                </div>
+                <button type="submit" class="btn btn-primary response-ml30">科室查询</button>
+                    <a href="#/departmentAdd" type="submit" class="btn btn-primary response-ml10">添加科室</a>
+            </form>
+
+            <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+            <div class="of-auto" ms-if="listData.length">
+                <table class="mytable" >
+                    <thead>
+                    <tr>
+                        <th>科室名称</th>
+                        <th>是否是特色科室</th>
+                         <th>特色描述</th>
+                        <th>科室描述</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+
+                    <tbody ms-each="listData" id="checks-form">
+                    <tr ms-attr-data-id="{{el.departmentId}}">
+                        <td>{{el.departmentName}}</td>
+                        <td>{{isSpecial[el.isSpecial]}}</td>
+                        <td>{{el.specialDescribe}}</td>
+                        <td>{{el.depDescribe}}</td>
+                        <td>
+                            <div class="mytable-console">
+                                <a ms-attr-href="{{'#/departmentEdit?departmentId=' + el.departmentId}}" class="fa fa-edit" title="编辑"></a>
+                                <i class="temp-delete fa fa-trash-o" title="删除"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="text-center border-t-gray" ms-if="listData.length">
+                <div class="mytable-pagenum inlineblock">
+                    显示
+                    <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                        <option selected="selected">10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
+                    条
+                </div>
+
+                <ul class="pagination v-middle ml10">
+                    <li class="page-last">
+                        <a href="#"><span aria-hidden="true">«</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+                    </li>
+                    <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                        <a href="#">{{el}}</a>
+                    </li>
+                    <li class="page-next">
+                        <a href="#"><span aria-hidden="true">»</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

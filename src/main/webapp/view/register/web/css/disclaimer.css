@@ -1,0 +1,11 @@
+.hsDis li{
+    margin-bottom: 10px;
+}
+.hsDis h3 {
+    font-weight: 700;
+    line-height: 30px;
+    font-size: 14px;
+}
+.hsDis p {
+    line-height: 30px;
+}

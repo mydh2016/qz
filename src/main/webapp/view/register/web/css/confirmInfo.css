@@ -1,0 +1,41 @@
+.hsReg_cont_confirm{
+      font-family: "微软雅黑";
+}
+
+/*确认部分*/
+.hsReg_cont_confirm{
+    width: 400px;
+    margin:60px auto 100px;
+}
+/*提示*/
+.hsReg_cont_confirm .hsReg_cont_confirm_tip{
+    text-align: center;
+    color:#fd7d00;
+    margin-bottom: 40px;
+}
+/*确认内容*/
+.hsReg_cont_confirm_info{
+    font-size: 14px;
+}
+.hsReg_cont_confirm_info td{
+    line-height: 40px;
+}
+.hsReg_cont_confirm_info .left{
+    width: 200px;
+    text-align: right;
+    color:#a9a9a9;
+    padding-right: 20px;
+}
+.hsReg_cont_confirm_info .hsReg_cont_confirm_info_btn button{
+    width: 140px;
+    height: 40px;
+    margin-top: 40px;
+    font-size: 16px;
+}
+.hsReg_cont_confirm_info .hsReg_cont_confirm_info_btn .register{
+    background-color: #fd7d00;
+    color:#fff;
+}
+.hsReg_cont_confirm_info .hsReg_cont_confirm_info_btn .modify{
+    margin-left: 60px;
+}

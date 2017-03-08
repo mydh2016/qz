@@ -1,0 +1,94 @@
+.row ,.col-xs-6{
+    padding: 0;
+    margin: 0;
+}
+.hsAppInfo{
+   border:1px solid #dddddd;
+   padding: 10px 10px;
+}
+/*就诊信息*/
+.hsAppInfo_vis{
+    background-color: #f5f5f5;
+    margin-bottom: 30px;
+}
+.hsAppInfo_vis h3{
+    height: 50px;
+    font-size: 16px;
+    border-bottom:1px solid #dddddd;
+    line-height: 50px;
+    padding-left: 20px;
+}
+.hsAppInfo_vis .hsAppInfo_vis_main{
+    padding: 20px 0px;
+}
+
+.hsAppInfo_vis li{
+    height: 30px;
+    line-height: 30px;
+    padding-left: 20px;
+    font-size: 14px;
+}
+.hsAppInfo_vis .hsAppInfo_vis_main .money{
+    color:#d65454;
+}
+/*就诊人信息*/
+
+.hsAppInfo_person_title{
+    padding-left: 20px;
+    background-color: #f5f5f5;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+.hsAppInfo_person_choose{
+    width: 340px;
+    margin:100px auto;
+    color:#595758;
+}
+.hsAppInfo_person_choose .left{
+    line-height: 60px;
+    width: 80px;
+    display: inline-block;
+}
+
+.hsAppInfo_person_choose_info select{
+    width: 226px;
+    height: 34px;
+    line-height: 34px;
+    padding-left: 6px;
+    padding:4px 0\9;
+    padding-left: 6px;
+    border-color: #dddddd;
+    border-width: 1px;
+}
+.hsAppInfo_person_choose_info .addBtn{
+    color:#3581cc;
+    cursor: pointer;
+    padding-left: 80px;
+    line-height: 40px;
+}
+.hsAppInfo_person_choose_info .addBtn:hover{
+    color:#4068a5;
+}
+.hsAppInfo_person_choose_add{
+    color:#595758;
+    display: none;
+}
+.hsAppInfo_person_choose_add input{
+    height: 34px;
+    width: 226px;
+    border:1px solid #dddddd;
+    line-height: 34px;
+    padding-left: 10px;
+}
+/*按钮*/
+.hsAppInfo_person_choose_btn{
+    margin-top: 60px;
+    padding-left: 100px;
+}
+.hsAppInfo_person_choose_btn .appoint,.hsAppInfo_person_choose_btn .back{
+    width: 80px;
+}
+.hsAppInfo_person_choose_btn .appoint{
+    margin-right: 20px;
+}

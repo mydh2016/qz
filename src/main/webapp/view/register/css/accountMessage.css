@@ -1,0 +1,126 @@
+html,body,.hs_accontMsg,.hs_accontMsg_info{
+    height:100%;
+}
+.hs_accontMsg{
+    max-width:720px;
+    min-width:320px;
+    margin:0 auto;
+}
+.hs_accontMsg .hs_accontMsg_headPor{
+    margin-top:0.96rem;
+    height:3.20rem;
+    width: 100%;
+    background-color: #F5F5F5;
+    position: relative;
+}
+.hs_accontMsg .hs_accontMsg_headPor i{
+    position: absolute;
+    font-size: 1.8rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform:translate(-50%,-50%);
+    cursor: pointer;
+}
+.hs_accontMsg_info{
+    width:100%;
+    height:100%;
+    background-color: #fff;
+}
+.hs_accontMsg_info table{
+    width: 100%;
+    padding-left:20px;
+    padding-right:20px;
+}
+.hs_accontMsg_info table tr {
+    border-bottom: 1px solid #dddddd;
+    width: 100%;
+    display: block;
+    padding: 0rem 0.2rem;
+    font-size: 0.26rem;
+    line-height:50px;
+}
+.hs_accontMsg_info table tr td:first-child {
+    width: 0.1rem;
+    color:red;
+}
+.hs_accontMsg_info table tr td:nth-child(2){
+    width:1.4rem;
+}
+/*提示*/
+.hs_accontMsg_info table tr:last-child td:last-child{
+    width: 100%;
+}
+.hs_accontMsg_info table tr:last-child td:last-child i{
+    color:red;
+}
+.hs_accontMsg_info table tr input{
+    font-size: 0.26rem;
+    line-height: 0.50rem;
+    width: 5rem;
+}
+.hs_accontMsg_info table tr input[disabled]{
+    background-color: #fff;
+}
+
+/*完成*/
+/*完成添加*/
+footer{
+    padding:0.2rem;
+    position:absolute;
+    bottom:0rem;
+    width:100%;
+
+}
+footer a.hs_accontMsg_btn{
+   color:#fff;
+}
+footer .hs_accontMsg_whether{
+    display:none;
+}
+/*修改和确定按钮*/
+.hs_accontMsg_whether_cancel,.hs_accontMsg_whether_confirm{
+    width:43%;
+}
+.hs_accontMsg_whether_cancel{
+    position: absolute;
+    left:0.2rem;
+    bottom:0.2rem;
+}
+.hs_accontMsg_whether_confirm{
+    position: absolute;
+    right:0.2rem;
+    bottom:0.2rem;
+}
+/*性别选择*/
+
+.hs_accontMsg_info table tr .chooseSex{
+    display:none;
+}
+.hs_accontMsg_info table tr .chooseSex input{
+    width: 20px;
+    height: 20px;
+    margin-right:20px;
+}
+.hs_accontMsg_info table tr .chooseSex label{
+    font-weight:normal;
+    margin-right:10px;
+    line-height: 0.60rem;
+}
+/*提示*/
+.hs_accontMsg .hs_accontMsg_tip{
+    background-color:rgba(0,0,0,0.6);
+    position:fixed;
+    top:55%;
+    left:50%;
+    color:#fff;
+    font-size:12px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 4px;
+    padding:4px 20px;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%); /* Safari 和 Chrome */
+    display:none;
+    z-index: 100000;
+}

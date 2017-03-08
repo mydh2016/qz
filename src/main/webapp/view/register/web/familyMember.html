@@ -1,0 +1,154 @@
+
+<!doctype html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta name="keywords" content="甘肃挂号平台 挂号 甘肃 登陆"/>
+    <meta name="description" content="甘肃挂号平台登陆"/>
+    <title>医院挂号系统</title>
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.5-dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./l ib/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/familyMember.css"/>
+    <script src="../lib/jquery.js"></script>
+    <script src="../lib/bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+    <script src="js/familyMember.js"></script>
+    <!--[if lt IE 9]>
+        <script src="./lib/html5shiv/html5shiv.js"></script>
+        <script src="./lib/respond/respond.js"></script>
+    <![endif]-->
+</head>
+       <body>
+        <div class="hsPersonal">
+            <!-- 头部搜索栏 -->
+           <div class="topBar">
+               <div class="container">
+                   <a href="#" class="topBar_logo">LOGO</a>
+                   <input type="text" >
+                    <a href="#" class="topBar_back">
+                      <i class="icon iconfont icon-fanhuijiantou"></i>
+                      返回首页
+                  </a>
+                  <a href="#" class="topBar_icon"><i class="icon iconfont icon-sousuo-sousuo"></i></a> 
+               </div>
+           </div>
+            <!-- 中间主要内容 -->
+           <div class="container">
+               <!-- 侧边栏 -->
+               <div class="hsPersonal_sliderBar">
+                   <div class="hsPersonal_sliderBar_layer">
+                       <!-- 头像 -->
+                       <div class="hsPersonal_sliderBar_layer_header">
+                           <i class="icon iconfont icon-7"></i>
+                           <h4>刘玉华</h4>
+                       </div>
+                       <!-- 目录 -->
+                       <div class="hsPersonal_sliderBar_layer_cata">
+                           <ul>
+                               <li>
+                                    <i class="icon iconfont icon-wodeshoucang"></i>
+                                    <a href="#">我的收藏</a>
+                                </li>
+                                 <li>
+                                    <i class="icon iconfont icon-personal-family"></i>
+                                    <a href="#">家庭成员</a>
+                                </li>
+                                 <li>
+                                    <i class="icon iconfont icon-zhanghaoanquan"></i>
+                                    <a href="#">账号安全</a>
+                                </li>
+                                 <li>
+                                    <i class="icon iconfont icon-zhanghuguanli"></i>
+                                    <a href="#">账户管理</a>
+                                </li>
+                           </ul>
+                       </div>
+                       <!-- 退出登录 -->
+                       <button >退出登录</button>
+
+                   </div>
+                </div>
+                <!-- 主要内容 -->
+                <div class="hsPersonal_main">
+                    <div class="hsFamMem">
+                        <!-- 标题 -->
+                        <div class="hsPersonal_main_title">
+                            <h3>家庭成员信息</h3>
+                            <a href="#" class="pull-right">返回上一页</a>
+                        </div>
+                        <!-- 家庭成员信息 -->
+                        <div class="hsFamMem_info">
+                           <table class="row"> 
+                            <tr class="hsFamMem_title">
+                                <th class="col-xs-2">姓名</th>
+                                <th class="col-xs-1">姓别</th>
+                                <th class="col-xs-2">证件类型</th>
+                                <th class="col-xs-3">证件号码</th>
+                                <th class="col-xs-2">手机号码</th>
+                                <th class="col-xs-2">操作</th>
+                            </tr>
+                            <!-- 具体内容 -->
+                            <tr class="hsFamMem_member">
+                                <td class="col-xs-2">仓央嘉措</td>
+                                <td class="col-xs-1">女</td>
+                                <td class="col-xs-2">居民身份证</td>
+                                <td class="col-xs-3">1300282199302093089</td>
+                                <td class="col-xs-2">13099992222</td>
+                                <td class="col-xs-2 hsFamMem_member_btn clearfix">
+                                    <button class="btn btn-primary modify pull-left">修改</button>
+                                    <button class="btn btn-danger delete pull-right" data-toggle="modal" data-target=".bs-example-modal-sm" >删除</button>
+                                </td>
+                            </tr> 
+                            <tr class="hsFamMem_member_add">
+                                <td colspan="6">
+                                    <button class="btn btn-default pull-right">
+                                    +添加新成员</button>
+                                </td>
+                            </tr>
+                        </table> 
+                        </div>
+                       
+                        <!-- 删除提示 -->
+                        <div class="hsFamMem_delTip">
+                            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+                                <div class="modal-dialog modal-sm" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title">提示！</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>您确认要删除信息吗？</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">确认</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+               </div>
+           </div>
+           <!-- 底部说明内容 -->
+           <div class="footerBar">
+               <div class="container">
+                    <p>Copyright©2016&nbsp 京ICP备 10011656号-20</p>
+                    <div class="footerBar_share">
+                      <a href="#"><i class="icon iconfont icon-weixin"></i></a>
+                      <a href="#"><i class="icon iconfont icon-qq"></i></a>
+                      <a href="#"><i class="icon iconfont icon-weibo"></i></a>
+                    </div> 
+               </div>                
+           </div>
+        </div>
+    </body>
+       
+
+</html>

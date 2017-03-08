@@ -1,0 +1,361 @@
+html,body,.hs_medLab,.container,.hs_medLab_main,.hs_medLab_item,.hs_medLab_item_med,.hs_medLab_item_det,.hs_medLab_main_detail{
+    height: 100%;
+}
+.hs_medLab {
+    max-width: 720px;
+    min-width: 320px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.hs_medLab_hos {
+    margin: 1.16rem 0.20rem 0.20rem;
+    height: 2.28rem;
+    border: 1px solid #dcdedd;
+    background-color: #fff;
+}
+
+.hs_medLab_hos .col-xs-5, .hs_medLab_hos .col-xs-7 {
+    padding: 0;
+}
+
+.hs_medLab_hos .hs_medLab_hos_img img {
+    padding:0.1rem;
+    width: 100%;
+    height: 2.26rem;
+}
+
+.hs_medLab_hos .hs_medLab_hos_text {
+    padding-left: 0.20rem;
+}
+
+.hs_medLab_hos .hs_medLab_hos_text h3 {
+    font-size: 0.30rem;
+    line-height: 0.76rem;
+}
+
+.hs_medLab_hos .hs_medLab_hos_text p {
+    font-size: 0.28rem;
+    line-height: 0.76rem;
+}
+
+.hs_medLab_hos .hs_medLab_hos_text div {
+    font-size: 0.28rem;
+    line-height: 0.76rem;
+}
+
+.hs_medLab_hos .hs_medLab_hos_text div a {
+    border: 1px solid #dcdedd;
+    padding: 0.04rem 0.06rem;
+    margin-right: 0.12rem
+}
+
+.hs_medLab_hos .hs_medLab_hos_text div a:last-child {
+    margin: 0;
+}
+
+.hs_medLab_hos .hs_medLab_hos_text div a:visited {
+    color: #444444;
+}
+
+/*医院科室*/
+.hs_medLab_item {
+    border-top: 1px solid #dcdedd;
+    height:100%;
+}
+/*左侧栏*/
+.hs_medLab_item .hs_medLab_item_med{
+    background-color: #f5f5f5;
+    width: 2.60rem;
+    float: left;
+    overflow: hidden;
+}
+
+.hs_medLab_item .hs_medLab_item_med>ul>li{
+    border-bottom: 1px solid #f5f5f5;
+    border-top: 1px solid #f5f5f5;
+    border-right: 1px solid #dcdedd;
+}
+.hs_medLab_item .hs_medLab_item_med li a {
+    text-align: center;
+    font-size: 0.3rem;
+    line-height:  0.50rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    display: block;
+}
+.hs_medLab_item .hs_medLab_item_med>ul>li.active{
+    background-color: #fff;
+    border-bottom-color:#dcdedd;
+    border-top-color:#dcdedd;
+    border-right: none;
+}
+
+.hs_medLab_item .hs_medLab_item_med li:first-child {
+    border-top: none;
+}
+/*右侧栏*/
+.hs_medLab_item .hs_medLab_item_det{
+    background-color: #fff;
+    overflow: hidden;
+    padding-left:0.2rem;
+}
+.hs_medLab_item .hs_medLab_item_det>ul>li>a {
+    text-align: left;
+    font-size: 0.30rem;
+    line-height: 0.50rem;
+    padding-top: 0.15rem;
+    padding-bottom: 0.15rem;
+    border-top:  1px solid #fff;
+    border-bottom: 1px solid #dcdedd;
+    display: block;
+    background-color: #fff;
+    width: 100%;
+}
+.hs_medLab_item .hs_medLab_item_det>ul>li:first-child>a{
+    border-top: none;
+}
+
+/*排班日期*/
+.hs_medLab_main_detail{
+    overflow: hidden;
+}
+.hs_medLabDate {
+    width: 100%;
+    max-width: 720px;
+    min-width: 320px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.hs_medLabDate .hs_medLabDate_date {
+    width: 6.18rem;
+    border-top: 1px solid #dcdedd;
+    border-bottom: 1px solid #dcdedd;
+    background-color: #fff;
+    overflow: hidden;
+    height: 1rem;
+    position: relative;
+    margin-left:0.51rem;
+}
+.hs_medLabDate .you,.hs_medLabDate  .zuo{
+    position: absolute;
+    top:0;
+    right:0;
+    line-height: 1.0rem;
+    font-size:0.5rem;
+    height:1.0rem;
+    width: 0.51rem;
+    background:#fff;
+    text-align: center;
+    color:#4068a5;
+    cursor:pointer;
+    border-bottom: 1px solid #dcdedd;
+    border-top:1px solid #dcdedd;
+}
+.hs_medLabDate  .zuo{
+    left:0;
+}
+.hs_medLabDate .hs_medLabDate_date ul{
+    position: absolute;
+    left:0;
+    top:0;
+    height: 1rem;
+    width: 30.9rem;
+}
+.hs_medLabDate .hs_medLabDate_date li {
+    float: left;
+    width: 1.03rem;
+}
+
+.hs_medLabDate_date li > a {
+    padding: 0.1rem 0;
+    display: block;
+    border-left: 1px solid #dcdedd;
+}
+
+.hs_medLabDate_date li:nth-child(6n) > a {
+    border-right:  1px solid #dcdedd;
+}
+
+.hs_medLabDate_date li.active a{
+    background-color: #4068a5;
+    color: #fff;
+}
+
+.hs_medLabDate_date li > a > p {
+    text-align: center;
+    font-size: 0.24rem;
+    line-height: 0.40rem;
+}
+
+/*排班信息*/
+.hs_medLabDate_doc {
+    border-bottom: 1px solid #dcdedd;
+    background-color: #fff;
+}
+
+.hs_medLabDate_doc .hs_medLabDate_doc_img {
+    width: 1.64rem;
+    height: 1.6rem;
+    text-align: center;
+    line-height: 1.6rem;
+    float: left;
+}
+
+.hs_medLabDate_doc .hs_medLabDate_doc_img > img {
+    height: 0.64rem;
+    width: 0.64rem;
+}
+
+.hs_medLabDate_doc .hs_medLabDate_doc_info {
+    padding: 0.20rem;
+}
+
+.hs_medLabDate_doc .hs_medLabDate_doc_info > ul > li:nth-child(n) {
+    font-size: 0.26rem;
+    line-height: 0.50rem;
+}
+
+.hs_medLabDate_doc .hs_medLabDate_doc_info > ul > li:first-child {
+    position: relative;
+}
+
+.hs_medLabDate_doc .hs_medLabDate_doc_info > ul > li:first-child > a {
+    background-color: #4068a5;
+    padding: 0rem 0.20rem;
+    font-size: 0.26rem;
+    line-height: 0.5rem;
+    color: #fff;
+    border-radius: 0.04rem;
+    position: absolute;
+    right: 0;
+}
+
+.hs_medLabDate_doc .hs_medLabDate_doc_info > ul > li:last-child {
+    position: relative;
+}
+
+.hs_medLabDate_doc .hs_medLabDate_doc_info .money {
+    position: absolute;
+    right: 0;
+    color: #e37736;
+}
+
+/*确认信息*/
+.hs_deparmentInfo {
+    height: 100%;
+    overflow: hidden;
+}
+
+.hs_deparment_sure {
+    background-color: #fff;
+    height:0.76rem;  
+    padding-left: 0.20rem;
+    padding-right:0.2rem;
+    border-bottom: 1px solid #dddddd;
+}
+.hs_deparment_sure h1{
+    font-size: 0.36rem;
+    line-height: 0.76rem;
+    
+}
+.hs_deparment_del,.hs_deparment_del_add {
+    background-color: #fff;
+    padding: 0.20rem;
+}
+.hs_deparment_del{
+    padding-bottom:0;
+}
+.hs_deparment_del_add {
+    padding:0 0 0.2rem 0;
+    border-bottom: 1px solid #dddddd;
+}
+.hs_deparment_del > ul > li,.hs_deparment_del_add>ul>li {
+    font-size: 0.26rem;
+    line-height: 0.50rem;
+}
+input{
+    font-size:0.26rem;
+}
+/*选择就诊人*/
+.hs_deparment_del > ul > li > select {
+    font-size: 0.26rem;
+    padding: 0.04rem 0.18rem;
+}
+/*确认添加*/
+.hs_deparment_del_add_confirm{
+    display:none;
+}
+.hs_deparment_del_add_confirm .quite{
+    margin-right:0.2rem;
+}
+.hs_deparment_del > ul > li > p > span {
+    color:#e00001;
+}
+
+.hs_deparment_pay {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    padding: 0.30rem 0.2rem;
+    height: 0.96rem;
+}
+
+.hs_deparment_pay > a {
+    position: absolute;
+    right: 0.20rem;
+    font-size: 0.36rem;
+    line-height: 0.36rem;
+    background-color: #fff;
+    color: #e37736;
+}
+/*添加成员*/
+.hs_deparment_del .addBtn {
+    display: inline-block;
+    font-size: 0.26rem;
+    padding: 0.06rem 0.24rem;
+    border: 1px solid #A9A9A9;
+    border-radius: 0.02rem;
+    line-height: 0.34rem;
+    background-color: #fff;
+    margin-left: 0.20rem;
+    vertical-align: middle;
+}
+/*添加成员信息*/
+.hs_deparment_del_add input{
+    background-color: #fff;
+    width:70%;
+}
+/*添加新加成员时整体向上滑动*/
+.hs_deparment.now{
+    animation:moveUp 0.3s ease-in-out forwards ;
+    -webkit-animation:moveUp 0.3s ease-in-out forwards ;
+}
+@keyframes moveUp{
+    form{transform:translateY(0);}
+    to{transform:translateY(-45%);}
+}
+@-webkit-keyframes moveUp{
+    form{-webkit-transform:translateY(0);}
+    to{-webkit-transform:translateY(-45%);}
+}
+
+/*提示*/
+.hs_medLab .hs_medLab_tip{
+    background-color:rgba(0,0,0,0.6);
+    position:fixed;
+    top:50%;
+    left:50%;
+    color:#fff;
+    font-size:0.26rem;
+    line-height: 0.40rem;
+    text-align: center;
+    border-radius: 0.04rem;
+    padding:0.04rem 0.20rem;
+    transform:translateX(-50%);
+    -webkit-transform:translateX(-50%); /* Safari 和 Chrome */
+    display:none;
+    z-index: 100000;
+}

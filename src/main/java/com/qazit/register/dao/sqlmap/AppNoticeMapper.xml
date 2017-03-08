@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.register.dao.mapper.AppNoticeMapper" >
+  <resultMap id="appNotice" type="com.qazit.register.model.AppNoticeVO" >
+    <id column="PUBLIC_NOTICE_ID" property="publicNoticeId"/>
+    <result column="PUBLIC_NOTICE_SN" property="publicNoticeSn"/>
+    <result column="PUBLIC_NOTICE_NAME" property="publicNoticeName"/>
+    <result column="PUBLIC_NOTICE_LEVEL" property="publicNoticeLevel"/>
+    <result column="STATUS" property="status"/>
+    <result column="PUBLIC_NOTICE_ORDER" property="publicNoticeOrder"/>
+    <result column="DOCTOR_SN" property="doctorSn"/>
+    <result column="PUBLISHED_TIME" property="publishedTime"/>
+    <result column="DEADLINE" property="deadline"/>
+    <result column="DESCRIPTION" property="description"/>
+    <result column="HOSPITAL_SN" property="hospitalSn"/>
+    <result column="DEPARTMENT_SN" property="departmentSn"/>
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+  PUBLIC_NOTICE_ID,
+  PUBLIC_NOTICE_SN,
+  PUBLIC_NOTICE_NAME,
+  PUBLIC_NOTICE_LEVEL,
+  STATUS,
+  PUBLIC_NOTICE_ORDER,
+  DOCTOR_SN,
+  PUBLISHED_TIME,
+  DEADLINE,
+  DESCRIPTION,
+  HOSPITAL_SN,
+  DEPARTMENT_SN
+  </sql>
+  
+ <select id="queryAllpublicNotice" resultMap="appNotice" parameterType="com.qazit.register.model.AppNoticeVO" >
+  	select
+  		<include refid="Base_Column_List" />
+  	from public_notice
+  	where STATUS='1'
+  	ORDER BY PUBLISHED_TIME DESC
+  	limit #{startNum},#{pageNum}
+  	
+ </select>
+  <select id="selectByNotice" resultMap="appNotice" parameterType="com.qazit.register.model.AppNoticeVO" >
+  	select
+  		<include refid="Base_Column_List" />
+  	from public_notice
+  	where
+  		PUBLIC_NOTICE_ID=#{publicNoticeId}
+ </select>
+  
+  </mapper>

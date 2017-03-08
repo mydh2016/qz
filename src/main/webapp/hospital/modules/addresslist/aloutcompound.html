@@ -1,0 +1,172 @@
+<div class="p25">
+    <div class="title">办公通讯录管理（院外）</div>
+
+    <div class="conbar">
+        <div id="alOutCompound" class="ms-controller" ms-controller="alOutCompound">
+
+            <form id="al-search" class="form-inline p20">
+                <input type="hidden" name="status" value="2">
+                <div>
+                    <div class="form-group">
+                        <label class="text-right" for="name">姓名</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="姓名...">
+                    </div>
+
+                    <div class="form-group ml10">
+                        <label class="text-right" for="sex">性别</label>
+
+                        <select id="sex" name="sex" class="form-control">
+                            <option value="">不限</option>
+                            <option value="1">男</option>
+                            <option value="2">女</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group ml10">
+                        <label class="text-right" for="telphone">手机号码</label>
+                        <input type="text" class="form-control" id="telphone" name="telphone" placeholder="手机号码...">
+                    </div>
+                </div>
+
+                <div class="mt15">
+
+                    <div class="form-group">
+                        <label class="text-right">出生日期</label>
+                        <input type="text" class="form-control" id="dateStart" name="bTime" placeholder="起始时间">
+                        <input type="text" class="form-control ml10" id="dateEnd" name="eTime" placeholder="终止时间">
+                    </div>
+                </div>
+
+                <div class="mt15">
+                    <div class="form-group">
+                        <label class="text-right" for="address">地址</label>
+                        <input type="text" class="form-control" id="address" name="address" placeholder="地址">
+                    </div>
+
+                    <div class="form-group ml10">
+                        <label class="text-right" for="departments">科室</label>
+
+                        <select id="departments" name="departmentId" class="form-control" ms-controller="select">
+                            <option value="" >不限</option>
+                            <option ms-attr-value="{{el.departmentId}}" ms-repeat="departments">{{el.departmentName}}</option>
+                        </select>
+                    </div>
+<!-- 
+                    <div class="form-group ml10">
+                        <label class="text-right" for="duties">职务</label>
+
+                        <select id="duties" name="duties" class="form-control" ms-controller="select">
+                            <option value="">不限</option>
+                            <option ms-attr-value="{{el}}" ms-repeat="duties">{{el}}</option>
+                        </select>
+                    </div> -->
+                </div>
+
+                <div class="mt15">
+                    <!-- <div class="form-group">
+                        <label class="text-right" for="title">职称</label>
+
+                        <select id="title" name="title" class="form-control" ms-controller="select">
+                            <option value="">不限</option>
+                            <option ms-attr-value="{{el}}" ms-repeat="title">{{el}}</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group ml10">
+                        <label class="text-right" for="unit">单位</label>
+
+                        <select id="unit" name="unit" class="form-control" ms-controller="select">
+                            <option value="">不限</option>
+                            <option ms-attr-value="{{el}}" ms-repeat="unit">{{el}}</option>
+                        </select>
+                    </div> -->
+
+                    <button type="submit" class="btn btn-primary ml20">查询</button>
+                </div>
+
+            </form>
+			<div class="p18">
+                    <a href="#/aladdwork" class="btn btn-info">新增</a>
+                    <div id="btnExport" class="btn btn-info response-ml10">导出</div>
+                    <form id= "uploadForm" class="block form-inline mt15">
+                        <input type="file" class="form-control" name="file">
+                        <div id="btnImport" class="btn btn-info">导入</div>
+                        <a href="/qazitem/rest/download/download?dl=1"  class="btn btn-primary ml10">下载模板</a>
+                    </form>
+                </div>
+            <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+            <div class="of-auto" ms-if="listData.length">
+                <form id="selectForm">
+                    <table class="mytable" >
+                        <thead>
+                        <tr>
+                            <th></th>
+                            <th>姓名</th>
+                            <th>性别</th>
+                            <th>手机号码</th>
+                            <th>出生日期</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+
+                        <tbody ms-each="listData" id="checks-form">
+                        <tr ms-attr-data-id="{{el.id}}">
+                            <td><input class="_check" type="checkbox" name="ids" ms-attr-value="el.id"></td>
+                            <td>{{el.name}}</td>
+                            <td>{{sex[el.sex]}}</td>
+                            <td>{{el.telphone}}</td>
+                            <td>{{el.dateBirth}}</td>
+                            <td>
+                                <div class="mytable-console">
+                                    <a ms-attr-href="{{'#/aleditwork?id=' + el.id}}" class="fa fa-edit" title="编辑"></a>
+                                    <i class="al-delete fa fa-trash-o" title="删除"></i>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+
+                    </table>
+
+                    <input type="hidden" name="allSelect" value="0">
+                </form>
+
+                <div class="p18">
+                    <div id="allSelect" class="btn btn-success response-ml10">全选</div>
+                    <div id="currentAllSelect" class="btn btn-success response-ml10">当前页全选</div>
+                    <div id="currentInvert" class="btn btn-success response-ml10">当前页反选</div>
+                </div>
+
+            </div>
+
+            <div class="text-center border-t-gray" ms-if="listData.length">
+                <div class="mytable-pagenum inlineblock">
+                    显示
+                    <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                        <option selected="selected">10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
+                    条
+                </div>
+
+                <ul class="pagination v-middle ml10">
+                    <li class="page-last">
+                        <a href="#"><span aria-hidden="true">«</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+                    </li>
+                    <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                        <a href="#">{{el}}</a>
+                    </li>
+                    <li class="page-next">
+                        <a href="#"><span aria-hidden="true">»</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

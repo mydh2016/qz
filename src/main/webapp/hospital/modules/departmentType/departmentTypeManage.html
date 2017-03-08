@@ -1,0 +1,74 @@
+<div class="p25">
+    <div class="title">科室类型管理</div>
+
+    <div class="conbar">
+        <div id="departmentTypeList" class="ms-controller" ms-controller="departmentTypeList">
+
+            <form id="temp-search" class="form-inline p30-10">
+                <div class="form-group">
+                    <label for="modelName" class="response-w80 text-right">科室类型名称</label>
+                    <input type="text" class="form-control" id="departmentTypeName" name="departmentTypeName" placeholder="科室类型名称...">
+                     <button type="submit" class="btn btn-primary response-ml30">模板查询</button>
+                    <a href="#/departmentTypeAdd" type="submit" class="btn btn-primary response-ml10">添加科室类型</a>
+                </div>
+            </form>
+
+            <div class="nodata" ms-if="!listData.length">暂无数据</div>
+
+            <div class="of-auto" ms-if="listData.length">
+                <table class="mytable" >
+                    <thead>
+                    <tr>
+                        <th>科室类型名称</th>
+                        <th>科室类型描述</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+
+                    <tbody ms-each="listData" id="checks-form">
+                    <tr ms-attr-data-id="{{el.departmentTypeId}}">
+                        <td>{{el.departmentTypeName}}</td>
+                        <td>{{el.description}}</td>
+                        <td>
+                            <div class="mytable-console">
+                                <a ms-attr-href="{{'#/departmentTypeEdit?departmentTypeId=' + el.departmentTypeId}}" class="fa fa-edit" title="编辑"></a>
+                                <i class="temp-delete fa fa-trash-o" title="删除"></i>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="text-center border-t-gray" ms-if="listData.length">
+                <div class="mytable-pagenum inlineblock">
+                    显示
+                    <select class="form-control inlineblock w-auto" ms-duplex="pageSize">
+                        <option selected="selected">10</option>
+                        <option>15</option>
+                        <option>20</option>
+                    </select>
+                    条
+                </div>
+
+                <ul class="pagination v-middle ml10">
+                    <li class="page-last">
+                        <a href="#"><span aria-hidden="true">«</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是第一页</div></div>
+                    </li>
+                    <li ms-repeat="pagination" ms-attr-class="currentPage == el ? 'page-num active' : 'page-num'">
+                        <a href="#">{{el}}</a>
+                    </li>
+                    <li class="page-next">
+                        <a href="#"><span aria-hidden="true">»</span></a>
+                        <div class="tooltip bottom" role="tooltip"><div class="tooltip-arrow" style="left: 50%;"></div><div class="tooltip-inner">已是最后一页</div></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

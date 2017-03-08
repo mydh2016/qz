@@ -1,0 +1,21 @@
+
+.list-sm {
+    padding-left: 20px;
+    list-style: none;
+}
+.list-sm label {
+    margin-bottom: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+.list-sm label:hover {
+    color: #333;
+}
+
+.list-sm span {
+    vertical-align: middle;
+}
+.list-sm input {
+    margin: 0;
+    vertical-align: middle;
+}

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.qazit.hospital.web.dao.mapper.AddressMapper" >
+  <resultMap id="address" type="com.qazit.hospital.web.model.Address" >
+    <id column="id" property="id"/>
+    <result column="name" property="name"/>
+    <result column="sex" property="sex"/>
+    <result column="telphone" property="telphone"/>
+    <result column="date_birth" property="dateBirth"/>
+    <result column="department_id" property="departmentId"/>
+    <result column="duties" property="duties"/>
+    <result column="state" property="state"/>
+    <result column="title" property="title"/>
+    <result column="unit" property="unit" />
+    <result column="address" property="address"/>
+    <result column="status" property="status" />
+    <result column="state" property="state" />
+    <result column="create_time" property="createTime"/>
+    <result column="creater_id" property="createrId"/>
+    <result column="creater_name" property="createrName"/>
+    <result column="hp_id" property="hpId"/>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id,
+	name,
+	sex,
+	telphone,
+	date_birth,
+	department_id,
+	duties,
+	title,
+	unit,
+	address,
+	status,
+	state,
+	create_time,
+	creater_id,
+	creater_name,
+	hp_id
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="address" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_ADDRESS_LIST
+    where id = #{_parameter}
+  </select>
+  <select id="selectCount" resultType="Long" parameterType="com.qazit.hospital.web.model.Address" >
+    select 
+    count(*)
+    from T_ADDRESS_LIST
+    where state=0
+    <if test="id!=null and id!=''">
+    and id!=#{id}
+    </if>
+    <if test="name!=null and name!=''">
+    and name like '%${name}%'
+    </if>
+    <if test="sex!=null and sex!=''">
+    and sex like '%${sex}%'
+    </if>
+    <if test="telphone!=null and telphone!=''">
+    and telphone like '%${telphone}%'
+    </if>
+    <if test="beginTime!=null and beginTime!=''">
+    and date_birth &gt;= #{beginTime}
+    </if>
+   <if test="endTime!=null and endTime!=''">
+    and date_birth &lt;= #{endTime}
+    </if>
+    <if test="departmentId!=null and departmentId!=''">
+    and department_id =#{departmentId}
+    </if>
+    <if test="duties!=null and duties!=''">
+    and duties like '%${duties}%'
+    </if>
+    <if test="title!=null and title!=''">
+    and title like '%${title}%'
+    </if>
+    <if test="unit!=null and unit!=''">
+    and unit like '%${unit}%'
+    </if>
+    <if test="address!=null and address!=''">
+    and address like '%${address}%'
+    </if>
+    <if test="status!=null">
+    and status =#{status}
+    </if>
+    <if test="createrId!= null" >
+       and creater_id!=#{createrId}
+    </if>
+    <if test="hpId!= null" >
+       and hp_id=#{hpId}
+    </if>
+  </select>
+  <select id="selectForList" resultMap="address" parameterType="com.qazit.hospital.web.model.Address" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_ADDRESS_LIST
+    where state=0
+    <if test="id!=null and id!=''">
+    and id!=#{id}
+    </if>
+    <if test="name!=null and name!=''">
+    and name like  CONCAT('%',#{name},'%' ) 
+    </if>
+    <if test="sex!=null and sex!=''">
+    and sex like '%${sex}%'
+    </if>
+    <if test="telphone!=null and telphone!=''">
+    and telphone like '%${telphone}%'
+    </if>
+    <if test="beginTime!=null and beginTime!=''">
+    and date_birth &gt;= #{beginTime}
+    </if>
+   <if test="endTime!=null and endTime!=''">
+    and date_birth &lt;= #{endTime}
+    </if>
+    <if test="departmentId!=null and departmentId!=''">
+    and department_id =#{departmentId}
+    </if>
+    <if test="duties!=null and duties!=''">
+    and duties like '%${duties}%'
+    </if>
+    <if test="title!=null and title!=''">
+    and title like '%${title}%'
+    </if>
+    <if test="unit!=null and unit!=''">
+    and unit like '%${unit}%'
+    </if>
+    <if test="address!=null and address!=''">
+    and address like '%${address}%'
+    </if>
+    <if test="status!=null">
+    and status =#{status}
+    </if>
+     <if test="createrId!= null" >
+       and creater_id!=#{createrId}
+    </if>
+    <if test="hpId!= null" >
+       and hp_id=#{hpId}
+    </if>
+    <if test="firstRecord!=null">
+      	ORDER BY create_time
+		LIMIT #{firstRecord},#{pageSize}
+      </if>
+  </select>
+  <update id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    update T_ADDRESS_LIST
+    set state=1
+    where id = #{id}
+  </update>
+  <insert id="insert" useGeneratedKeys="true" keyProperty="id" parameterType="com.qazit.hospital.web.model.Address" >
+    insert into T_ADDRESS_LIST
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+    <if test="id!=null">
+   		id,
+    </if>
+    <if test="name!=null">
+       name ,
+    </if>
+    <if test="sex!=null">
+   	   sex,
+    </if>
+    <if test="telphone!=null">
+      telphone,
+    </if>
+    <if test="dateBirth!=null">
+      date_birth,
+    </if>
+    <if test="departmentId!=null">
+      department_id,
+    </if>
+    <if test="duties!=null">
+      duties,
+    </if>
+    <if test="title!=null">
+      title,
+    </if>
+    <if test="unit!=null">
+      unit,
+    </if>
+    <if test="address!=null">
+      address,
+    </if>
+    <if test="status!=null">
+      status,
+    </if>
+    <if test="state!=null">
+      state,
+    </if>
+    <if test="createTime!=null">
+      create_time,
+    </if>
+    <if test="createrId !=null">
+      	creater_id,
+    </if>
+    <if test="createrName !=null">
+      	creater_name,
+    </if>
+    <if test="hpId !=null">
+      	hp_id,
+    </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id},
+      </if>
+      <if test="name!=null">
+        #{name}, 
+       </if>
+      <if test="sex!=null">
+   	    #{sex},
+      </if>
+      <if test="telphone!=null">
+        #{telphone},
+      </if>
+      <if test="dateBirth!=null">
+        #{dateBirth},
+      </if>
+      <if test="departmentId!=null">
+        #{departmentId},
+      </if>
+      <if test="duties!=null">
+        #{duties},
+      </if>
+      <if test="title!=null">
+       #{title},
+      </if>
+      <if test="unit!=null">
+       #{unit},
+      </if>
+      <if test="address!=null">
+       #{address},
+      </if>
+      <if test="status!=null">
+       #{status},
+      </if>
+      <if test="state!=null">
+       #{state},
+      </if>
+      <if test="createTime!=null">
+       #{createTime},
+      </if>
+      <if test="createrId !=null">
+      	#{createrId},
+      </if>
+      <if test="createrName !=null">
+      	#{createrName},
+      </if>
+      <if test="hpId !=null">
+      	#{hpId},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.qazit.hospital.web.model.Address" >
+    update T_ADDRESS_LIST
+    <set >
+      <if test="name!=null">
+        name=#{name}, 
+       </if>
+      <if test="sex!=null">
+   	    sex=#{sex},
+      </if>
+      <if test="telphone!=null">
+        telphone=#{telphone},
+      </if>
+      <if test="dateBirth!=null">
+       date_birth= #{dateBirth},
+      </if>
+      <if test="departmentId!=null">
+        department_id=#{departmentId},
+      </if>
+      <if test="duties!=null">
+        duties=#{duties},
+      </if>
+      <if test="title!=null">
+       title=#{title},
+      </if>
+      <if test="unit!=null">
+       unit=#{unit},
+      </if>
+      <if test="address!=null">
+       address=#{address},
+      </if>
+      <if test="status!=null">
+       status=#{status},
+      </if>
+      <if test="state!=null">
+       state=#{state},
+      </if>
+      <if test="createTime!=null">
+       create_time=#{createTime},
+      </if>
+      <if test="createrId !=null">
+      	creater_id=#{createrId},
+      </if>
+      <if test="createrName !=null">
+      	creater_name=#{createrName},
+      </if>
+      <if test="hpId !=null">
+      	hp_id=#{hpId}
+      </if>
+    </set>
+    where id = #{id}
+  </update>
+</mapper>

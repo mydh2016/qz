@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport"
+			content="minimum-scale=1, maximum-scale=1, initial-scale=1, width=device-width, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title>医信通</title>
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+		<link type="text/css" rel="Stylesheet" href="css/bootstrap.css" />
+		<link type="text/css" rel="Stylesheet" href="css/animate.css" />
+		<link type="text/css" rel="Stylesheet" href="css/font-awesome.css" />
+		<link type="text/css" rel="Stylesheet" href="js/lib/plugin/simditor/styles/simditor.css" />
+
+		<script>
+			window.version = '?v=1.02';
+			window.appName = '/qazitem';
+			window.hospitalId='gsyd';
+			if (!("createTouch" in document)) {
+					document.write('<link type="text/css" rel="Stylesheet" href="css/scrollBar.css"/>');
+			}
+		</script>
+		<link type="text/css" rel="Stylesheet" href="css/app.css?v=1.01" />
+		<!--[if lt IE 9]>
+		<script src="js/lib/respond.min.js"></script>
+		<![endif]-->
+		<script src="js/lib/require.js" data-main="js/main.js"></script>
+
+	</head>
+
+	<body>
+
+		<div id="container" ms-controller="root" class="ms-controller">
+
+			<div id="header">
+				<div class="logo">
+					<em class="fa fa-plus-square logo-icon"></em>
+					<span class="ml10">医信通</span>
+				</div>
+
+				<div class="header-btnBar fl">
+					<div id="siderToggle" class="header-btnBar-btn ripple sider-open">
+						<div class="line-wrap">
+							<div class="line top"></div>
+							<div class="line center"></div>
+							<div class="line bottom"></div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="header-btnBar fr">
+					<div class="header-userbar dropdown">
+						<div class="dropdown-toggle" data-toggle="dropdown">
+							<div class="header-userbar-face circle fa fa-user"></div>
+							<div class="header-userbar-detail">
+								{{avalon.vmodels.root.pubperm.userName}}
+							</div>
+							<div class="caret"></div>
+						</div>
+
+						<ul class="dropdown-menu">
+							<li>
+								<a href="#/usercenter"> <i class="fa fa-user"></i> 个人中心 </a>
+							</li>
+							<li role="separator" class="divider"></li>
+							<li>
+					<a ms-attr-href="appName + '/rest/exit'"> <i
+									class="fa fa-sign-out"></i> 退出 </a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+
+			</div>
+
+
+			<div id="wraper">
+
+				<div id="sider" class="pt10" ms-class="{{theme}}">
+					<div class="text-center" ms-if="menuStatus == 'error'">
+						<p class="nodata">{{menuMsg}}</p>
+						<div id="btn-refresh" class="btn-refresh circle-btn circle inlineblock" title="刷新" ms-click="reload">
+							<div class="btn-refresh-icon fa fa-refresh"></div>
+						</div>
+					</div>
+					<div class="sider-item" ms-repeat="menu" ms-if="menuStatus != 'error'">
+						<a href="#" class="ripple">
+							<!-- <i class="fa fa-home sider-item-icon"></i> -->
+							<span>{{el.resourcename}}</span>
+
+							<i class="fa fa-angle-right sider-item-caret" ms-if="el.children.length"></i>
+						</a>
+
+						<ul class="adorn list-unstyled">
+							<li ms-repeat="el.children">
+								<a ms-attr-href="el.other" class="ripple">{{el.resourcename}}</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+
+
+
+				<div id="content" class="min-container animated">
+					<div></div>
+
+				</div>
+			</div>
+
+		</div>
+	</body>
+
+</html>

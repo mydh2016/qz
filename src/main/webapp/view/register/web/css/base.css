@@ -1,0 +1,210 @@
+/*css 初始化 */
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    line-height: 150%;
+    font-family: "微软雅黑"  "Microsoft YaHei"   \5FAE\8F6F\96C5\9ED1 !important;
+}
+
+fieldset, img, input, button {
+    /*fieldset初始化*/
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline-style: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+input {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+}
+
+select, input {
+    vertical-align: middle;
+    outline: none;
+}
+
+select, input, textarea {
+    font-size: 12px;
+    margin: 0;
+}
+
+textarea {
+    resize: none;
+}
+
+/*去除图片3像素*/
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+/*  table栏*/
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1; /*IE/7/6*/
+}
+
+a {
+    color: #3a3a3a;
+    text-decoration: none
+}
+
+/*LVHA*/
+a:link {
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
+a:visited {
+    text-decoration: none;
+     color: #3a3a3a;
+}
+
+a:hover {
+    text-decoration: none;
+     color: #3a3a3a;
+}
+
+a:active {
+    text-decoration: none;
+     color: #3a3a3a;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+}
+
+s, i, em {
+    font-style: normal;
+    text-decoration: none;
+}
+
+.col-blue {
+    background-color: #4068a5;
+}
+
+
+/*版心*/
+.container {
+    width:1160px;
+    margin:0 auto;
+    padding: 0;
+}
+
+/*头部搜索栏*/
+.topBar{
+    height: 74px;
+    width: 100%;
+    background-color: rgba(64,104,165,0.9);
+    background-color: rgb(64,104,165)\9;
+    filter:alpha(opacity=90)\9;
+    line-height: 74px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+}
+.topBar .container{
+    position: relative;
+}
+.topBar a{
+    color: #fff;
+}
+.topBar .topBar_logo{
+    font-size: 30px;
+    width: 300px;
+    text-align: center;
+    float:left;
+    margin-right:20px;
+}
+.topBar input{
+    width: 660px;
+    height: 44px;
+    line-height: 44px;
+    margin-top: 16px;
+    float:left;
+    border-radius: 5px;
+    padding-left:20px;
+    font-size: 16px;
+}
+.topBar  .topBar_back{
+    margin-left:60px;
+    font-size: 16px;
+}
+.topBar .topBar_back .icon-fanhuijiantou{
+    font-size: 24px;
+    margin-right:10px;
+}
+.topBar>div>.topBar_icon{
+    position: absolute;
+    right:190px;
+    color:#146ec4;
+    font-size: 24px;
+}
+.topBar>div>.topBar_icon>i{
+    padding:10px;
+}
+
+/*底部说明内容*/
+.footerBar{
+    height: 38px;
+    background-color: #4879b4;
+    text-align: center;
+    color:#fff;
+}
+.footerBar .container{
+    position: relative;
+}
+.footerBar p{
+    text-align: center;
+    line-height: 38px;
+}
+.footerBar .footerBar_share{
+    float:right;
+    padding-right: 4px;
+    height: 38px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.footerBar .footerBar_share a{
+    margin-right:12px;
+    color:#fff;
+}
+.footerBar .footerBar_share a i{
+    font-size: 26px;
+    line-height: 38px;
+}
+
+/*字体图标*/
+
+@font-face {font-family: "iconfont";
+    src: url('../../register/lib/iconfont/iconfont.eot?t=1482458257607'); /* IE9*/
+    src: url('../../register/lib/iconfont/iconfont.eot?t=1482458257607#iefix') format('embedded-opentype'), 
+    url('../../register/lib/iconfont/iconfont.svg?t=1482458257607#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    font-size:18px;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
